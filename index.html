@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Touch AI Agency — AI Automations for Business</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#04080F',
+              900: '#080D1A',
+              800: '#0D1526',
+              700: '#111D35',
+              600: '#162444',
+            },
+            blue: {
+              glow: '#1B8FFF',
+              bright: '#3BA3FF',
+              dim: '#0E5FCC',
+              muted: '#0A3D85',
+            }
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #080D1A;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ---------- grain overlay ---------- */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.035;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ---------- glow orbs ---------- */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+    }
+
+    /* ---------- typography ---------- */
+    .font-display { font-family: 'Syne', sans-serif; }
+
+    h1, h2, h3 { font-family: 'Syne', sans-serif; letter-spacing: -0.03em; }
+
+    /* ---------- glass card ---------- */
+    .glass {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+    }
+    .glass-blue {
+      background: rgba(27,143,255,0.07);
+      border: 1px solid rgba(27,143,255,0.18);
+      backdrop-filter: blur(12px);
+    }
+
+    /* ---------- button ---------- */
+    .btn-primary {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      background: linear-gradient(135deg, #1B8FFF 0%, #0E5FCC 100%);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      border-radius: 0.625rem;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      box-shadow:
+        0 0 0 1px rgba(27,143,255,0.4),
+        0 4px 24px rgba(27,143,255,0.35),
+        0 1px 3px rgba(0,0,0,0.5);
+      transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow:
+        0 0 0 1px rgba(27,143,255,0.5),
+        0 8px 32px rgba(27,143,255,0.5),
+        0 2px 8px rgba(0,0,0,0.4);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible {
+      outline: 2px solid #1B8FFF;
+      outline-offset: 3px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.9375rem;
+      border-radius: 0.625rem;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.15);
+      outline: none;
+      transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+      text-decoration: none;
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.07);
+      border-color: rgba(255,255,255,0.25);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+    .btn-ghost:active { transform: translateY(0); }
+    .btn-ghost:focus-visible {
+      outline: 2px solid #1B8FFF;
+      outline-offset: 3px;
+    }
+
+    /* ---------- nav ---------- */
+    .nav-link {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.15s ease;
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1.5px;
+      background: #1B8FFF;
+      transition: width 0.2s ease;
+    }
+    .nav-link:hover { color: #fff; }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:focus-visible { outline: 2px solid #1B8FFF; outline-offset: 4px; border-radius: 2px; }
+
+    /* ---------- service card ---------- */
+    .service-card {
+      padding: 2rem;
+      border-radius: 1.25rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+      cursor: default;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(27,143,255,0.25);
+      background: rgba(27,143,255,0.05);
+      box-shadow: 0 8px 40px rgba(27,143,255,0.12), 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    /* ---------- step connector ---------- */
+    .step-line {
+      width: 1px;
+      background: linear-gradient(to bottom, rgba(27,143,255,0.4), transparent);
+      margin: 0 auto;
+      height: 40px;
+    }
+
+    /* ---------- stat card ---------- */
+    .stat-card {
+      padding: 1.75rem 2rem;
+      border-radius: 1rem;
+      background: rgba(27,143,255,0.06);
+      border: 1px solid rgba(27,143,255,0.15);
+    }
+
+    /* ---------- testimonial ---------- */
+    .testimonial-card {
+      padding: 2rem;
+      border-radius: 1.25rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+
+    /* ---------- gradient text ---------- */
+    .text-gradient {
+      background: linear-gradient(135deg, #3BA3FF 0%, #1B8FFF 50%, #8FD4FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ---------- icon wrapper ---------- */
+    .icon-wrap {
+      width: 3rem; height: 3rem;
+      border-radius: 0.75rem;
+      background: rgba(27,143,255,0.12);
+      border: 1px solid rgba(27,143,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ---------- modal ---------- */
+    .modal-backdrop {
+      position: fixed; inset: 0;
+      background: rgba(4,8,15,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .modal-backdrop.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .modal-box {
+      width: 100%; max-width: 520px;
+      border-radius: 1.5rem;
+      background: #0D1526;
+      border: 1px solid rgba(27,143,255,0.2);
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 80px rgba(27,143,255,0.08);
+      padding: 2.5rem;
+      transform: translateY(24px) scale(0.97);
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .modal-backdrop.open .modal-box {
+      transform: translateY(0) scale(1);
+    }
+
+    /* ---------- form ---------- */
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0.625rem;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+    .form-input:focus {
+      border-color: rgba(27,143,255,0.5);
+      background: rgba(27,143,255,0.06);
+    }
+    .form-input::placeholder { color: rgba(255,255,255,0.3); }
+    .form-label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.375rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---------- divider ---------- */
+    .section-divider {
+      width: 48px; height: 2px;
+      background: linear-gradient(90deg, #1B8FFF, transparent);
+      border-radius: 99px;
+      margin-bottom: 1rem;
+    }
+
+    /* scroll fade-in */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* mobile nav */
+    .mobile-nav {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .mobile-nav.open {
+      max-height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════ MODAL ═══════════════════════════ -->
+<div class="modal-backdrop" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h2 id="modalTitle" class="font-display text-xl font-700 text-white" style="font-weight:700">Book a Strategy Call</h2>
+        <p style="color:rgba(255,255,255,0.5); font-size:0.875rem; margin-top:0.25rem;">Free 30-min consultation. No commitment.</p>
+      </div>
+      <button onclick="closeModal()" aria-label="Close" style="width:2rem;height:2rem;display:flex;align-items:center;justify-content:center;border-radius:0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6);cursor:pointer;transition:background 0.15s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 1l12 12M13 1L1 13" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <form id="bookingForm" onsubmit="submitForm(event)" novalidate>
+      <div style="display:grid; gap:1.125rem;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div>
+            <label class="form-label" for="fname">First name</label>
+            <input class="form-input" type="text" id="fname" name="fname" placeholder="Alex" required />
+          </div>
+          <div>
+            <label class="form-label" for="lname">Last name</label>
+            <input class="form-input" type="text" id="lname" name="lname" placeholder="Johnson" required />
+          </div>
+        </div>
+        <div>
+          <label class="form-label" for="email">Work email</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="alex@company.com" required />
+        </div>
+        <div>
+          <label class="form-label" for="company">Company name</label>
+          <input class="form-input" type="text" id="company" name="company" placeholder="Acme Corp" />
+        </div>
+        <div>
+          <label class="form-label" for="challenge">Biggest automation challenge</label>
+          <textarea class="form-input" id="challenge" name="challenge" rows="3" placeholder="Tell us about the processes you want to automate..." style="resize:vertical;min-height:80px;"></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width:100%;margin-top:1.5rem;justify-content:center;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 2v2M11 2v2M2 7h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Request My Free Call
+      </button>
+      <p style="text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.35);margin-top:0.875rem;">We'll reply within 24 hours to confirm your slot.</p>
+    </form>
+
+    <!-- success state (hidden initially) -->
+    <div id="formSuccess" style="display:none;text-align:center;padding:1rem 0;">
+      <div style="width:3.5rem;height:3.5rem;border-radius:50%;background:rgba(27,143,255,0.15);border:1px solid rgba(27,143,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11l5 5L18 6" stroke="#1B8FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:1.25rem;margin-bottom:0.5rem;">You're on the list!</h3>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.9rem;line-height:1.6;">We'll reach out within 24 hours to schedule your free strategy call. Check your inbox.</p>
+      <button onclick="closeModal()" class="btn-primary" style="margin-top:1.5rem;">Done</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<header id="navbar" style="position:fixed;top:0;left:0;right:0;z-index:50;transition:background 0.3s ease, border-color 0.3s ease;border-bottom:1px solid transparent;">
+  <nav style="max-width:1200px;margin:0 auto;padding:1.125rem 2rem;display:flex;align-items:center;justify-content:space-between;">
+    <!-- logo -->
+    <a href="#" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;flex-shrink:0;" aria-label="Touch AI Agency">
+      <img src="brand_assets/LOGO TOUCH AI.png" alt="Touch AI Agency" style="height:40px;width:auto;" />
+    </a>
+
+    <!-- desktop links -->
+    <div style="display:flex;align-items:center;gap:2.5rem;" class="hidden-mobile">
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#results" class="nav-link">Results</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:1rem;" class="hidden-mobile">
+      <button onclick="openModal()" class="btn-primary" style="padding:0.625rem 1.5rem;font-size:0.875rem;">
+        Book a Call
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- hamburger -->
+    <button id="menuBtn" onclick="toggleMenu()" aria-label="Toggle menu" style="display:none;background:transparent;border:1px solid rgba(255,255,255,0.12);border-radius:0.5rem;padding:0.5rem;cursor:pointer;color:rgba(255,255,255,0.8);" class="show-mobile">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 5h16M2 10h16M2 15h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+  </nav>
+
+  <!-- mobile nav -->
+  <div class="mobile-nav" id="mobileNav" style="border-top:1px solid rgba(255,255,255,0.05);background:#080D1A;display:none;">
+    <div style="padding:1.25rem 2rem;display:flex;flex-direction:column;gap:1.25rem;">
+      <a href="#services" class="nav-link" onclick="toggleMenu()">Services</a>
+      <a href="#how-it-works" class="nav-link" onclick="toggleMenu()">How It Works</a>
+      <a href="#results" class="nav-link" onclick="toggleMenu()">Results</a>
+      <a href="#faq" class="nav-link" onclick="toggleMenu()">FAQ</a>
+      <button onclick="openModal();toggleMenu();" class="btn-primary" style="width:100%;justify-content:center;">Book a Free Call</button>
+    </div>
+  </div>
+</header>
+
+<style>
+  @media (max-width: 768px) {
+    .hidden-mobile { display: none !important; }
+    .show-mobile { display: flex !important; }
+    #mobileNav { display: block !important; }
+  }
+</style>
+
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section style="position:relative;min-height:100vh;display:flex;align-items:center;padding:7rem 2rem 4rem;overflow:hidden;">
+
+  <!-- background orbs -->
+  <div class="orb" style="width:700px;height:700px;background:radial-gradient(circle, rgba(27,143,255,0.18) 0%, transparent 70%);top:-200px;right:-200px;"></div>
+  <div class="orb" style="width:500px;height:500px;background:radial-gradient(circle, rgba(27,143,255,0.1) 0%, transparent 70%);bottom:-100px;left:-150px;"></div>
+  <div class="orb" style="width:300px;height:300px;background:radial-gradient(circle, rgba(14,95,204,0.15) 0%, transparent 70%);top:40%;left:40%;"></div>
+
+  <!-- grid pattern -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(27,143,255,0.04) 1px, transparent 1px),linear-gradient(90deg,rgba(27,143,255,0.04) 1px, transparent 1px);background-size:64px 64px;pointer-events:none;"></div>
+
+  <div style="max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:1;">
+    <div style="max-width:780px;">
+
+      <!-- badge -->
+      <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.375rem 0.875rem;border-radius:99px;background:rgba(27,143,255,0.1);border:1px solid rgba(27,143,255,0.25);margin-bottom:1.75rem;">
+        <span style="width:6px;height:6px;border-radius:50%;background:#1B8FFF;box-shadow:0 0 6px #1B8FFF;flex-shrink:0;"></span>
+        <span style="font-size:0.8125rem;font-weight:500;color:rgba(255,255,255,0.75);letter-spacing:0.04em;">AI Automation Agency</span>
+      </div>
+
+      <h1 style="font-family:'Syne',sans-serif;font-size:clamp(2.75rem,6vw,5rem);font-weight:800;line-height:1.05;letter-spacing:-0.03em;margin-bottom:1.5rem;">
+        Automate Your Business.<br />
+        <span class="text-gradient">Scale Without Limits.</span>
+      </h1>
+
+      <p style="font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.6);line-height:1.75;max-width:580px;margin-bottom:2.5rem;">
+        We design and deploy custom AI automation systems that eliminate repetitive work, cut operational costs, and unlock growth — so your team can focus on what truly matters.
+      </p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;">
+        <button onclick="openModal()" class="btn-primary" style="font-size:1rem;padding:1rem 2.25rem;">
+          Book a Free Strategy Call
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 8h14M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <a href="#services" class="btn-ghost" style="font-size:1rem;padding:1rem 2rem;">
+          See What We Build
+        </a>
+      </div>
+
+      <!-- social proof strip -->
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.06);">
+        <div style="display:flex;flex-direction:column;gap:0.125rem;">
+          <span style="font-family:'Syne',sans-serif;font-size:1.625rem;font-weight:800;color:#fff;">50+</span>
+          <span style="font-size:0.8rem;color:rgba(255,255,255,0.45);">Businesses automated</span>
+        </div>
+        <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);"></div>
+        <div style="display:flex;flex-direction:column;gap:0.125rem;">
+          <span style="font-family:'Syne',sans-serif;font-size:1.625rem;font-weight:800;color:#fff;">10×</span>
+          <span style="font-size:0.8rem;color:rgba(255,255,255,0.45);">Average productivity gain</span>
+        </div>
+        <div style="width:1px;height:36px;background:rgba(255,255,255,0.1);"></div>
+        <div style="display:flex;flex-direction:column;gap:0.125rem;">
+          <span style="font-family:'Syne',sans-serif;font-size:1.625rem;font-weight:800;color:#fff;">30 Days</span>
+          <span style="font-size:0.8rem;color:rgba(255,255,255,0.45);">To first automation live</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+<section id="services" style="padding:6rem 2rem;position:relative;">
+  <div style="max-width:1200px;margin:0 auto;">
+
+    <div style="max-width:600px;margin-bottom:3.5rem;" class="fade-in">
+      <div class="section-divider"></div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:1rem;">What We Build For You</h2>
+      <p style="color:rgba(255,255,255,0.55);font-size:1.0625rem;line-height:1.7;">
+        End-to-end AI systems tailored to your business — from intelligent chatbots to fully automated back-office workflows.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+
+      <!-- Card 1 -->
+      <div class="service-card fade-in" style="transition-delay:0.05s;">
+        <div class="icon-wrap" style="margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="6" width="18" height="13" rx="2" stroke="#1B8FFF" stroke-width="1.5"/>
+            <path d="M7 6V4a4 4 0 018 0v2" stroke="#1B8FFF" stroke-width="1.5"/>
+            <circle cx="11" cy="12.5" r="2" stroke="#1B8FFF" stroke-width="1.5"/>
+            <path d="M11 14.5v2" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.625rem;">AI Chatbots & Assistants</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.9125rem;line-height:1.7;">Custom-trained bots that handle customer support, lead qualification, and internal queries 24/7 — with your brand voice.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card fade-in" style="transition-delay:0.1s;">
+        <div class="icon-wrap" style="margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M4 11h4l2-7 4 14 2-7h4" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.625rem;">Workflow Automation</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.9125rem;line-height:1.7;">Connect your tools, eliminate manual handoffs, and build automated pipelines across CRMs, ERPs, email, and more.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card fade-in" style="transition-delay:0.15s;">
+        <div class="icon-wrap" style="margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <circle cx="11" cy="11" r="8" stroke="#1B8FFF" stroke-width="1.5"/>
+            <path d="M11 7v4l3 2" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.625rem;">AI-Powered Analytics</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.9125rem;line-height:1.7;">Turn raw data into real-time decisions. We build dashboards and AI models that surface the insights that drive revenue.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card fade-in" style="transition-delay:0.2s;">
+        <div class="icon-wrap" style="margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <rect x="2" y="2" width="8" height="8" rx="1.5" stroke="#1B8FFF" stroke-width="1.5"/>
+            <rect x="12" y="2" width="8" height="8" rx="1.5" stroke="#1B8FFF" stroke-width="1.5"/>
+            <rect x="2" y="12" width="8" height="8" rx="1.5" stroke="#1B8FFF" stroke-width="1.5"/>
+            <path d="M16 12v2m0 4v-2m0 0H14m2 0h2" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.625rem;">Custom AI Integrations</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.9125rem;line-height:1.7;">Embed large language models directly into your existing software stack — no rip-and-replace, just seamless intelligence.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card fade-in" style="transition-delay:0.25s;">
+        <div class="icon-wrap" style="margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M11 2L3 7v8l8 5 8-5V7l-8-5z" stroke="#1B8FFF" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M11 2v18M3 7l8 5 8-5" stroke="#1B8FFF" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.625rem;">Document Processing</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.9125rem;line-height:1.7;">Automatically extract, classify, and route data from invoices, contracts, forms, and emails with near-perfect accuracy.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card fade-in" style="transition-delay:0.3s;">
+        <div class="icon-wrap" style="margin-bottom:1.25rem;">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M11 3C7.13 3 4 6.13 4 10c0 2.39 1.19 4.5 3 5.74V18h8v-2.26C16.81 14.5 18 12.39 18 10c0-3.87-3.13-7-7-7z" stroke="#1B8FFF" stroke-width="1.5"/>
+            <path d="M9 18h4M9 21h4" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3 style="font-size:1.125rem;font-weight:700;margin-bottom:0.625rem;">AI Strategy Consulting</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.9125rem;line-height:1.7;">Not sure where to start? We audit your operations, map automation opportunities, and build a phased roadmap for maximum ROI.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+<section id="how-it-works" style="padding:6rem 2rem;position:relative;">
+  <!-- bg strip -->
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(27,143,255,0.04) 40%,transparent);pointer-events:none;"></div>
+
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+
+    <div style="text-align:center;max-width:580px;margin:0 auto 4rem;" class="fade-in">
+      <div class="section-divider" style="margin:0 auto 1rem;"></div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:1rem;">From Call to Deployed — Fast</h2>
+      <p style="color:rgba(255,255,255,0.55);font-size:1.0625rem;line-height:1.7;">A streamlined process built to get your first automation live within 30 days.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;position:relative;">
+
+      <!-- Step 1 -->
+      <div class="fade-in" style="text-align:center;padding:2rem 1.5rem;border-radius:1.25rem;background:rgba(27,143,255,0.04);border:1px solid rgba(27,143,255,0.1);">
+        <div style="width:3rem;height:3rem;border-radius:50%;background:rgba(27,143,255,0.12);border:1px solid rgba(27,143,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#1B8FFF;">1</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.625rem;">Discovery Call</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;line-height:1.65;">We learn your business, identify automation opportunities, and define success metrics together.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="fade-in" style="text-align:center;padding:2rem 1.5rem;border-radius:1.25rem;background:rgba(27,143,255,0.04);border:1px solid rgba(27,143,255,0.1);transition-delay:0.1s;">
+        <div style="width:3rem;height:3rem;border-radius:50%;background:rgba(27,143,255,0.12);border:1px solid rgba(27,143,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#1B8FFF;">2</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.625rem;">Custom Roadmap</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;line-height:1.65;">We deliver a detailed automation blueprint with timeline, integrations, and expected ROI projections.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="fade-in" style="text-align:center;padding:2rem 1.5rem;border-radius:1.25rem;background:rgba(27,143,255,0.04);border:1px solid rgba(27,143,255,0.1);transition-delay:0.2s;">
+        <div style="width:3rem;height:3rem;border-radius:50%;background:rgba(27,143,255,0.12);border:1px solid rgba(27,143,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#1B8FFF;">3</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.625rem;">Build & Integrate</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;line-height:1.65;">Our engineers build, test, and integrate your AI systems — with zero disruption to existing operations.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="fade-in" style="text-align:center;padding:2rem 1.5rem;border-radius:1.25rem;background:rgba(27,143,255,0.04);border:1px solid rgba(27,143,255,0.1);transition-delay:0.3s;">
+        <div style="width:3rem;height:3rem;border-radius:50%;background:rgba(27,143,255,0.12);border:1px solid rgba(27,143,255,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#1B8FFF;">4</div>
+        <h3 style="font-size:1rem;font-weight:700;margin-bottom:0.625rem;">Launch & Optimize</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.875rem;line-height:1.65;">Go live, monitor performance, and continuously refine. We stay with you long after launch.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ RESULTS / STATS ═══════════════════════════ -->
+<section id="results" style="padding:6rem 2rem;">
+  <div style="max-width:1200px;margin:0 auto;">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="results-grid">
+
+      <div class="fade-in">
+        <div class="section-divider"></div>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:1rem;">Real Results.<br />Real Businesses.</h2>
+        <p style="color:rgba(255,255,255,0.55);font-size:1.0625rem;line-height:1.7;margin-bottom:2rem;">
+          Our clients don't just save time — they compound it. Every hour recovered is reinvested into growth, customer experience, and competitive advantage.
+        </p>
+        <button onclick="openModal()" class="btn-primary">
+          Get Your Free Audit
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="fade-in">
+        <div class="stat-card">
+          <div style="font-family:'Syne',sans-serif;font-size:2.25rem;font-weight:800;color:#1B8FFF;margin-bottom:0.25rem;">78%</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);line-height:1.5;">Reduction in manual admin time</div>
+        </div>
+        <div class="stat-card">
+          <div style="font-family:'Syne',sans-serif;font-size:2.25rem;font-weight:800;color:#1B8FFF;margin-bottom:0.25rem;">3.4×</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);line-height:1.5;">Average ROI within 6 months</div>
+        </div>
+        <div class="stat-card">
+          <div style="font-family:'Syne',sans-serif;font-size:2.25rem;font-weight:800;color:#1B8FFF;margin-bottom:0.25rem;">$0</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);line-height:1.5;">Wasted on hires for automated tasks</div>
+        </div>
+        <div class="stat-card">
+          <div style="font-family:'Syne',sans-serif;font-size:2.25rem;font-weight:800;color:#1B8FFF;margin-bottom:0.25rem;">99.9%</div>
+          <div style="font-size:0.875rem;color:rgba(255,255,255,0.55);line-height:1.5;">System uptime guarantee</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  @media (max-width: 768px) {
+    .results-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  }
+</style>
+
+
+<!-- ═══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
+<section style="padding:6rem 2rem;position:relative;">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,transparent,rgba(27,143,255,0.03) 50%,transparent);pointer-events:none;"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;">
+
+    <div style="text-align:center;max-width:560px;margin:0 auto 3.5rem;" class="fade-in">
+      <div class="section-divider" style="margin:0 auto 1rem;"></div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;">What Our Clients Say</h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+
+      <div class="testimonial-card fade-in">
+        <div style="display:flex;gap:0.25rem;margin-bottom:1rem;">
+          <span style="color:#1B8FFF;font-size:1rem;">★★★★★</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9375rem;line-height:1.75;margin-bottom:1.5rem;">"Touch AI automated our entire onboarding workflow. What used to take our team 3 hours per client now happens in minutes. We've onboarded 4× more clients with the same headcount."</p>
+        <div style="display:flex;align-items:center;gap:0.875rem;">
+          <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,#1B8FFF,#0A3D85);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;font-size:0.875rem;">SM</div>
+          <div>
+            <div style="font-weight:600;font-size:0.9rem;">Sarah M.</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.45);">COO, Velocity Consulting</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in" style="transition-delay:0.1s;">
+        <div style="display:flex;gap:0.25rem;margin-bottom:1rem;">
+          <span style="color:#1B8FFF;font-size:1rem;">★★★★★</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9375rem;line-height:1.75;margin-bottom:1.5rem;">"Their AI chatbot now handles 80% of our support tickets without human intervention. Our team finally has time to focus on complex cases. Customer satisfaction is up 40%."</p>
+        <div style="display:flex;align-items:center;gap:0.875rem;">
+          <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,#0E5FCC,#080D1A);border:1px solid rgba(27,143,255,0.3);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;font-size:0.875rem;">JR</div>
+          <div>
+            <div style="font-weight:600;font-size:0.9rem;">James R.</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.45);">Head of CX, NexaScale</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card fade-in" style="transition-delay:0.2s;">
+        <div style="display:flex;gap:0.25rem;margin-bottom:1rem;">
+          <span style="color:#1B8FFF;font-size:1rem;">★★★★★</span>
+        </div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9375rem;line-height:1.75;margin-bottom:1.5rem;">"From discovery call to fully deployed — 3 weeks. We saved 120 hours a month on invoice processing alone. The ROI was clear by week 6. Best investment we've made."</p>
+        <div style="display:flex;align-items:center;gap:0.875rem;">
+          <div style="width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,#1B8FFF,#0A3D85);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:700;font-size:0.875rem;">DK</div>
+          <div>
+            <div style="font-weight:600;font-size:0.9rem;">Dana K.</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.45);">CEO, Bright Finance Group</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section id="faq" style="padding:6rem 2rem;">
+  <div style="max-width:760px;margin:0 auto;">
+
+    <div style="text-align:center;margin-bottom:3.5rem;" class="fade-in">
+      <div class="section-divider" style="margin:0 auto 1rem;"></div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);font-weight:800;">Frequently Asked Questions</h2>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:0.875rem;" class="fade-in">
+
+      <details class="service-card" style="cursor:pointer;" open>
+        <summary style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:600;font-size:1rem;outline:none;">
+          Do I need technical knowledge to work with you?
+          <svg style="flex-shrink:0;transition:transform 0.2s ease;" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.9125rem;line-height:1.7;margin-top:0.875rem;padding-top:0.875rem;border-top:1px solid rgba(255,255,255,0.06);">Not at all. We handle everything end-to-end — from scoping and architecture to deployment and training. You just tell us the business outcomes you want.</p>
+      </details>
+
+      <details class="service-card" style="cursor:pointer;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:600;font-size:1rem;outline:none;">
+          How long does it take to see results?
+          <svg style="flex-shrink:0;transition:transform 0.2s ease;" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.9125rem;line-height:1.7;margin-top:0.875rem;padding-top:0.875rem;border-top:1px solid rgba(255,255,255,0.06);">Most clients have their first automation live within 30 days. Measurable ROI typically appears within 6–8 weeks as the system processes real workloads.</p>
+      </details>
+
+      <details class="service-card" style="cursor:pointer;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:600;font-size:1rem;outline:none;">
+          What tools and platforms do you work with?
+          <svg style="flex-shrink:0;transition:transform 0.2s ease;" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.9125rem;line-height:1.7;margin-top:0.875rem;padding-top:0.875rem;border-top:1px solid rgba(255,255,255,0.06);">We integrate with virtually any platform — Salesforce, HubSpot, Slack, Notion, Zapier, Airtable, custom APIs, and more. If it has an API, we can automate it.</p>
+      </details>
+
+      <details class="service-card" style="cursor:pointer;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:600;font-size:1rem;outline:none;">
+          Is my data secure?
+          <svg style="flex-shrink:0;transition:transform 0.2s ease;" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.9125rem;line-height:1.7;margin-top:0.875rem;padding-top:0.875rem;border-top:1px solid rgba(255,255,255,0.06);">Absolutely. We follow enterprise-grade security practices, sign NDAs, and can deploy solutions entirely within your own infrastructure if required.</p>
+      </details>
+
+      <details class="service-card" style="cursor:pointer;">
+        <summary style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none;font-weight:600;font-size:1rem;outline:none;">
+          What's included in the free strategy call?
+          <svg style="flex-shrink:0;transition:transform 0.2s ease;" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="#1B8FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.9125rem;line-height:1.7;margin-top:0.875rem;padding-top:0.875rem;border-top:1px solid rgba(255,255,255,0.06);">It's a 30-minute session where we analyse your current workflows, identify your top 3 automation opportunities, and give you an honest assessment — with no obligation to proceed.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ CTA SECTION ═══════════════════════════ -->
+<section style="padding:6rem 2rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;">
+    <div class="orb" style="width:600px;height:600px;background:radial-gradient(circle,rgba(27,143,255,0.2) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+  </div>
+  <div style="max-width:720px;margin:0 auto;text-align:center;position:relative;z-index:1;" class="fade-in">
+
+    <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.375rem 0.875rem;border-radius:99px;background:rgba(27,143,255,0.1);border:1px solid rgba(27,143,255,0.25);margin-bottom:1.75rem;">
+      <span style="width:6px;height:6px;border-radius:50%;background:#1B8FFF;box-shadow:0 0 6px #1B8FFF;"></span>
+      <span style="font-size:0.8125rem;font-weight:500;color:rgba(255,255,255,0.75);">Free — No commitment</span>
+    </div>
+
+    <h2 style="font-size:clamp(2.25rem,5vw,3.75rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:1.25rem;">
+      Ready to Automate<br /><span class="text-gradient">Your Business?</span>
+    </h2>
+
+    <p style="color:rgba(255,255,255,0.55);font-size:1.125rem;line-height:1.7;margin-bottom:2.5rem;">
+      Book a free 30-minute strategy call. We'll map out your biggest automation wins and show you exactly what's possible — no fluff, no sales pitch.
+    </p>
+
+    <button onclick="openModal()" class="btn-primary" style="font-size:1.0625rem;padding:1.125rem 2.75rem;">
+      Book My Free Strategy Call
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 9h16M10 3l6 6-6 6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <p style="font-size:0.8125rem;color:rgba(255,255,255,0.3);margin-top:1.25rem;">30 minutes · Free · Immediate value</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer style="padding:3rem 2rem;border-top:1px solid rgba(255,255,255,0.06);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:0.875rem;">
+      <img src="brand_assets/LOGO TOUCH AI.png" alt="Touch AI Agency" style="height:34px;width:auto;opacity:0.85;" />
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:2rem;">
+      <a href="#services" style="font-size:0.875rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Services</a>
+      <a href="#how-it-works" style="font-size:0.875rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">How It Works</a>
+      <a href="#results" style="font-size:0.875rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Results</a>
+      <a href="#faq" style="font-size:0.875rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.15s ease;" onmouseover="this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">FAQ</a>
+    </div>
+    <p style="font-size:0.8rem;color:rgba(255,255,255,0.25);">© 2025 Touch AI Agency. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════ JS ═══════════════════════════ -->
+<script>
+  // ---- Navbar scroll ----
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      navbar.style.background = 'rgba(8,13,26,0.92)';
+      navbar.style.backdropFilter = 'blur(16px)';
+      navbar.style.borderColor = 'rgba(255,255,255,0.07)';
+    } else {
+      navbar.style.background = 'transparent';
+      navbar.style.backdropFilter = 'none';
+      navbar.style.borderColor = 'transparent';
+    }
+  });
+
+  // ---- Mobile menu ----
+  let menuOpen = false;
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+    const nav = document.getElementById('mobileNav');
+    if (menuOpen) {
+      nav.style.maxHeight = '400px';
+      nav.style.display = 'block';
+    } else {
+      nav.style.maxHeight = '0';
+      setTimeout(() => { if (!menuOpen) nav.style.display = 'none'; }, 300);
+    }
+  }
+
+  // ---- Modal ----
+  function openModal() {
+    document.getElementById('bookingModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('bookingModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  // close on backdrop click
+  document.getElementById('bookingModal').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) closeModal();
+  });
+  // close on Escape
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  // ---- Form submit ----
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('bookingForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // ---- Scroll animations ----
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) {
+        el.target.classList.add('visible');
+        observer.unobserve(el.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ---- Details arrow rotation ----
+  document.querySelectorAll('details').forEach(d => {
+    d.addEventListener('toggle', () => {
+      const svg = d.querySelector('summary svg');
+      if (svg) svg.style.transform = d.open ? 'rotate(180deg)' : '';
+    });
+  });
+</script>
+
+</body>
+</html>

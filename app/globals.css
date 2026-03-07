@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --brand: #6EADD4;
+  --brand-light: #9FCAE3;
+  --brand-xlight: #E8F4FA;
+  --brand-dark: #4A8EBB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', sans-serif;
+}
+
+/* Noise texture overlay */
+.noise-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* Gradient mesh background */
+.mesh-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% -10%, rgba(110,173,212,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 110%, rgba(110,173,212,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 60% 40%, rgba(159,202,227,0.06) 0%, transparent 60%),
+    #ffffff;
+}
+
+/* Subtle card elevation system */
+.card-base {
+  background: #ffffff;
+  border: 1px solid rgba(110,173,212,0.12);
+  box-shadow: 0 2px 8px 0 rgba(110,173,212,0.08), 0 1px 2px 0 rgba(0,0,0,0.04);
+}
+
+.card-elevated {
+  background: #ffffff;
+  border: 1px solid rgba(110,173,212,0.15);
+  box-shadow: 0 4px 20px 0 rgba(110,173,212,0.14), 0 2px 6px 0 rgba(0,0,0,0.06);
+}
+
+.card-floating {
+  background: #ffffff;
+  border: 1px solid rgba(110,173,212,0.2);
+  box-shadow: 0 8px 40px 0 rgba(110,173,212,0.18), 0 4px 12px 0 rgba(0,0,0,0.08);
+}
+
+/* Button focus ring */
+.btn-primary:focus-visible {
+  outline: 2px solid #6EADD4;
+  outline-offset: 3px;
+}
+
+/* Animated underline for links */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #6EADD4;
+  transition: width 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Stagger animation delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
