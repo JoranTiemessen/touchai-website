@@ -109,10 +109,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:info@touchaiagency"
+                  href="mailto:info@touchaiagency.com"
                   className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
                 >
-                  info@touchaiagency
+                  info@touchaiagency.com
                 </a>
               </li>
               <li>
