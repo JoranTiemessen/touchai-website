@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import ScrollBackground from "@/components/ScrollBackground";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import AgentTypes from "@/components/AgentTypes";
+import Results from "@/components/Results";
 import HowItWorks from "@/components/HowItWorks";
 import CaseStudies from "@/components/CaseStudies";
 import Testimonials from "@/components/Testimonials";
@@ -16,6 +18,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <AgentTypes />
+      <Results />
       <HowItWorks />
       <CaseStudies />
       <Testimonials />
