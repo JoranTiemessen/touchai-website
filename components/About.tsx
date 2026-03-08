@@ -1,10 +1,13 @@
+import Image from "next/image";
+
 const team = [
   {
     name: "Joran Tiemessen",
     age: 25,
     initials: "JT",
+    photo: "/joran.jpeg",
     tagline: "AI Strategy & Automation",
-    bio: "Joran leads client strategy and AI system design at Touch AI. With a sharp eye for business processes, he identifies exactly where automation creates the most value — then builds it. He specialises in connecting AI tools to real business outcomes: more leads, less manual work, and systems that keep running 24/7.",
+    bio: "Joran leads client strategy and AI system design at Touch AI. With a sharp eye for business processes, he identifies exactly where automation creates the most value, then builds it. He specialises in connecting AI tools to real business outcomes: more leads, less manual work, and systems that keep running 24/7.",
     skills: [
       "AI Workflow Automation",
       "Process Optimisation",
@@ -18,8 +21,9 @@ const team = [
     name: "Jesper Tiemessen",
     age: 22,
     initials: "JT",
+    photo: "/jesper.jpeg",
     tagline: "AI Development & Integration",
-    bio: "Jesper handles the technical side — building, training, and deploying the AI systems that power client results. From custom chatbots to automated data pipelines, he turns complex AI capabilities into clean, reliable tools that non-technical teams can actually use. He works across Python, LLM APIs, and no-code platforms to ship fast and ship right.",
+    bio: "Jesper handles the technical side: building, training, and deploying the AI systems that power client results. From custom chatbots to automated data pipelines, he turns complex AI capabilities into clean, reliable tools that non-technical teams can actually use. He works across Python, LLM APIs, and no-code platforms to ship fast and ship right.",
     skills: [
       "Custom AI Development",
       "LLM Integration",
@@ -59,7 +63,7 @@ export default function About() {
             <span style={{ color: "#6EADD4" }}>from Amersfoort</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Touch AI was founded by Joran and Jesper Tiemessen — two Dutch brothers with one shared obsession: making AI work for real businesses, not just on paper.
+            Touch AI was founded by Joran and Jesper Tiemessen, two Dutch brothers with one shared obsession: making AI work for real businesses, not just on paper.
           </p>
         </div>
 
@@ -79,13 +83,27 @@ export default function About() {
               {/* Avatar + name */}
               <div className="flex items-center gap-5">
                 <div
-                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-bold text-white flex-shrink-0"
+                  className="w-20 h-20 rounded-2xl flex-shrink-0 overflow-hidden"
                   style={{
-                    background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)",
-                    boxShadow: "0 8px 24px rgba(110,173,212,0.35)",
+                    boxShadow: "0 8px 24px rgba(110,173,212,0.30)",
                   }}
                 >
-                  {member.initials}
+                  {member.photo ? (
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      width={80}
+                      height={80}
+                      className="w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full flex items-center justify-center text-2xl font-bold text-white"
+                      style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)" }}
+                    >
+                      {member.initials}
+                    </div>
+                  )}
                 </div>
                 <div>
                   <h3
@@ -153,7 +171,7 @@ export default function About() {
             Why we started Touch AI
           </h3>
           <p className="text-gray-500 leading-[1.75] max-w-2xl mx-auto">
-            We kept seeing the same thing: great businesses drowning in repetitive work while AI sat unused. We built Touch AI to close that gap — no jargon, no overpriced consultants, just practical automation that makes a visible difference from day one.
+            We kept seeing the same thing: great businesses drowning in repetitive work while AI sat unused. We built Touch AI to close that gap. No jargon, no overpriced consultants, just practical automation that makes a visible difference from day one.
           </p>
           <a
             href="https://calendar.app.google/7rRamUEnapLFZ2PS9"

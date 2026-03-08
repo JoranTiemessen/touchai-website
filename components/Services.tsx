@@ -77,7 +77,7 @@ export default function Services() {
             <span style={{ color: "#6EADD4" }}>Real Results</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Every system we build is custom-engineered around your workflows —
+            Every system we build is custom-engineered around your workflows,
             not off-the-shelf tools.
           </p>
         </div>
