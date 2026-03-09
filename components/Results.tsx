@@ -142,21 +142,20 @@ export default function Results() {
               }}
             >
               <div
-                className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-1"
-                style={{ fontFamily: "'Sora', sans-serif", color: "#6EADD4" }}
+                className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-2"
+                style={{ fontFamily: "'Sora', sans-serif", color: "#4A8EBB" }}
               >
                 {stat.value}
                 {stat.unit && (
-                  <span className="text-2xl md:text-3xl text-brand-300 ml-0.5">{stat.unit}</span>
+                  <span className="text-2xl md:text-3xl ml-0.5" style={{ color: "#4A8EBB" }}>{stat.unit}</span>
                 )}
               </div>
               <div
-                className="text-sm font-bold text-gray-900 mb-2"
+                className="text-sm font-semibold text-gray-600"
                 style={{ fontFamily: "'Sora', sans-serif" }}
               >
                 {stat.label}
               </div>
-              <p className="text-xs text-gray-400 leading-[1.6]">{stat.description}</p>
             </div>
           ))}
         </div>
