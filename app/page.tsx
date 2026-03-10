@@ -5,7 +5,6 @@ import AgentTypes from "@/components/AgentTypes";
 import Results from "@/components/Results";
 import HowItWorks from "@/components/HowItWorks";
 import CaseStudies from "@/components/CaseStudies";
-import About from "@/components/About";
 import Advisors from "@/components/Advisors";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -20,7 +19,6 @@ export default function Home() {
       <AgentTypes />
       <Results />
       <CaseStudies />
-      <About />
       <Advisors />
       <FinalCTA />
       <Footer />
