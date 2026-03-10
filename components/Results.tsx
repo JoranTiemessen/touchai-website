@@ -1,5 +1,5 @@
 const stats = [
-  { value: "80+", unit: "hrs/mo", label: "Hours saved per client" },
+  { value: "80", unit: "hrs/mo", label: "Hours saved per client" },
   { value: "3×", unit: "", label: "More qualified leads" },
   { value: "<2", unit: "min", label: "Lead response time" },
   { value: "80%", unit: "", label: "Queries automated" },
