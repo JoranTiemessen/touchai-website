@@ -62,14 +62,15 @@ export default function Results() {
               }}
             >
               <div
-                className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-2"
+                className="text-4xl md:text-5xl font-bold tracking-[-0.03em] leading-none"
                 style={{ fontFamily: "'Sora', sans-serif", color: "#4A8EBB" }}
               >
                 {stat.value}
-                {stat.unit && (
-                  <span className="text-2xl md:text-3xl ml-0.5" style={{ color: "#4A8EBB" }}>{stat.unit}</span>
-                )}
               </div>
+              {stat.unit && (
+                <div className="text-base font-bold mt-0.5 mb-1" style={{ color: "#4A8EBB", fontFamily: "'Sora', sans-serif" }}>{stat.unit}</div>
+              )}
+              {!stat.unit && <div className="mb-2" />}
               <div
                 className="text-sm font-semibold text-gray-600"
                 style={{ fontFamily: "'Sora', sans-serif" }}
