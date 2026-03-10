@@ -4,7 +4,7 @@ const advisors = [
   {
     name: "Raymond Tiemessen",
     initials: "RT",
-    photo: null,
+    photo: "/ray.jpeg",
     tagline: "Advisor — Finance, Technology & Innovation",
     location: "Amersfoort, Netherlands",
     bio: "Ondernemer met meer dan 30 jaar ervaring op het snijvlak van financiële dienstverlening, technologie en innovatie. Begonnen als kredietacceptant en hypotheekanalist, waarna verdere specialisatie volgde in projectmanagement binnen fintech, met focus op de verkoop en implementatie van Mortgage-Backed Securities (MBS) software voor banken, pensioenfondsen en verzekeraars. Naast activiteiten in de financiële sector mede-eigenaar en ontwikkelaar van een internetplatform. Mede-oprichter van een interdisciplinair laboratorium gericht op de ontwikkeling van duurzame materialen en recent mede-oprichter van een biotech spin-off die biologisch afbreekbare plastics ontwikkelt.",
