@@ -67,7 +67,7 @@ export default function Hero() {
           {/* Stats */}
           <div className="mt-16 flex flex-wrap gap-x-10 gap-y-4">
             {[
-              { value: "200+", label: "Hours saved per client/mo" },
+              { value: "80+", label: "Hours saved per client/mo" },
               { value: "3×", label: "More qualified leads" },
               { value: "80%", label: "Queries handled automatically" },
             ].map((stat) => (

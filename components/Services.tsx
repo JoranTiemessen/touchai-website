@@ -13,7 +13,7 @@ const services = [
     title: "AI Workflow Automation",
     description:
       "Automate repetitive business processes using AI-powered systems that work 24/7 without supervision.",
-    benefit: "Eliminate manual work and reclaim 100+ hours per month",
+    benefit: "Eliminate manual work and reclaim 80+ hours per month",
     tag: "Most popular",
   },
   {
@@ -54,12 +54,10 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(255,255,255,0.88)" }}>
-      {/* Section background accent */}
       <div
         className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none opacity-40"
         style={{
-          background:
-            "radial-gradient(ellipse 60% 60% at 100% 0%, rgba(110,173,212,0.1) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse 60% 60% at 100% 0%, rgba(110,173,212,0.1) 0%, transparent 70%)",
         }}
       />
 
@@ -77,19 +75,17 @@ export default function Services() {
             <span style={{ color: "#6EADD4" }}>Real Results</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Every system we build is custom-engineered around your workflows,
-            not off-the-shelf tools.
+            Every system we build is custom-engineered around your workflows, not off-the-shelf tools.
           </p>
         </div>
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, i) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className="relative group card-elevated rounded-2xl p-8 hover:shadow-brand-lg transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Popular tag */}
               {service.tag && (
                 <div className="absolute -top-3 left-8 px-3 py-1 rounded-full text-xs font-bold text-white"
                   style={{ background: "linear-gradient(90deg, #6EADD4, #4A8EBB)" }}>
@@ -97,7 +93,6 @@ export default function Services() {
                 </div>
               )}
 
-              {/* Icon container */}
               <div
                 className="w-16 h-16 rounded-xl flex items-center justify-center mb-6"
                 style={{
@@ -118,7 +113,6 @@ export default function Services() {
                 {service.description}
               </p>
 
-              {/* Benefit pill */}
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 rounded-full flex items-center justify-center flex-shrink-0"
                   style={{ background: "rgba(110,173,212,0.15)" }}>
@@ -129,7 +123,6 @@ export default function Services() {
                 <span className="text-xs font-semibold text-brand-500">{service.benefit}</span>
               </div>
 
-              {/* Bottom border accent on hover */}
               <div
                 className="absolute bottom-0 left-0 right-0 h-0.5 rounded-b-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{ background: "linear-gradient(90deg, #6EADD4, #9FCAE3)" }}
