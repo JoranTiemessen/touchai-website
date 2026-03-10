@@ -190,12 +190,6 @@ function TeamCard({ member, wide = false }: { member: typeof team[0]; wide?: boo
             <span className="text-sm font-semibold" style={{ color: "#6EADD4" }}>
               {member.tagline}
             </span>
-            {member.age && (
-              <>
-                <span className="text-gray-300">·</span>
-                <span className="text-sm text-gray-400">{member.age} years old</span>
-              </>
-            )}
           </div>
           <div className="flex items-center gap-1.5 mt-1.5 text-xs text-gray-400">
             <svg className="w-3 h-3" viewBox="0 0 16 16" fill="currentColor">

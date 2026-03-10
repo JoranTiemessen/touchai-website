@@ -1,92 +1,78 @@
 export default function FinalCTA() {
   return (
-    <section id="contact" className="relative py-24 md:py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0"
-        style={{
-          background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 50%, #3474A0 100%)",
-        }}
-      />
-
-      {/* Noise texture */}
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-        }}
-      />
-
-      {/* Radial glows */}
+    <section id="contact" className="relative py-24 md:py-32 bg-gray-950 overflow-hidden">
+      {/* Background glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 60% at 20% 50%, rgba(255,255,255,0.12) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 80% 50%, rgba(255,255,255,0.08) 0%, transparent 60%)",
+            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(110,173,212,0.10) 0%, transparent 70%)",
         }}
       />
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{ background: "linear-gradient(90deg, transparent, rgba(110,173,212,0.4), transparent)" }}
+      />
 
-      {/* Decorative circles */}
-      <div className="absolute top-0 right-0 w-72 h-72 rounded-full border border-white/10 -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-56 h-56 rounded-full border border-white/10 translate-y-1/2 -translate-x-1/4 pointer-events-none" />
-
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 border border-white/25 text-white/90 text-xs font-semibold tracking-wider uppercase mb-8 backdrop-blur-sm">
-          <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-          Free, No Obligation
+      <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-semibold tracking-wider uppercase mb-8"
+          style={{
+            background: "rgba(110,173,212,0.08)",
+            borderColor: "rgba(110,173,212,0.25)",
+            color: "#9FCAE3",
+          }}
+        >
+          <span className="w-1.5 h-1.5 rounded-full bg-brand-400" />
+          Free strategy call
         </div>
 
-        {/* Headline */}
         <h2
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-[-0.03em] mb-6 leading-[1.06]"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-[-0.03em] mb-5 leading-[1.1]"
           style={{ fontFamily: "'Sora', sans-serif" }}
         >
-          Start Automating Your
+          Ready to reclaim
           <br />
-          Business Today
+          <span style={{ color: "#6EADD4" }}>hundreds of hours?</span>
         </h2>
 
-        {/* Subheadline */}
-        <p className="text-lg md:text-xl text-white/75 leading-[1.7] mb-10 max-w-2xl mx-auto">
-          Book a free AI automation audit and discover exactly how AI can
-          transform your operations, no commitment required.
+        <p className="text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
+          Book a free 30-minute audit. We'll identify your top automation opportunities and show you exactly what we'd build, with no obligation.
         </p>
 
-        {/* What you get */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           {[
-            "Identify top automation opportunities",
-            "Custom AI roadmap for your business",
-            "Clear ROI projection",
+            "No obligation",
+            "Results in weeks",
+            "Built for your business",
           ].map((item) => (
-            <div key={item} className="flex items-center gap-2 text-sm text-white/80">
-              <svg className="w-4 h-4 flex-shrink-0 text-white" viewBox="0 0 16 16" fill="none">
-                <circle cx="8" cy="8" r="7" fill="rgba(255,255,255,0.2)" />
-                <path d="M5 8l2 2 4-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <div key={item} className="flex items-center gap-2 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 16 16" fill="none" style={{ color: "#6EADD4" }}>
+                <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               {item}
             </div>
           ))}
         </div>
 
-        {/* CTA Button */}
         <a
           href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-brand-500 font-bold text-base hover:bg-brand-50 active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-3"
+          className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white font-semibold text-[15px] hover:opacity-90 active:scale-[0.98] transition-all duration-200 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-3"
           style={{
-            boxShadow: "0 8px 32px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1)",
+            background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)",
+            boxShadow: "0 6px 20px rgba(110,173,212,0.35)",
           }}
         >
-          Book Your Free AI Audit
-          <svg className="w-5 h-5" viewBox="0 0 20 20" fill="none">
-            <path d="M4 10h12M12 6l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          Book Free Audit
+          <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </a>
 
-        <p className="mt-5 text-sm text-white/50">
-          Typical response within 24 hours. No spam, ever.
+        <p className="mt-5 text-[13px]" style={{ color: "rgba(255,255,255,0.25)" }}>
+          info@touchaiagency.com
         </p>
       </div>
     </section>
