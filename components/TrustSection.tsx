@@ -3,7 +3,8 @@ export default function TrustSection() {
     { name: "Bookmatch", logo: "/logos/bookmatch.png" },
     { name: "Savvy Moves", logo: "/logos/savvy-moves.svg" },
     { name: "Smart Promo Marketing", logo: "/logos/smartpromo.png" },
-    { name: "RS Luxury Services", logo: "/logos/rsluxury.png" },
+    { name: "RS Luxury Services", logo: "/logos/rsluxury.png", tight: true },
+    { name: "Orion Hiring", logo: "/logos/orion.png" },
   ];
 
   const loop = [...companies, ...companies];
@@ -26,7 +27,7 @@ export default function TrustSection() {
             {loop.map((c, i) => (
               <div
                 key={`${c.name}-${i}`}
-                className="flex items-center gap-3 shrink-0"
+                className={`flex items-center ${c.tight ? "gap-1" : "gap-3"} shrink-0`}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
