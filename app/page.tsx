@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TrustSection from "@/components/TrustSection";
 import Services from "@/components/Services";
 import AgentTypes from "@/components/AgentTypes";
 import Results from "@/components/Results";
@@ -14,6 +15,7 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <TrustSection />
       <Services />
       <HowItWorks />
       <AgentTypes />
