@@ -35,23 +35,6 @@ const team = [
       "System Integration",
     ],
   },
-  {
-    name: "Raymond Tiemessen",
-    age: null,
-    initials: "RT",
-    photo: "/ray.jpeg",
-    tagline: "Finance, Technology & Innovation",
-    role: "Advisor",
-    bio: "Raymond brings over 30 years of experience at the intersection of financial services, technology, and innovation to Touch AI. Starting as a credit analyst and mortgage specialist, he went on to lead fintech projects focused on Mortgage-Backed Securities software for banks, pension funds, and insurers. Beyond finance, he has co-founded an internet platform, launched an interdisciplinary lab for sustainable materials, and most recently co-founded a biotech spin-off developing biodegradable plastics. His combination of financial expertise, technology insight, and entrepreneurial track record gives Touch AI a strong foundation for scaling.",
-    skills: [
-      "Financial Services",
-      "Fintech & MBS Software",
-      "Venture Building",
-      "Project Management",
-      "Technology Innovation",
-      "Sustainable Materials",
-    ],
-  },
 ];
 
 export default function Advisors() {
@@ -78,21 +61,20 @@ export default function Advisors() {
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            A family built on{" "}
-            <span style={{ color: "#6EADD4" }}>building things</span>
+            Two brothers,{" "}
+            <span style={{ color: "#6EADD4" }}>one mission</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Touch AI is a family business. Joran and Jesper build and ship the AI systems. Their father Raymond brings decades of experience in finance, technology, and starting companies.
+            Touch AI is run by brothers Joran and Jesper Tiemessen. Together they design, build, and ship the AI systems that make real differences in how our clients work.
           </p>
         </div>
 
-        {/* Team cards — founders side by side, advisor full width below */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {team.slice(0, 2).map((member) => (
+        {/* Team cards — founders side by side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {team.map((member) => (
             <TeamCard key={member.name} member={member} />
           ))}
         </div>
-        <TeamCard member={team[2]} wide />
 
         {/* Why we started strip */}
         <div
@@ -132,10 +114,10 @@ export default function Advisors() {
   );
 }
 
-function TeamCard({ member, wide = false }: { member: typeof team[0]; wide?: boolean }) {
+function TeamCard({ member }: { member: typeof team[0] }) {
   return (
     <div
-      className={`rounded-3xl p-8 md:p-10 flex flex-col gap-7 ${wide ? "lg:flex-row lg:gap-10" : ""}`}
+      className="rounded-3xl p-8 md:p-10 flex flex-col gap-7"
       style={{
         background: "rgba(255,255,255,0.95)",
         boxShadow:
@@ -144,7 +126,7 @@ function TeamCard({ member, wide = false }: { member: typeof team[0]; wide?: boo
       }}
     >
       {/* Avatar + name */}
-      <div className={`flex items-center gap-5 ${wide ? "lg:flex-col lg:items-start lg:w-56 lg:flex-shrink-0" : ""}`}>
+      <div className="flex items-center gap-5">
         <div
           className="w-20 h-20 rounded-2xl flex-shrink-0 overflow-hidden"
           style={{ boxShadow: "0 8px 24px rgba(110,173,212,0.30)" }}
