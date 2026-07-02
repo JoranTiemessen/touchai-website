@@ -128,17 +128,16 @@ function TeamCard({ member }: { member: typeof team[0] }) {
       {/* Avatar + name */}
       <div className="flex items-center gap-5">
         <div
-          className="w-20 h-20 rounded-2xl flex-shrink-0 overflow-hidden"
+          className="w-28 h-28 md:w-32 md:h-32 rounded-2xl flex-shrink-0 overflow-hidden"
           style={{ boxShadow: "0 8px 24px rgba(110,173,212,0.30)" }}
         >
           {member.photo ? (
             <Image
               src={member.photo}
               alt={member.name}
-              width={80}
-              height={80}
-              className="w-full h-full object-cover object-[center_20%]"
-              style={{ transform: "scale(1.15)", transformOrigin: "center 25%" }}
+              width={160}
+              height={160}
+              className="w-full h-full object-cover object-[center_18%]"
             />
           ) : (
             <div
