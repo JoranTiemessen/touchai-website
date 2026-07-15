@@ -25,7 +25,7 @@ export default function Hero() {
             }}
           >
             <span className="w-1.5 h-1.5 rounded-full bg-brand-400" />
-            AI Workforce · voor het MKB
+            The AI Leap · AI Workforce
           </div>
 
           {/* Headline */}
@@ -40,7 +40,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-base md:text-lg text-gray-500 leading-relaxed mb-10 max-w-xl">
-            Dat is <strong className="font-semibold text-gray-700">€3.000 tot €5.000 per maand</strong> aan loonkosten die je niet hoeft te maken. Geen vage AI-adviezen, maar een team AI-agents dat wij bouwen op de systemen die je nu al gebruikt. Jouw team stopt met repetitief werk.
+            Dat is <strong className="font-semibold text-gray-700">€3.000 tot €5.000 per maand</strong> aan loonkosten die je niet hoeft te maken. Geen vage AI-adviezen. Met <strong className="font-semibold text-gray-700">The AI Leap</strong> installeren we een team AI-agents, jouw AI Workforce, op de systemen die je nu al gebruikt. Jouw team stopt met repetitief werk.
           </p>
 
           {/* CTA buttons */}

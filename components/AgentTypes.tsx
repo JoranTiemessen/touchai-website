@@ -117,7 +117,7 @@ Dit krijg je, concreet
 
         {/* Footnote */}
         <p className="text-sm text-gray-400 leading-[1.7] mt-6 max-w-3xl mx-auto text-center">
-          De besparing is opgeteld over je hele team. De exacte mix van agents stemmen we af op jouw bedrijf. Dat doen we in de tijdscan (stap 1). Alles wordt gebouwd op je bestaande systemen.
+          De besparing is opgeteld over je hele team. De exacte mix van agents stemmen we af op jouw bedrijf. Dat doen we in de Tijdlek-scan (stap 1). Alles wordt gebouwd op je bestaande systemen.
         </p>
 
         <div className="mt-10 text-center">

@@ -1,8 +1,8 @@
 const reassurances = [
+  "Je betaalt pas vanaf het moment dat je eerste agent live staat.",
   "Alles wat we bouwen blijft van jou, ook als we uit elkaar gaan.",
   "Gebouwd op je bestaande systemen. Geen migratie, geen gedoe.",
-  "Elke maand een rapport: bespaarde uren per agent, zwart op wit.",
-  "Max 2 nieuwe implementaties per maand, zodat elke klant onze volle aandacht krijgt.",
+  "Elke maand een rapport met bespaarde uren per agent, zwart op wit.",
 ];
 
 export default function Results() {

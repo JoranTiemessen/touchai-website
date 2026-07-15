@@ -40,6 +40,10 @@ export default function FinalCTA() {
           Plan een gratis gesprek van 30 minuten. We laten je precies zien welke agents het meeste opleveren en wat we voor je zouden bouwen. Volledig vrijblijvend.
         </p>
 
+        <p className="text-sm mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.38)" }}>
+          Voor Nederlandse MKB-bedrijven vanaf 5 medewerkers waar de eigenaar zelf meewerkt en dagelijks de pijn van repetitief werk voelt.
+        </p>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           {[
             "Vrijblijvend",

@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Touch AI Agency · Bespaar een volledige FTE met AI",
   description:
-    "Wij bouwen een team AI-agents op je bestaande systemen dat een volledige FTE aan werk overneemt. 40 uur per week terug, binnen 90 dagen gegarandeerd.",
+    "Met The AI Leap installeren wij een team AI-agents (je AI Workforce) op je bestaande systemen dat een volledige FTE aan werk overneemt. 40 uur per week terug, binnen 90 dagen gegarandeerd.",
   openGraph: {
     title: "Touch AI Agency · Jouw AI Workforce",
     description:

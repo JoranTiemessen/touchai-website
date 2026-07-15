@@ -42,7 +42,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-[1.7] max-w-xs mb-6">
-              Wij bouwen een team AI-agents op je bestaande systemen dat het repetitieve werk overneemt. Een volledige FTE terug, elke maand opnieuw.
+              Met The AI Leap installeren we een team AI-agents op je bestaande systemen dat het repetitieve werk overneemt. Een volledige FTE terug, elke maand opnieuw.
             </p>
             {/* Social */}
             <div className="flex gap-3">

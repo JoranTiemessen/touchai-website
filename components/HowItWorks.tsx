@@ -2,30 +2,37 @@ const steps = [
   {
     number: "01",
     when: "Week 1",
-    title: "Tijdscan",
+    title: "Tijdlek-scan",
     description:
-      "Eén sessie van 2 uur. We meten precies waar de uren in jouw bedrijf weglekken en wat dat je nu per maand kost. Dat is de nulmeting, daar rekenen we ons straks op af.",
+      "Eén sessie van 2 uur. Binnen een week zwart op wit waar de uren in jouw bedrijf weglekken en wat elk lek per maand kost. Dat is de nulmeting, daar rekenen we ons straks op af.",
   },
   {
     number: "02",
     when: "Week 2",
     title: "Agent-blauwdruk",
     description:
-      "Jouw AI-team op één pagina: welke agents, welke besparing per agent, welke systemen ze gebruiken. Jij weet exact wat er gebouwd wordt vóór we bouwen.",
+      "Jouw AI-team op één pagina: welke agent welk tijdlek oplost, hoeveel uur dat scheelt en welke systemen hij gebruikt. Jij weet exact wat er gebouwd wordt.",
   },
   {
     number: "03",
     when: "Eerste agent live in week 3",
-    title: "Bouwen",
+    title: "Bouw en koppeling",
     description:
-      "We starten met je grootste tijdvreter, zodat je direct resultaat ziet. Daarna rollen we agent voor agent uit. Jouw team is er max 2 uur per week mee bezig.",
+      "We starten met je grootste tijdvreter, gekoppeld op je bestaande systemen. Niks migreren. Daarna rollen we agent voor agent uit.",
   },
   {
     number: "04",
     when: "Doorlopend",
-    title: "Adoptie & meting",
+    title: "Team-adoptie",
     description:
-      "We trainen je team tot de agents dagelijks gebruikt worden, want een ongebruikte agent bespaart nul uur. Elke maand een rapport: bespaarde uren per agent, afgezet tegen de nulmeting.",
+      "We trainen je mensen tot elke agent dagelijks gebruikt wordt, want een ongebruikte agent bespaart nul uur. Jouw team is er max 2 uur per week mee bezig.",
+  },
+  {
+    number: "05",
+    when: "Elke maand",
+    title: "Meting en uitbreiding",
+    description:
+      "Elke maand een rapport met bespaarde uren per agent, afgezet tegen de nulmeting. En we breiden je AI-team stap voor stap verder uit.",
   },
 ];
 
@@ -41,7 +48,7 @@ export default function HowItWorks() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-semibold tracking-wider uppercase mb-5"
             style={{ background: "rgba(110,173,212,0.06)", borderColor: "rgba(110,173,212,0.25)", color: "#6EADD4" }}
           >
-            Van kick-off naar resultaat in 90 dagen
+            De AIOS-methode
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-4"
@@ -51,12 +58,12 @@ export default function HowItWorks() {
             <span style={{ color: "#6EADD4" }}>aan</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Je koopt geen software en geen adviesrapport. Je koopt een meetbaar resultaat: 40 uur per week terug, binnen 90 dagen.
+            The AI Leap brengt je van kick-off naar resultaat in 90 dagen. Je koopt geen software en geen adviesrapport, maar een meetbaar resultaat: 40 uur per week terug.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
           {steps.map((step) => (
             <div key={step.title} className="relative">
               <div
