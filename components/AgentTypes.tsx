@@ -9,7 +9,7 @@ type Look = {
 
 const agents: { name: string; does: string; hours: number; look: Look }[] = [
   {
-    name: "E-mailbuddy",
+    name: "E-mail agent",
     does: "Leest, sorteert en beantwoordt terugkerende mail. Jij keurt alleen nog goed.",
     hours: 6,
     look: { color: "#4A8EBB", light: "#7CB4DA", eyes: "round", mouth: "smile", top: "antenna" },
@@ -27,7 +27,7 @@ const agents: { name: string; does: string; hours: number; look: Look }[] = [
     look: { color: "#3FA99B", light: "#6FC7BC", eyes: "focused", mouth: "calm", top: "antenna" },
   },
   {
-    name: "Notulen-agent",
+    name: "Meeting-agent",
     does: "Elke meeting automatisch samengevat, actiepunten verdeeld over het team.",
     hours: 4,
     look: { color: "#8A78CE", light: "#AC9CE4", eyes: "round", mouth: "calm", top: "double" },
@@ -51,7 +51,7 @@ const agents: { name: string; does: string; hours: number; look: Look }[] = [
     look: { color: "#34AEC0", light: "#66C7D4", eyes: "round", mouth: "smile", top: "antenna" },
   },
   {
-    name: "Klantvragen-agent",
+    name: "Klantenservice-agent",
     does: "Beantwoordt de steeds terugkerende klantvragen via mail en WhatsApp.",
     hours: 7,
     look: { color: "#7B93DE", light: "#A0B3E8", eyes: "round", mouth: "grin", top: "headset" },
