@@ -24,7 +24,7 @@ export default function FinalCTA() {
           }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-brand-400" />
-          Gratis kennismaking
+          Gratis Tijdlek-scan
         </div>
 
         <h2
@@ -37,7 +37,7 @@ export default function FinalCTA() {
         </h2>
 
         <p className="text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
-          Plan een gratis gesprek van 30 minuten. We laten je precies zien welke agents het meeste opleveren en wat we voor je zouden bouwen. Volledig vrijblijvend.
+          Doe de gratis Tijdlek-scan. In een gesprek van 30 minuten laten we je precies zien waar bij jou de uren weglekken, welke agents het meeste opleveren en wat we voor je zouden bouwen. Volledig vrijblijvend.
         </p>
 
         <p className="text-sm mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.38)" }}>
@@ -69,7 +69,7 @@ export default function FinalCTA() {
             boxShadow: "0 6px 20px rgba(110,173,212,0.35)",
           }}
         >
-          Plan een gratis gesprek
+          Doe de gratis Tijdlek-scan
           <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

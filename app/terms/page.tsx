@@ -11,84 +11,84 @@ export default function TermsOfService() {
           className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-4"
           style={{ fontFamily: "'Sora', sans-serif" }}
         >
-          Terms of Service
+          Algemene voorwaarden
         </h1>
-        <p className="text-sm text-gray-400 mb-12">Last updated: March 2026</p>
+        <p className="text-sm text-gray-400 mb-12">Laatst bijgewerkt: juli 2026</p>
 
         <div className="prose prose-gray max-w-none space-y-10 text-gray-600 leading-[1.8]">
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>1. About Us</h2>
-            <p>These Terms of Service govern the use of the website and services provided by Touch AI Agency, operated by Joran Tiemessen and Jesper Tiemessen, based in Amersfoort, the Netherlands. By using our website or engaging our services, you agree to these terms.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>1. Over ons</h2>
+            <p>Deze algemene voorwaarden zijn van toepassing op het gebruik van de website en de diensten van Touch AI Agency, gerund door Joran Tiemessen en Jesper Tiemessen, gevestigd in Amersfoort, Nederland. Door onze website te gebruiken of onze diensten af te nemen, ga je akkoord met deze voorwaarden.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>2. Services</h2>
-            <p>Touch AI Agency provides AI automation consulting and implementation services, including but not limited to:</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>2. Diensten</h2>
+            <p>Touch AI Agency levert advies en implementatie op het gebied van AI-automatisering, waaronder maar niet beperkt tot:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
-              <li>AI workflow automation</li>
-              <li>Lead generation systems</li>
-              <li>Custom AI chatbots and assistants</li>
-              <li>Data pipeline automation</li>
-              <li>AI strategy consulting</li>
+              <li>AI-workflow automatisering</li>
+              <li>Leadgeneratie-systemen</li>
+              <li>Maatwerk AI-agents en assistenten</li>
+              <li>Datapijplijn-automatisering</li>
+              <li>AI-strategie advies</li>
             </ul>
-            <p className="mt-3">The specific scope, deliverables, timeline, and pricing of each engagement are agreed upon individually before work begins.</p>
+            <p className="mt-3">De precieze scope, opleverpunten, planning en prijs van elk traject worden vooraf per opdracht afgesproken voordat het werk begint.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>3. Bookings and Consultations</h2>
-            <p>Free consultations can be booked via our website. These calls are non-binding and carry no obligation for either party. Touch AI Agency reserves the right to decline any engagement without providing a reason.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>3. Gesprekken en Tijdlek-scan</h2>
+            <p>Een gratis Tijdlek-scan of kennismakingsgesprek kun je via onze website inplannen. Deze gesprekken zijn vrijblijvend en verplichten geen van beide partijen tot iets. Touch AI Agency behoudt zich het recht voor om een opdracht zonder opgaaf van reden te weigeren.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>4. Payment</h2>
-            <p>Payment terms are specified in the individual service agreement or proposal. Unless otherwise agreed:</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>4. Betaling</h2>
+            <p>Betalingsvoorwaarden staan in de individuele overeenkomst of offerte. Tenzij anders overeengekomen:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
-              <li>Invoices are due within 14 days of receipt</li>
-              <li>Late payments may incur a statutory interest charge under Dutch law</li>
-              <li>Work may be paused if payment is overdue by more than 14 days</li>
+              <li>Facturen dienen binnen 14 dagen na ontvangst te worden voldaan</li>
+              <li>Bij te late betaling kan de wettelijke rente in rekening worden gebracht</li>
+              <li>Werkzaamheden kunnen worden gepauzeerd als een betaling meer dan 14 dagen openstaat</li>
             </ul>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>5. Intellectual Property</h2>
-            <p>Upon full payment, the client receives ownership of all custom deliverables created specifically for them. Touch AI Agency retains the right to reuse generic components, frameworks, and methodologies developed during the engagement. We may reference the client relationship in our portfolio unless otherwise agreed in writing.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>5. Intellectueel eigendom</h2>
+            <p>Na volledige betaling wordt de klant eigenaar van alle maatwerk die specifiek voor hem is gebouwd. Touch AI Agency behoudt het recht om generieke componenten, frameworks en methodieken die tijdens het traject zijn ontwikkeld, opnieuw te gebruiken. We mogen de samenwerking benoemen in onze portfolio, tenzij schriftelijk anders is afgesproken.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>6. Confidentiality</h2>
-            <p>Both parties agree to keep confidential any sensitive business information shared during the engagement. This obligation remains in effect for 2 years after the end of the engagement.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>6. Vertrouwelijkheid</h2>
+            <p>Beide partijen houden gevoelige bedrijfsinformatie die tijdens het traject wordt gedeeld vertrouwelijk. Deze verplichting blijft van kracht tot 2 jaar na afloop van de samenwerking.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>7. Limitation of Liability</h2>
-            <p>Touch AI Agency is not liable for any indirect, incidental, or consequential damages arising from the use of our services. Our total liability in any case is limited to the amount paid for the specific service that gave rise to the claim.</p>
-            <p className="mt-3">We do not guarantee specific results such as revenue increases or lead generation targets, as these depend on factors beyond our control.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>7. Aansprakelijkheid en garantie</h2>
+            <p>Touch AI Agency is niet aansprakelijk voor indirecte, incidentele of gevolgschade die voortvloeit uit het gebruik van onze diensten. Onze totale aansprakelijkheid is in elk geval beperkt tot het bedrag dat is betaald voor de specifieke dienst die aanleiding gaf tot de claim.</p>
+            <p className="mt-3">De resultaatgarantie die we bij een traject afgeven (het afgesproken aantal bespaarde uren binnen 90 dagen, of we werken kosteloos door) staat los van deze aansprakelijkheidsbeperking en wordt per opdracht schriftelijk vastgelegd.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>8. Cancellation</h2>
-            <p>Either party may terminate an ongoing engagement with 14 days written notice. Work completed up to the point of cancellation will be invoiced at the agreed rate. Prepaid amounts for work not yet started will be refunded.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>8. Opzegging</h2>
+            <p>Beide partijen kunnen een lopend traject beëindigen met een schriftelijke opzegtermijn van 14 dagen. Werk dat tot het moment van opzegging is uitgevoerd, wordt tegen het afgesproken tarief gefactureerd. Vooruitbetaalde bedragen voor nog niet gestart werk worden terugbetaald.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>9. Website Use</h2>
-            <p>The content on this website is for informational purposes only. You may not copy, reproduce, or distribute any content from this website without our prior written permission. We reserve the right to change or remove content at any time without notice.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>9. Gebruik van de website</h2>
+            <p>De content op deze website is uitsluitend informatief. Je mag geen content van deze website kopiëren, verveelvoudigen of verspreiden zonder onze voorafgaande schriftelijke toestemming. We behouden ons het recht voor om content op elk moment zonder aankondiging te wijzigen of te verwijderen.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>10. Governing Law</h2>
-            <p>These terms are governed by Dutch law. Any disputes will be submitted to the competent court in the Netherlands.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>10. Toepasselijk recht</h2>
+            <p>Op deze voorwaarden is Nederlands recht van toepassing. Eventuele geschillen worden voorgelegd aan de bevoegde rechter in Nederland.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>11. Changes to These Terms</h2>
-            <p>We may update these Terms of Service at any time. The most current version will always be available on this page. Continued use of our website or services after changes constitutes acceptance of the updated terms.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>11. Wijzigingen in deze voorwaarden</h2>
+            <p>We kunnen deze algemene voorwaarden op elk moment bijwerken. De meest actuele versie staat altijd op deze pagina. Blijf je onze website of diensten gebruiken na een wijziging, dan geldt dat als acceptatie van de bijgewerkte voorwaarden.</p>
           </div>
 
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>12. Contact</h2>
-            <p>Touch AI Agency<br />Amersfoort, Netherlands<br /><a href="mailto:info@touchaiagency.com" className="text-blue-500 hover:underline">info@touchaiagency.com</a></p>
+            <p>Touch AI Agency<br />Amersfoort, Nederland<br /><a href="mailto:info@touchaiagency.com" className="text-blue-500 hover:underline">info@touchaiagency.com</a></p>
           </div>
 
         </div>

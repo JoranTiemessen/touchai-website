@@ -79,7 +79,7 @@ export default function Navbar() {
               className="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 text-white text-sm font-semibold hover:bg-brand-500 active:bg-brand-600 transition-colors duration-200"
               style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
             >
-              Plan een gratis gesprek
+              Gratis Tijdlek-scan
             </a>
           </div>
 
@@ -134,7 +134,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="mt-2 btn-primary text-center px-5 py-2.5 rounded-full bg-brand-400 text-white text-sm font-semibold hover:bg-brand-500 transition-colors duration-200"
             >
-              Plan een gratis gesprek
+              Gratis Tijdlek-scan
             </a>
           </div>
         </div>

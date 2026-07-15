@@ -100,7 +100,7 @@ export default function HowItWorks() {
             className="btn-primary inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-400 text-white font-semibold text-[15px] hover:bg-brand-500 active:scale-[0.98] transition-all duration-150"
             style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
           >
-            Plan de kick-off
+            Doe de gratis Tijdlek-scan
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

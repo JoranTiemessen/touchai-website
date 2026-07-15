@@ -103,7 +103,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
                 >
-                  Plan een gesprek
+                  Gratis Tijdlek-scan
                 </a>
               </li>
               <li>
@@ -121,7 +121,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-brand-200 transition-colors duration-200"
                 >
-                  Plan een gratis gesprek
+                  Doe de gratis Tijdlek-scan
                   <svg className="w-3.5 h-3.5" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

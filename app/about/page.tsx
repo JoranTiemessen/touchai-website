@@ -7,30 +7,30 @@ const team = [
     name: "Joran Tiemessen",
     age: 25,
     initials: "JT",
-    tagline: "AI Strategy & Automation",
-    bio: "Joran leads client strategy and AI system design at Touch AI. With a sharp eye for business processes, he identifies exactly where automation creates the most value, then builds it. He specialises in connecting AI tools to real business outcomes: more leads, less manual work, and systems that keep running 24/7.",
+    tagline: "AI-strategie & automatisering",
+    bio: "Joran leidt de klantstrategie en het ontwerp van de AI-systemen bij Touch AI. Met een scherp oog voor bedrijfsprocessen ziet hij precies waar automatisering de meeste waarde oplevert, en bouwt het vervolgens. Hij verbindt AI aan concrete resultaten: meer tijd, minder handwerk, en systemen die 24/7 blijven draaien.",
     skills: [
-      "AI Workflow Automation",
-      "Process Optimisation",
-      "Client Strategy",
-      "Lead Generation Systems",
-      "Claude & GPT API Integration",
-      "Business Analysis",
+      "AI-workflow automatisering",
+      "Procesoptimalisatie",
+      "Klantstrategie",
+      "Leadgeneratie-systemen",
+      "Claude & GPT API-integratie",
+      "Bedrijfsanalyse",
     ],
   },
   {
     name: "Jesper Tiemessen",
     age: 22,
     initials: "JT",
-    tagline: "AI Development & Integration",
-    bio: "Jesper handles the technical side: building, training, and deploying the AI systems that power client results. From custom chatbots to automated data pipelines, he turns complex AI capabilities into clean, reliable tools that non-technical teams can actually use. He works across Python, LLM APIs, and no-code platforms to ship fast and ship right.",
+    tagline: "AI-development & integratie",
+    bio: "Jesper doet de technische kant: het bouwen, trainen en uitrollen van de AI-systemen die de resultaten leveren. Van maatwerk-agents tot geautomatiseerde datapijplijnen: hij maakt complexe AI tot betrouwbare tools die ook een niet-technisch team gewoon kan gebruiken. Hij werkt met Python, LLM-API's en no-code om snel én goed te leveren.",
     skills: [
-      "Custom AI Development",
-      "LLM Integration",
-      "Python Automation",
-      "Chatbot Engineering",
-      "Data Pipeline Automation",
-      "System Integration",
+      "Maatwerk AI-development",
+      "LLM-integratie",
+      "Python-automatisering",
+      "Agent-engineering",
+      "Datapijplijn-automatisering",
+      "Systeemintegratie",
     ],
   },
 ];
@@ -56,13 +56,13 @@ export default function AboutPage() {
               className="w-1.5 h-1.5 rounded-full animate-pulse"
               style={{ background: "#6EADD4" }}
             />
-            The Team
+            Het team
           </div>
           <h1
             className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-[1.06] tracking-[-0.03em] mb-6"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            Built by two brothers
+            Gebouwd door twee broers
             <br />
             <span
               style={{
@@ -72,11 +72,11 @@ export default function AboutPage() {
                 backgroundClip: "text",
               }}
             >
-              from Amersfoort
+              uit Amersfoort
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-500 leading-[1.7] max-w-2xl mx-auto">
-            Touch AI Agency was founded by Joran and Jesper Tiemessen, two Dutch brothers with one shared obsession: making AI work for real businesses, not just on paper.
+            Touch AI Agency is opgericht door Joran en Jesper Tiemessen, twee broers met één gedeelde obsessie: AI écht laten werken voor bedrijven, niet alleen op papier.
           </p>
         </div>
       </section>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                         {member.tagline}
                       </span>
                       <span className="text-gray-300">·</span>
-                      <span className="text-sm text-gray-400">{member.age} years old</span>
+                      <span className="text-sm text-gray-400">{member.age} jaar</span>
                     </div>
                     <div className="flex items-center gap-1.5 mt-1.5">
                       <svg className="w-3.5 h-3.5 text-gray-400" viewBox="0 0 16 16" fill="currentColor">
@@ -131,7 +131,7 @@ export default function AboutPage() {
                       <svg className="w-3.5 h-3.5 text-gray-400" viewBox="0 0 16 16" fill="currentColor">
                         <path fillRule="evenodd" d="M8 1a5 5 0 00-3.536 8.536L8 13.07l3.536-3.534A5 5 0 008 1zm0 7a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-xs text-gray-400">Amersfoort, Netherlands</span>
+                      <span className="text-xs text-gray-400">Amersfoort, Nederland</span>
                     </div>
                   </div>
                 </div>
@@ -179,10 +179,10 @@ export default function AboutPage() {
                 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em] mb-4"
                 style={{ fontFamily: "'Sora', sans-serif" }}
               >
-                Why we started Touch AI
+                Waarom we Touch AI zijn begonnen
               </h3>
               <p className="text-gray-500 leading-[1.75]">
-                We kept seeing the same thing: great businesses drowning in repetitive work while AI sat unused. We built Touch AI to close that gap. No jargon, no overpriced consultants, just practical automation that makes a visible difference from day one.
+                We zagen steeds hetzelfde: goede bedrijven die verzuipen in repetitief werk, terwijl AI ongebruikt bleef. Touch AI dicht dat gat. Geen jargon, geen dure consultants, gewoon praktische automatisering die vanaf dag één een zichtbaar verschil maakt.
               </p>
               <a
                 href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
@@ -194,7 +194,7 @@ export default function AboutPage() {
                   boxShadow: "0 6px 20px rgba(110,173,212,0.40)",
                 }}
               >
-                Book a free call with us
+                Doe de gratis Tijdlek-scan
                 <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

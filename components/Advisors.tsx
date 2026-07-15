@@ -103,7 +103,7 @@ export default function Advisors() {
               boxShadow: "0 6px 20px rgba(110,173,212,0.40)",
             }}
           >
-            Plan een gratis gesprek
+            Doe de gratis Tijdlek-scan
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

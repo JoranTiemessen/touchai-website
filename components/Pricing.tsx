@@ -52,7 +52,7 @@ export default function Pricing() {
               </span>
             </div>
             <p className="text-sm text-gray-500 leading-[1.7]">
-              Tijdscan, blauwdruk en de complete bouw van jouw AI-team, inclusief training van je medewerkers.
+              Tijdlek-scan, blauwdruk en de complete bouw van jouw AI-team, inclusief training van je medewerkers.
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function Pricing() {
             className="btn-primary inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-base hover:opacity-95 active:scale-[0.98] transition-all duration-200"
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
           >
-            Plan de kick-off
+            Doe de gratis Tijdlek-scan
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
