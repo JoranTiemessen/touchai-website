@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Touch AI Agency · Jouw AI Workforce",
     description:
-      "Bespaar €5.000 per maand aan loonkosten. Een team AI-agents dat het repetitieve werk overneemt. Eerste agent live in 3 weken.",
+      "Bespaar gemiddeld €4.000 per maand aan loonkosten. Een team AI-agents dat het repetitieve werk overneemt. Eerste agent live in 3 weken.",
     type: "website",
     locale: "nl_NL",
   },

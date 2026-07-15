@@ -40,7 +40,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-base md:text-lg text-gray-500 leading-relaxed mb-10 max-w-xl">
-            Dat is <strong className="font-semibold text-gray-700">€5.000 per maand</strong> aan loonkosten die je niet hoeft te maken. Geen vage AI-adviezen. Met <strong className="font-semibold text-gray-700">The AI Leap</strong> installeren we een team AI-agents, jouw AI Workforce, op de systemen die je nu al gebruikt. Jouw team stopt met repetitief werk.
+            Dat is gemiddeld <strong className="font-semibold text-gray-700">€4.000 per maand</strong> aan loonkosten die je niet hoeft te maken. Geen vage AI-adviezen. Met <strong className="font-semibold text-gray-700">The AI Leap</strong> installeren we een team AI-agents, jouw AI Workforce, op de systemen die je nu al gebruikt. Jouw team stopt met repetitief werk.
           </p>
 
           {/* CTA buttons */}
