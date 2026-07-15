@@ -33,7 +33,7 @@ export default function Hero() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.05] tracking-[-0.03em] mb-6"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            Bespaar een volledige FTE.
+            Doe het werk van een volledige FTE.
             <br />
             <span style={{ color: "#6EADD4" }}>Zonder iemand aan te nemen.</span>
           </h1>
