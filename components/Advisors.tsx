@@ -6,16 +6,16 @@ const team = [
     age: 25,
     initials: "JT",
     photo: "/joran.jpeg",
-    tagline: "AI Strategy & Automation",
-    role: "Co-Founder",
-    bio: "Joran leads client strategy and AI system design at Touch AI. With a sharp eye for business processes, he identifies exactly where automation creates the most value, then builds it. He specialises in connecting AI tools to real business outcomes: more leads, less manual work, and systems that keep running 24/7.",
+    tagline: "AI-strategie & automatisering",
+    role: "Mede-oprichter",
+    bio: "Joran leidt de klantstrategie en het ontwerp van de AI-systemen bij Touch AI. Met een scherp oog voor bedrijfsprocessen ziet hij precies waar automatisering de meeste waarde oplevert, en bouwt het vervolgens. Hij verbindt AI aan concrete resultaten: meer tijd, minder handwerk, en systemen die 24/7 blijven draaien.",
     skills: [
-      "AI Workflow Automation",
-      "Process Optimisation",
-      "Client Strategy",
-      "Lead Generation Systems",
-      "Claude & GPT API Integration",
-      "Business Analysis",
+      "AI-workflow automatisering",
+      "Procesoptimalisatie",
+      "Klantstrategie",
+      "Leadgeneratie-systemen",
+      "Claude & GPT API-integratie",
+      "Bedrijfsanalyse",
     ],
   },
   {
@@ -23,16 +23,16 @@ const team = [
     age: 22,
     initials: "JT",
     photo: "/jesper.jpeg",
-    tagline: "AI Development & Integration",
-    role: "Co-Founder",
-    bio: "Jesper handles the technical side: building, training, and deploying the AI systems that power client results. From custom chatbots to automated data pipelines, he turns complex AI capabilities into clean, reliable tools that non-technical teams can actually use. He works across Python, LLM APIs, and no-code platforms to ship fast and ship right.",
+    tagline: "AI-development & integratie",
+    role: "Mede-oprichter",
+    bio: "Jesper doet de technische kant: het bouwen, trainen en uitrollen van de AI-systemen die de resultaten leveren. Van maatwerk-agents tot geautomatiseerde datapijplijnen: hij maakt complexe AI tot betrouwbare tools die ook een niet-technisch team gewoon kan gebruiken. Hij werkt met Python, LLM-API's en no-code om snel én goed te leveren.",
     skills: [
-      "Custom AI Development",
-      "LLM Integration",
-      "Python Automation",
-      "Chatbot Engineering",
-      "Data Pipeline Automation",
-      "System Integration",
+      "Maatwerk AI-development",
+      "LLM-integratie",
+      "Python-automatisering",
+      "Agent-engineering",
+      "Datapijplijn-automatisering",
+      "Systeemintegratie",
     ],
   },
 ];
@@ -40,7 +40,7 @@ const team = [
 export default function Advisors() {
   return (
     <section
-      id="about"
+      id="team"
       className="relative py-24 md:py-32 overflow-hidden"
       style={{ background: "rgba(255,255,255,0.88)" }}
     >
@@ -55,21 +55,21 @@ export default function Advisors() {
               color: "#6EADD4",
             }}
           >
-            The Team
+            Het team
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            Two brothers,{" "}
-            <span style={{ color: "#6EADD4" }}>one mission</span>
+            Twee broers,{" "}
+            <span style={{ color: "#6EADD4" }}>één missie</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Touch AI is run by brothers Joran and Jesper Tiemessen. Together they design, build, and ship the AI systems that make real differences in how our clients work.
+            Touch AI wordt gerund door de broers Joran en Jesper Tiemessen. Samen ontwerpen, bouwen en leveren ze de AI-systemen die een echt verschil maken in hoe onze klanten werken.
           </p>
         </div>
 
-        {/* Team cards — founders side by side */}
+        {/* Team cards - founders side by side */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {team.map((member) => (
             <TeamCard key={member.name} member={member} />
@@ -88,10 +88,10 @@ export default function Advisors() {
             className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em] mb-4"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            Why we started Touch AI
+            Waarom we Touch AI zijn begonnen
           </h3>
           <p className="text-gray-500 leading-[1.75] max-w-2xl mx-auto">
-            We kept seeing the same thing: great businesses drowning in repetitive work while AI sat unused. We built Touch AI to close that gap. No jargon, no overpriced consultants, just practical automation that makes a visible difference from day one.
+            We zagen steeds hetzelfde: goede bedrijven die verzuipen in repetitief werk, terwijl AI ongebruikt bleef. Touch AI dicht dat gat. Geen jargon, geen dure consultants, gewoon praktische automatisering die vanaf dag één een zichtbaar verschil maakt.
           </p>
           <a
             href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
@@ -103,7 +103,7 @@ export default function Advisors() {
               boxShadow: "0 6px 20px rgba(110,173,212,0.40)",
             }}
           >
-            Book a free call with us
+            Plan een gratis gesprek
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -176,7 +176,7 @@ function TeamCard({ member }: { member: typeof team[0] }) {
             <svg className="w-3 h-3" viewBox="0 0 16 16" fill="currentColor">
               <path fillRule="evenodd" d="M8 1a5 5 0 00-3.536 8.536L8 13.07l3.536-3.534A5 5 0 008 1zm0 7a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
             </svg>
-            Amersfoort, Netherlands
+            Amersfoort, Nederland
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function TrustSection() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-10">
-          Trusted by innovative businesses
+          Vertrouwd door vooruitstrevende bedrijven
         </p>
 
         <div className="relative">

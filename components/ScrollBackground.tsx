@@ -68,7 +68,7 @@ export default function ScrollBackground() {
         }}
       />
 
-      {/* Top-right orb — drifts up */}
+      {/* Top-right orb - drifts up */}
       <div
         data-orb
         data-speed="-0.12"
@@ -160,7 +160,7 @@ export default function ScrollBackground() {
         }}
       />
 
-      {/* Small accent orb — fast sway */}
+      {/* Small accent orb - fast sway */}
       <div
         data-orb
         data-speed="0.22"

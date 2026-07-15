@@ -8,7 +8,7 @@ const team = [
     age: 25,
     initials: "JT",
     tagline: "AI Strategy & Automation",
-    bio: "Joran leads client strategy and AI system design at Touch AI. With a sharp eye for business processes, he identifies exactly where automation creates the most value — then builds it. He specialises in connecting AI tools to real business outcomes: more leads, less manual work, and systems that keep running 24/7.",
+    bio: "Joran leads client strategy and AI system design at Touch AI. With a sharp eye for business processes, he identifies exactly where automation creates the most value, then builds it. He specialises in connecting AI tools to real business outcomes: more leads, less manual work, and systems that keep running 24/7.",
     skills: [
       "AI Workflow Automation",
       "Process Optimisation",
@@ -23,7 +23,7 @@ const team = [
     age: 22,
     initials: "JT",
     tagline: "AI Development & Integration",
-    bio: "Jesper handles the technical side — building, training, and deploying the AI systems that power client results. From custom chatbots to automated data pipelines, he turns complex AI capabilities into clean, reliable tools that non-technical teams can actually use. He works across Python, LLM APIs, and no-code platforms to ship fast and ship right.",
+    bio: "Jesper handles the technical side: building, training, and deploying the AI systems that power client results. From custom chatbots to automated data pipelines, he turns complex AI capabilities into clean, reliable tools that non-technical teams can actually use. He works across Python, LLM APIs, and no-code platforms to ship fast and ship right.",
     skills: [
       "Custom AI Development",
       "LLM Integration",
@@ -76,7 +76,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-500 leading-[1.7] max-w-2xl mx-auto">
-            Touch AI Agency was founded by Joran and Jesper Tiemessen — two Dutch brothers with one shared obsession: making AI work for real businesses, not just on paper.
+            Touch AI Agency was founded by Joran and Jesper Tiemessen, two Dutch brothers with one shared obsession: making AI work for real businesses, not just on paper.
           </p>
         </div>
       </section>
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 Why we started Touch AI
               </h3>
               <p className="text-gray-500 leading-[1.75]">
-                We kept seeing the same thing: great businesses drowning in repetitive work while AI sat unused. We built Touch AI to close that gap — no jargon, no overpriced consultants, just practical automation that makes a visible difference from day one.
+                We kept seeing the same thing: great businesses drowning in repetitive work while AI sat unused. We built Touch AI to close that gap. No jargon, no overpriced consultants, just practical automation that makes a visible difference from day one.
               </p>
               <a
                 href="https://calendar.app.google/7rRamUEnapLFZ2PS9"

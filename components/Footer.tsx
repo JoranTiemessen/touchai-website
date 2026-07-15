@@ -42,8 +42,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-[1.7] max-w-xs mb-6">
-              We build AI systems that automate workflows, generate leads, and save
-              businesses hundreds of hours every month.
+              Wij bouwen een team AI-agents op je bestaande systemen dat het repetitieve werk overneemt. Een volledige FTE terug, elke maand opnieuw.
             </p>
             {/* Social */}
             <div className="flex gap-3">
@@ -68,14 +67,14 @@ export default function Footer() {
               className="text-sm font-semibold text-white mb-5 tracking-wide"
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
-              Company
+              Navigatie
             </h4>
             <ul className="space-y-3">
               {[
-                { label: "About", href: "#about" },
-                { label: "Services", href: "#services" },
-                { label: "How It Works", href: "#how-it-works" },
-                { label: "Case Studies", href: "#case-studies" },
+                { label: "Je AI-team", href: "#ai-team" },
+                { label: "Aanpak", href: "#aanpak" },
+                { label: "Prijs", href: "#prijs" },
+                { label: "Team", href: "#team" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
@@ -94,7 +93,7 @@ export default function Footer() {
               className="text-sm font-semibold text-white mb-5 tracking-wide"
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
-              Get In Touch
+              Contact
             </h4>
             <ul className="space-y-3">
               <li>
@@ -104,7 +103,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
                 >
-                  Contact
+                  Plan een gesprek
                 </a>
               </li>
               <li>
@@ -122,7 +121,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-brand-200 transition-colors duration-200"
                 >
-                  Book Free Audit
+                  Plan een gratis gesprek
                   <svg className="w-3.5 h-3.5" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
@@ -135,14 +134,14 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-600">
-            &copy; {currentYear} Touch AI Agency. All rights reserved.
+            &copy; {currentYear} Touch AI Agency. Alle rechten voorbehouden.
           </p>
           <div className="flex gap-6">
             <a href="/privacy" className="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-200">
-              Privacy Policy
+              Privacybeleid
             </a>
             <a href="/terms" className="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-200">
-              Terms of Service
+              Algemene voorwaarden
             </a>
           </div>
         </div>

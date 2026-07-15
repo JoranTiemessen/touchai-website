@@ -3,9 +3,9 @@ import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
 import Services from "@/components/Services";
 import AgentTypes from "@/components/AgentTypes";
-import Results from "@/components/Results";
 import HowItWorks from "@/components/HowItWorks";
-import CaseStudies from "@/components/CaseStudies";
+import Results from "@/components/Results";
+import Pricing from "@/components/Pricing";
 import Advisors from "@/components/Advisors";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -17,10 +17,10 @@ export default function Home() {
       <Hero />
       <TrustSection />
       <Services />
-      <HowItWorks />
       <AgentTypes />
+      <HowItWorks />
       <Results />
-      <CaseStudies />
+      <Pricing />
       <Advisors />
       <FinalCTA />
       <Footer />

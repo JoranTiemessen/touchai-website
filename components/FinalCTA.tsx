@@ -24,27 +24,27 @@ export default function FinalCTA() {
           }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-brand-400" />
-          Free strategy call
+          Gratis kennismaking
         </div>
 
         <h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-[-0.03em] mb-5 leading-[1.1]"
           style={{ fontFamily: "'Sora', sans-serif" }}
         >
-          Ready to reclaim
+          Klaar voor een
           <br />
-          <span style={{ color: "#6EADD4" }}>hundreds of hours?</span>
+          <span style={{ color: "#6EADD4" }}>volledige FTE terug?</span>
         </h2>
 
         <p className="text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
-          Book a free 30-minute audit. We'll identify your top automation opportunities and show you exactly what we'd build, with no obligation.
+          Plan een gratis gesprek van 30 minuten. We laten je precies zien welke agents het meeste opleveren en wat we voor je zouden bouwen. Volledig vrijblijvend.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           {[
-            "No obligation",
-            "Results in weeks",
-            "Built for your business",
+            "Vrijblijvend",
+            "Eerste agent live in 3 weken",
+            "Gebouwd op je eigen systemen",
           ].map((item) => (
             <div key={item} className="flex items-center gap-2 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
               <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 16 16" fill="none" style={{ color: "#6EADD4" }}>
@@ -65,7 +65,7 @@ export default function FinalCTA() {
             boxShadow: "0 6px 20px rgba(110,173,212,0.35)",
           }}
         >
-          Book Free Audit
+          Plan een gratis gesprek
           <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

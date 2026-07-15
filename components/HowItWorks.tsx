@@ -1,54 +1,62 @@
 const steps = [
   {
     number: "01",
-    title: "Free Strategy Call",
+    when: "Week 1",
+    title: "Tijdscan",
     description:
-      "We start with a focused 30-minute call to understand your business, identify the highest-impact automation opportunities, and map out exactly what we'd build.",
+      "Eén sessie van 2 uur. We meten precies waar de uren in jouw bedrijf weglekken en wat dat je nu per maand kost. Dat is de nulmeting, daar rekenen we ons straks op af.",
   },
   {
     number: "02",
-    title: "We Build Your System",
+    when: "Week 2",
+    title: "Agent-blauwdruk",
     description:
-      "Our team designs and deploys your custom AI system, integrating it directly into your existing tools and workflows. You stay focused on your business while we handle the build.",
+      "Jouw AI-team op één pagina: welke agents, welke besparing per agent, welke systemen ze gebruiken. Jij weet exact wat er gebouwd wordt vóór we bouwen.",
   },
   {
     number: "03",
-    title: "Results From Day One",
+    when: "Eerste agent live in week 3",
+    title: "Bouwen",
     description:
-      "Once live, your AI system runs 24/7. We monitor performance, refine where needed, and report back with clear metrics so you always know exactly what it's doing for you.",
+      "We starten met je grootste tijdvreter, zodat je direct resultaat ziet. Daarna rollen we agent voor agent uit. Jouw team is er max 2 uur per week mee bezig.",
+  },
+  {
+    number: "04",
+    when: "Doorlopend",
+    title: "Adoptie & meting",
+    description:
+      "We trainen je team tot de agents dagelijks gebruikt worden, want een ongebruikte agent bespaart nul uur. Elke maand een rapport: bespaarde uren per agent, afgezet tegen de nulmeting.",
   },
 ];
 
+const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(255,255,255,0.94)" }}>
+    <section id="aanpak" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(255,255,255,0.94)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-16">
           <div
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-semibold tracking-wider uppercase mb-5"
-            style={{
-              background: "rgba(110,173,212,0.06)",
-              borderColor: "rgba(110,173,212,0.25)",
-              color: "#6EADD4",
-            }}
+            style={{ background: "rgba(110,173,212,0.06)", borderColor: "rgba(110,173,212,0.25)", color: "#6EADD4" }}
           >
-            How It Works
+            Van kick-off naar resultaat in 90 dagen
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-4"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            From first call to{" "}
-            <span style={{ color: "#6EADD4" }}>live in weeks</span>
+            Zo pakken we het{" "}
+            <span style={{ color: "#6EADD4" }}>aan</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            A simple, proven process that gets your AI system running fast, with zero disruption to your team.
+            Je koopt geen software en geen adviesrapport. Je koopt een meetbaar resultaat: 40 uur per week terug, binnen 90 dagen.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {steps.map((step) => (
             <div key={step.title} className="relative">
               <div
@@ -56,6 +64,12 @@ export default function HowItWorks() {
                 style={{ color: "rgba(110,173,212,0.25)", fontFamily: "'Sora', sans-serif" }}
               >
                 {step.number}
+              </div>
+              <div
+                className="inline-block text-[11px] font-semibold tracking-wider uppercase mb-2 px-2.5 py-1 rounded-full"
+                style={{ background: "rgba(110,173,212,0.08)", color: "#4A8EBB", border: "1px solid rgba(110,173,212,0.18)" }}
+              >
+                {step.when}
               </div>
               <h3
                 className="text-xl font-bold text-gray-900 mb-3 tracking-[-0.02em]"
@@ -73,13 +87,13 @@ export default function HowItWorks() {
         {/* CTA */}
         <div className="mt-14 pt-10 border-t border-gray-100">
           <a
-            href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
+            href={CAL_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-400 text-white font-semibold text-[15px] hover:bg-brand-500 active:scale-[0.98] transition-all duration-150"
             style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
           >
-            Book a free strategy call
+            Plan de kick-off
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
