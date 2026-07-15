@@ -33,7 +33,7 @@ export default function FinalCTA() {
         >
           Klaar voor een
           <br />
-          <span style={{ color: "#6EADD4" }}>volledige FTE terug?</span>
+          <span style={{ color: "#6EADD4" }}>fulltime medewerker erbij?</span>
         </h2>
 
         <p className="text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>

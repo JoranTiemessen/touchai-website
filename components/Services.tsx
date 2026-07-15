@@ -3,7 +3,7 @@ const pillars = [
     kicker: "Besparing",
     value: "40 uur",
     unit: "per week",
-    detail: "Eén volledige FTE aan capaciteit, opgeteld over je hele team.",
+    detail: "Een fulltime medewerker aan capaciteit, opgeteld over je hele team.",
     icon: (
       <svg viewBox="0 0 48 48" fill="none" className="w-8 h-8">
         <circle cx="24" cy="24" r="18" fill="rgba(110,173,212,0.12)" stroke="#6EADD4" strokeWidth="1.5" />

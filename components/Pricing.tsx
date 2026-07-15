@@ -131,7 +131,7 @@ tot €4.500 terug
             </svg>
           </a>
           <p className="mt-4 text-sm text-gray-400">
-            Binnen 3 weken staat je eerste agent live. Binnen 90 dagen heb je een volledige FTE terug.
+            Binnen 3 weken staat je eerste agent live. Binnen 90 dagen heb je een fulltime medewerker terug.
           </p>
         </div>
       </div>

@@ -229,7 +229,7 @@ export default function AgentTypes() {
               Totaal
             </div>
             <div className="hidden md:block text-sm font-semibold text-gray-600">
-              1 volledige FTE aan capaciteit terug
+              Een fulltime medewerker aan capaciteit terug
             </div>
             <div
               className="text-xl font-bold text-right whitespace-nowrap"
@@ -238,7 +238,7 @@ export default function AgentTypes() {
               40 u/wk
             </div>
             <div className="col-span-2 md:hidden text-sm font-semibold text-gray-600">
-              1 volledige FTE aan capaciteit terug
+              Een fulltime medewerker aan capaciteit terug
             </div>
           </div>
         </div>

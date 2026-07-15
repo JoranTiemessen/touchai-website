@@ -68,7 +68,7 @@ export default function Hero() {
           {/* Stats */}
           <div className="mt-16 flex flex-wrap gap-x-10 gap-y-4">
             {[
-              { value: "40 u", label: "bespaard per week, 1 volledige FTE" },
+              { value: "40 u", label: "bespaard per week, een fulltime kracht" },
               { value: "3 wkn", label: "tot je eerste agent live staat" },
               { value: "90 dgn", label: "resultaat gegarandeerd, of we werken gratis door" },
             ].map((stat) => (
