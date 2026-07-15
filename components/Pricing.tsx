@@ -1,5 +1,28 @@
 const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 
+const monthlyValue = [
+  {
+    title: "Monitoring & onderhoud",
+    desc: "We houden elke agent draaiend en lossen problemen op vóór jij het merkt.",
+  },
+  {
+    title: "Maandelijkse optimalisatie",
+    desc: "Agents worden scherper op basis van echt gebruik.",
+  },
+  {
+    title: "Elke maand uitbreiding",
+    desc: "Een nieuwe of uitgebreide agent. Je AI-team groeit mee met je bedrijf.",
+  },
+  {
+    title: "Maandrapport",
+    desc: "Bespaarde uren per agent, afgezet tegen de nulmeting. Zwart op wit.",
+  },
+  {
+    title: "Adoptie & support",
+    desc: "We zorgen dat je team de agents blijft gebruiken. Ongebruikt is nul besparing.",
+  },
+];
+
 export default function Pricing() {
   return (
     <section
@@ -71,21 +94,20 @@ export default function Pricing() {
             />
             <div className="text-xs font-semibold tracking-wider uppercase text-brand-500 mb-4">Maandelijks</div>
             <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-2xl font-semibold text-gray-400 tracking-tight" style={{ fontFamily: "'Sora', sans-serif" }}>vanaf</span>
               <span className="text-5xl md:text-6xl font-bold text-gray-900 tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-                €500
+                €1.250
               </span>
               <span className="text-lg font-medium text-gray-400">/mnd</span>
             </div>
             <p className="text-sm text-gray-500 leading-[1.7]">
-              Meting, doorontwikkeling en uitbreiding. Start pas op het moment dat je eerste agent live staat.
+              Monitoring, maandelijkse optimalisatie, uitbreiding en rapportage. Start pas op het moment dat je eerste agent live staat.
             </p>
           </div>
         </div>
 
-        {/* ROI strip */}
+        {/* ROI strip — netto framing */}
         <div
-          className="rounded-3xl p-8 md:p-10 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1.2fr] items-center gap-6 md:gap-4 text-center"
+          className="rounded-3xl p-8 md:p-10 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1.3fr] items-center gap-6 md:gap-4 text-center"
           style={{
             background: "linear-gradient(135deg, rgba(110,173,212,0.08) 0%, rgba(74,142,187,0.05) 100%)",
             border: "1px solid rgba(110,173,212,0.16)",
@@ -93,27 +115,84 @@ export default function Pricing() {
         >
           <div>
             <div className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              tot €5.000
+              €3.000–5.000
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mt-1">Besparing per maand</div>
           </div>
           <div className="text-3xl font-light text-brand-300 hidden md:block">−</div>
           <div>
             <div className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              €500
+              €1.250
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mt-1">Kosten per maand</div>
           </div>
           <div className="text-3xl font-light text-brand-300 hidden md:block">=</div>
           <div
-            className="rounded-2xl py-4 px-2"
+            className="rounded-2xl py-4 px-3"
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)" }}
           >
-            <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-tot €4.500 terug
+            <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] whitespace-nowrap" style={{ fontFamily: "'Sora', sans-serif" }}>
+              €1.750–3.750
             </div>
-            <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Netto, elke maand opnieuw</div>
+            <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Netto in je zak, elke maand</div>
           </div>
+        </div>
+
+        {/* Wat je maandelijks krijgt */}
+        <div
+          className="mt-8 rounded-3xl p-8 md:p-10"
+          style={{
+            background: "rgba(255,255,255,0.96)",
+            boxShadow: "0 4px 6px rgba(110,173,212,0.06), 0 14px 44px rgba(110,173,212,0.10), 0 1px 2px rgba(0,0,0,0.04)",
+            border: "1px solid rgba(110,173,212,0.14)",
+          }}
+        >
+          <div className="mb-7">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+              Wat je maandelijks krijgt
+            </h3>
+            <p className="text-sm text-gray-500 leading-[1.7] mt-1.5">
+              De maandelijkse investering houdt je AI-team scherp en groeiend.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+            {monthlyValue.map((item) => (
+              <div key={item.title} className="flex items-start gap-3">
+                <div
+                  className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                  style={{ background: "rgba(110,173,212,0.14)", border: "1px solid rgba(110,173,212,0.28)" }}
+                >
+                  <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" style={{ color: "#4A8EBB" }}>
+                    <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-gray-900" style={{ fontFamily: "'Sora', sans-serif" }}>
+                    {item.title}
+                  </div>
+                  <p className="text-[13px] text-gray-500 leading-[1.6] mt-0.5">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pitch line */}
+        <div
+          className="mt-8 rounded-3xl p-8 md:p-10 text-center"
+          style={{
+            background: "linear-gradient(135deg, rgba(110,173,212,0.10) 0%, rgba(74,142,187,0.07) 100%)",
+            border: "1px solid rgba(110,173,212,0.18)",
+          }}
+        >
+          <p
+            className="text-lg md:text-2xl font-bold text-gray-900 tracking-[-0.01em] leading-[1.4] max-w-3xl mx-auto"
+            style={{ fontFamily: "'Sora', sans-serif" }}
+          >
+            Jij houdt elke maand die besparing. Wij houden het draaiend, optimaliseren het en breiden het uit,{" "}
+            <span style={{ color: "#4A8EBB" }}>voor €1.250 per maand.</span>
+          </p>
         </div>
 
         {/* CTA */}
