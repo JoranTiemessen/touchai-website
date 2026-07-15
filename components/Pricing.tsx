@@ -48,12 +48,11 @@ export default function Pricing() {
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            Een medewerker kost je gemiddeld{" "}
-            <span style={{ color: "#6EADD4" }}>€4.000 per maand.</span>{" "}
-            Als je die al kunt vinden.
+            Een medewerker kost je al gauw{" "}
+            <span style={{ color: "#6EADD4" }}>€5.000 per maand.</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Jouw AI-team kost een fractie daarvan en levert elke maand opnieuw op.
+            Salaris, werkgeverslasten, werkplek en verzuim. Nog los van de tijd om er überhaupt één te vinden. Jouw AI-team kost daar een fractie van.
           </p>
         </div>
 
@@ -95,7 +94,7 @@ export default function Pricing() {
             <div className="text-xs font-semibold tracking-wider uppercase text-brand-500 mb-4">Maandelijks</div>
             <div className="flex items-baseline gap-2 mb-4">
               <span className="text-5xl md:text-6xl font-bold text-gray-900 tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-                €1.250
+                €1.500
               </span>
               <span className="text-lg font-medium text-gray-400">/mnd</span>
             </div>
@@ -115,14 +114,14 @@ export default function Pricing() {
         >
           <div>
             <div className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              €4.000
+              €5.000
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mt-1">Besparing per maand</div>
           </div>
           <div className="text-3xl font-light text-brand-300 hidden md:block">−</div>
           <div>
             <div className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              €1.250
+              €1.500
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mt-1">Kosten per maand</div>
           </div>
@@ -132,7 +131,7 @@ export default function Pricing() {
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)" }}
           >
             <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] whitespace-nowrap" style={{ fontFamily: "'Sora', sans-serif" }}>
-              €2.750
+              €3.500
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Netto in je zak, elke maand</div>
           </div>
@@ -191,7 +190,7 @@ export default function Pricing() {
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Jij houdt elke maand die besparing. Wij houden het draaiend, optimaliseren het en breiden het uit,{" "}
-            <span style={{ color: "#4A8EBB" }}>voor €1.250 per maand.</span>
+            <span style={{ color: "#4A8EBB" }}>voor €1.500 per maand.</span>
           </p>
         </div>
 
