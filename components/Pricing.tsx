@@ -93,7 +93,7 @@ export default function Pricing() {
         >
           <div>
             <div className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              €5.000
+              tot €5.000
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mt-1">Besparing per maand</div>
           </div>
@@ -110,7 +110,7 @@ export default function Pricing() {
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)" }}
           >
             <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              €4.500 terug
+tot €4.500 terug
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Netto, elke maand opnieuw</div>
           </div>
