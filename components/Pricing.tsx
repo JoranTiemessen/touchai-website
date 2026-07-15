@@ -26,7 +26,7 @@ export default function Pricing() {
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Een medewerker kost je{" "}
-            <span style={{ color: "#6EADD4" }}>€3.000–€5.000 per maand.</span>{" "}
+            <span style={{ color: "#6EADD4" }}>€5.000 per maand.</span>{" "}
             Als je die al kunt vinden.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
@@ -93,7 +93,7 @@ export default function Pricing() {
         >
           <div>
             <div className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              €3.000–5.000
+              €5.000
             </div>
             <div className="text-[11px] font-semibold tracking-wider uppercase text-gray-400 mt-1">Besparing per maand</div>
           </div>
@@ -110,9 +110,9 @@ export default function Pricing() {
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)" }}
           >
             <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-              6–10× terug
+              €4.500 terug
             </div>
-            <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Elke maand opnieuw</div>
+            <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Netto, elke maand opnieuw</div>
           </div>
         </div>
 
