@@ -15,7 +15,7 @@ const agents: { name: string; does: string; hours: number; look: Look }[] = [
     look: { color: "#4A8EBB", light: "#7CB4DA", eyes: "round", mouth: "smile", top: "antenna" },
   },
   {
-    name: "Personal Assistant",
+    name: "Personal Assistant-agent",
     does: "Dagstart op maandag, weekrecap op vrijdag, documenten opstellen. Jouw overzicht van alles.",
     hours: 5,
     look: { color: "#6C7FD0", light: "#98A8E6", eyes: "happy", mouth: "smile", top: "double" },
