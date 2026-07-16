@@ -9,27 +9,21 @@ type Look = {
 
 const agents: { name: string; does: string; hours: number; look: Look }[] = [
   {
-    name: "E-mail agent",
-    does: "Leest, sorteert en beantwoordt terugkerende mail. Jij keurt alleen nog goed.",
-    hours: 6,
-    look: { color: "#4A8EBB", light: "#7CB4DA", eyes: "round", mouth: "smile", top: "antenna" },
+    name: "Inbox-agent",
+    does: "Leest, sorteert en beantwoordt je mail én de terugkerende klantvragen via mail en WhatsApp. Jij keurt alleen nog goed.",
+    hours: 13,
+    look: { color: "#4A8EBB", light: "#7CB4DA", eyes: "round", mouth: "smile", top: "headset" },
   },
   {
-    name: "Personal Assistant-agent",
+    name: "Assistent-agent",
     does: "Dagstart op maandag, weekrecap op vrijdag, documenten opstellen. Jouw overzicht van alles.",
     hours: 5,
     look: { color: "#6C7FD0", light: "#98A8E6", eyes: "happy", mouth: "smile", top: "double" },
   },
   {
-    name: "To-do agent",
-    does: "Haalt actiepunten uit mails en meetings en zet ze automatisch op de juiste lijst.",
-    hours: 3,
-    look: { color: "#3FA99B", light: "#6FC7BC", eyes: "focused", mouth: "calm", top: "antenna" },
-  },
-  {
     name: "Meeting-agent",
-    does: "Elke meeting automatisch samengevat, actiepunten verdeeld over het team.",
-    hours: 4,
+    does: "Elke meeting automatisch samengevat, actiepunten verdeeld en op de juiste lijst gezet.",
+    hours: 7,
     look: { color: "#8A78CE", light: "#AC9CE4", eyes: "round", mouth: "calm", top: "double" },
   },
   {
@@ -49,12 +43,6 @@ const agents: { name: string; does: string; hours: number; look: Look }[] = [
     does: "Plannen, bevestigen en reminders sturen. Nooit meer heen-en-weer mailen.",
     hours: 4,
     look: { color: "#34AEC0", light: "#66C7D4", eyes: "round", mouth: "smile", top: "antenna" },
-  },
-  {
-    name: "Klantenservice-agent",
-    does: "Beantwoordt de steeds terugkerende klantvragen via mail en WhatsApp.",
-    hours: 7,
-    look: { color: "#7B93DE", light: "#A0B3E8", eyes: "round", mouth: "grin", top: "headset" },
   },
 ];
 
