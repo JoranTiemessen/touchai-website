@@ -76,19 +76,7 @@ const departments: Department[] = [
   },
 ];
 
-function chipStyle(tag: Tag) {
-  if (tag === "KERN") return { background: "#EAF2FB", color: "#2A5E83", border: "1px solid rgba(52,116,160,0.14)" };
-  if (tag === "GELD") return { background: "#EAF7F0", color: "#2C8F5E", border: "1px solid rgba(44,143,94,0.14)" };
-  return { background: "#F1F3F7", color: "#475569", border: "1px solid rgba(71,85,105,0.10)" };
-}
-
-function LegendPill({ tag }: { tag: "KERN" | "GELD" }) {
-  return (
-    <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-md" style={chipStyle(tag)}>
-      {tag}
-    </span>
-  );
-}
+const chipStyle = { background: "#F1F3F7", color: "#475569", border: "1px solid rgba(71,85,105,0.10)" };
 
 export default function AgentCatalog() {
   return (
@@ -105,15 +93,9 @@ export default function AgentCatalog() {
           >
             Per afdeling een agent voor elk terugkerend proces.
           </h2>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
-            <p className="text-lg text-gray-500 leading-[1.7] max-w-xl">
-              Dit is het volledige aanbod. Je kiest per afdeling welke agents je inzet en breidt uit wanneer je wilt, altijd op de systemen die je al gebruikt.
-            </p>
-            <div className="flex items-center gap-5 flex-shrink-0 text-sm text-gray-500">
-              <span className="flex items-center gap-2"><LegendPill tag="KERN" /> in het offer</span>
-              <span className="flex items-center gap-2"><LegendPill tag="GELD" /> levert omzet op</span>
-            </div>
-          </div>
+          <p className="text-lg text-gray-500 leading-[1.7] max-w-xl">
+            Dit is het volledige aanbod. Je kiest per afdeling welke agents je inzet en breidt uit wanneer je wilt, altijd op de systemen die je al gebruikt.
+          </p>
         </div>
 
         {/* Department cards */}
@@ -148,7 +130,7 @@ export default function AgentCatalog() {
                   <span
                     key={a.name}
                     className="text-[13px] font-semibold px-3 py-1.5 rounded-lg"
-                    style={chipStyle(a.tag)}
+                    style={chipStyle}
                   >
                     {a.name}
                   </span>
