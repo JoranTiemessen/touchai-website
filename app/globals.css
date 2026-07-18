@@ -94,3 +94,35 @@ h1, h2, h3, h4, h5, h6 {
 .delay-300 { animation-delay: 0.3s; }
 .delay-400 { animation-delay: 0.4s; }
 .delay-500 { animation-delay: 0.5s; }
+
+/* Premium range slider (ROI meter) */
+.roi-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  outline: none;
+  cursor: pointer;
+}
+.roi-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px #4A8EBB, 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.16,1,0.3,1);
+}
+.roi-slider::-webkit-slider-thumb:hover { transform: scale(1.12); }
+.roi-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 4px solid #4A8EBB;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+}
+.roi-slider:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 4px #4A8EBB, 0 0 0 7px rgba(74,142,187,0.35); }

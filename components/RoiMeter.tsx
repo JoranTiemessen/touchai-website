@@ -4,161 +4,150 @@ import { useState } from "react";
 
 const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 
-// ~€5.000/mnd fully-loaded ÷ ~160 productieve uren ≈ €31/uur
-const EUR_PER_HOUR = 31;
-const WEEKS_PER_MONTH = 4.33;
+const EUR_PER_HOUR = 31; // fully-loaded
+const WEEKS_PER_MONTH = 52 / 12;
 
 function euro(n: number) {
   return "€" + Math.round(n).toLocaleString("nl-NL");
 }
 
 export default function RoiMeter() {
-  const [team, setTeam] = useState(6);
-  const [hoursPP, setHoursPP] = useState(7);
+  const [team, setTeam] = useState(5);
+  const [hoursPP, setHoursPP] = useState(8);
 
   const hoursPerWeek = team * hoursPP;
-  const perMonth = Math.round((hoursPerWeek * WEEKS_PER_MONTH * EUR_PER_HOUR) / 50) * 50;
+  const perMonth = Math.round(hoursPerWeek * WEEKS_PER_MONTH * EUR_PER_HOUR);
   const ftes = (hoursPerWeek / 40).toFixed(1).replace(".", ",");
+
+  const teamPct = ((team - 1) / 49) * 100;
+  const hoursPct = ((hoursPP - 2) / 18) * 100;
 
   return (
     <section
       id="roi"
       className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, rgba(240,248,255,0.6) 0%, rgba(255,255,255,0.95) 100%)" }}
+      style={{ background: "#F7F6F3" }}
     >
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{ background: "radial-gradient(ellipse 60% 50% at 20% 0%, rgba(110,173,212,0.08) 0%, transparent 60%)" }}
-      />
-
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-semibold tracking-wider uppercase mb-5"
-            style={{ background: "rgba(110,173,212,0.06)", borderColor: "rgba(110,173,212,0.25)", color: "#6EADD4" }}
-          >
-            ROI-calculator
+          <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
+            ROI-meter
           </div>
           <h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5"
+            style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}
           >
-            Reken je{" "}
-            <span style={{ color: "#6EADD4" }}>tijdlek uit.</span>
+            Bereken je tijdlek in seconden.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Werknemers besteden gemiddeld tot 40% van hun tijd aan repetitief werk (McKinsey). Schuif hieronder en zie wat dat jou kost.
+            Schuif je teamgrootte en het aantal uur repetitief werk per persoon. We rekenen het live door naar uren, kosten en capaciteit.
           </p>
         </div>
 
-        {/* Calculator card */}
+        {/* Card */}
         <div
-          className="rounded-3xl overflow-hidden grid grid-cols-1 lg:grid-cols-[1.1fr_1fr]"
-          style={{
-            background: "rgba(255,255,255,0.96)",
-            boxShadow: "0 8px 40px rgba(110,173,212,0.16), 0 2px 6px rgba(0,0,0,0.05)",
-            border: "1px solid rgba(110,173,212,0.18)",
-          }}
+          className="rounded-[28px] overflow-hidden grid grid-cols-1 lg:grid-cols-2"
+          style={{ boxShadow: "0 20px 60px rgba(11,18,32,0.12), 0 2px 8px rgba(0,0,0,0.05)" }}
         >
           {/* Inputs */}
-          <div className="p-8 md:p-10">
-            {/* Team size */}
-            <div className="mb-10">
-              <div className="flex items-baseline justify-between mb-3">
-                <label htmlFor="team" className="text-sm font-semibold text-gray-700">Teamgrootte</label>
-                <span className="text-2xl font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#4A8EBB" }}>
-                  {team} {team === 1 ? "persoon" : "mensen"}
+          <div className="bg-white p-8 md:p-11 flex flex-col justify-center">
+            <div className="mb-9">
+              <div className="flex items-baseline justify-between mb-4">
+                <label htmlFor="team" className="text-[15px] font-semibold text-gray-800">Teamgrootte</label>
+                <span style={{ fontFamily: "'Sora', sans-serif" }}>
+                  <span className="text-2xl font-bold" style={{ color: "#0B1220" }}>{team}</span>
+                  <span className="text-sm font-medium text-gray-400 ml-1.5">{team === 1 ? "medewerker" : "medewerkers"}</span>
                 </span>
               </div>
               <input
-                id="team"
-                type="range"
-                min={1}
-                max={50}
-                value={team}
+                id="team" type="range" min={1} max={50} value={team}
                 onChange={(e) => setTeam(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-brand-400"
-                style={{ background: `linear-gradient(90deg, #6EADD4 ${((team - 1) / 49) * 100}%, #e2e8f0 ${((team - 1) / 49) * 100}%)` }}
+                className="roi-slider w-full"
+                style={{ background: `linear-gradient(90deg, #4A8EBB ${teamPct}%, #E5E7EB ${teamPct}%)` }}
               />
-              <div className="flex justify-between text-[11px] text-gray-400 mt-2">
-                <span>1</span>
-                <span>50+</span>
+              <div className="flex justify-between text-xs text-gray-400 mt-2.5">
+                <span>1</span><span>50</span>
               </div>
             </div>
 
-            {/* Hours per person */}
-            <div>
-              <div className="flex items-baseline justify-between mb-3">
-                <label htmlFor="hours" className="text-sm font-semibold text-gray-700">Uur repetitief werk p.p. / week</label>
-                <span className="text-2xl font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#4A8EBB" }}>
-                  {hoursPP} uur
+            <div className="mb-8">
+              <div className="flex items-baseline justify-between mb-4">
+                <label htmlFor="hours" className="text-[15px] font-semibold text-gray-800">Repetitief werk p.p. / week</label>
+                <span style={{ fontFamily: "'Sora', sans-serif" }}>
+                  <span className="text-2xl font-bold" style={{ color: "#0B1220" }}>{hoursPP}</span>
+                  <span className="text-sm font-medium text-gray-400 ml-1.5">uur</span>
                 </span>
               </div>
               <input
-                id="hours"
-                type="range"
-                min={2}
-                max={20}
-                value={hoursPP}
+                id="hours" type="range" min={2} max={20} value={hoursPP}
                 onChange={(e) => setHoursPP(Number(e.target.value))}
-                className="w-full h-2 rounded-full appearance-none cursor-pointer accent-brand-400"
-                style={{ background: `linear-gradient(90deg, #6EADD4 ${((hoursPP - 2) / 18) * 100}%, #e2e8f0 ${((hoursPP - 2) / 18) * 100}%)` }}
+                className="roi-slider w-full"
+                style={{ background: `linear-gradient(90deg, #4A8EBB ${hoursPct}%, #E5E7EB ${hoursPct}%)` }}
               />
-              <div className="flex justify-between text-[11px] text-gray-400 mt-2">
-                <span>2</span>
-                <span>20</span>
+              <div className="flex justify-between text-xs text-gray-400 mt-2.5">
+                <span>2 u</span><span>20 u</span>
               </div>
+            </div>
+
+            <div className="rounded-2xl px-5 py-4 text-sm leading-[1.6]" style={{ background: "#F3F4F7", color: "#64748B" }}>
+              Werknemers besteden gemiddeld tot 40% van hun tijd aan repetitief werk. <span className="text-gray-400">(McKinsey)</span>
             </div>
           </div>
 
-          {/* Results */}
-          <div
-            className="p-8 md:p-10 flex flex-col justify-center relative overflow-hidden"
-            style={{ background: "linear-gradient(150deg, #4A8EBB 0%, #2A5E83 100%)" }}
-          >
+          {/* Results (dark) */}
+          <div className="relative p-8 md:p-11 flex flex-col justify-center" style={{ background: "linear-gradient(155deg, #14263F 0%, #0A1220 100%)" }}>
             <div
               className="absolute inset-0 pointer-events-none"
-              style={{ background: "radial-gradient(ellipse 70% 50% at 100% 0%, rgba(255,255,255,0.10) 0%, transparent 60%)" }}
+              style={{ background: "radial-gradient(ellipse 80% 50% at 100% 0%, rgba(74,142,187,0.16) 0%, transparent 60%)" }}
             />
             <div className="relative">
-              <div className="text-[11px] font-semibold tracking-wider uppercase text-white/60 mb-1">Jouw tijdlek</div>
-              <div className="flex items-baseline gap-2 mb-6">
-                <span className="text-5xl font-bold text-white tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif" }}>
-                  tot {hoursPerWeek}
-                </span>
-                <span className="text-lg font-medium text-white/70">uur / week</span>
+              <div className="text-[11px] font-bold tracking-[0.18em] uppercase mb-6" style={{ color: "rgba(159,202,227,0.7)" }}>
+                Jouw tijdlek
               </div>
 
-              <div className="space-y-4 pt-6 border-t border-white/15">
-                <div className="flex items-baseline justify-between">
-                  <span className="text-sm text-white/70">Kost je per maand</span>
-                  <span className="text-2xl font-bold text-white" style={{ fontFamily: "'Sora', sans-serif" }}>tot {euro(perMonth)}</span>
+              <div className="grid grid-cols-2 gap-6 mb-7">
+                <div>
+                  <div className="flex items-baseline" style={{ fontFamily: "'Sora', sans-serif" }}>
+                    <span className="text-5xl md:text-6xl font-bold text-white tracking-[-0.03em]">{hoursPerWeek}</span>
+                    <span className="text-xl font-semibold text-white/50 ml-1">u</span>
+                  </div>
+                  <div className="text-sm text-white/55 mt-1.5">tijdlek per week</div>
                 </div>
-                <div className="flex items-baseline justify-between">
-                  <span className="text-sm text-white/70">Aan capaciteit</span>
-                  <span className="text-2xl font-bold text-white" style={{ fontFamily: "'Sora', sans-serif" }}>{ftes} fulltime kracht</span>
+                <div>
+                  <div className="text-5xl md:text-6xl font-bold text-white tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+                    {ftes}
+                  </div>
+                  <div className="text-sm text-white/55 mt-1.5">fulltime kracht aan capaciteit</div>
                 </div>
+              </div>
+
+              <div className="rounded-2xl p-6 mb-6" style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.10)" }}>
+                <div className="text-sm text-white/60 mb-1">Kosten van dit tijdlek</div>
+                <div className="flex items-baseline mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>
+                  <span className="text-5xl md:text-6xl font-bold text-white tracking-[-0.03em]">{euro(perMonth)}</span>
+                  <span className="text-lg font-medium text-white/45 ml-1">/maand</span>
+                </div>
+                <p className="text-xs text-white/40 leading-[1.6]">
+                  Indicatie op basis van circa €31 per uur fully-loaded. De exacte tijdlek meten we in de Tijdlek-scan.
+                </p>
               </div>
 
               <a
                 href={CAL_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex items-center justify-center gap-2.5 w-full px-6 py-3.5 rounded-full bg-white text-brand-700 font-semibold text-[15px] hover:bg-white/90 active:scale-[0.98] transition-all duration-150"
+                className="inline-flex items-center justify-center gap-2.5 w-full px-6 py-4 rounded-full bg-white font-semibold text-[15px] hover:bg-white/90 active:scale-[0.98] transition-all duration-150"
+                style={{ color: "#0A1220" }}
               >
-                Meet je exacte tijdlek
+                Meet mijn echte tijdlek gratis
                 <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </a>
             </div>
           </div>
         </div>
-
-        <p className="text-center text-xs text-gray-400 mt-5 max-w-xl mx-auto">
-          Indicatie op basis van ~€31 per uur (fully-loaded). Je exacte tijdlek en besparing meten we zwart op wit in de gratis Tijdlek-scan.
-        </p>
       </div>
     </section>
   );

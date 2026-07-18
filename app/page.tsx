@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
 import Services from "@/components/Services";
-import AgentTypes from "@/components/AgentTypes";
 import AgentCatalog from "@/components/AgentCatalog";
 import RoiMeter from "@/components/RoiMeter";
 import HowItWorks from "@/components/HowItWorks";
@@ -20,7 +19,6 @@ export default function Home() {
       <Hero />
       <TrustSection />
       <Reveal><Services /></Reveal>
-      <Reveal><AgentTypes /></Reveal>
       <Reveal><AgentCatalog /></Reveal>
       <Reveal><RoiMeter /></Reveal>
       <Reveal><HowItWorks /></Reveal>
