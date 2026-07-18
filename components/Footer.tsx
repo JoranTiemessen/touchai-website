@@ -72,6 +72,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: "Je AI-team", href: "#ai-team" },
+                { label: "Catalogus", href: "#catalogus" },
                 { label: "Aanpak", href: "#aanpak" },
                 { label: "Prijs", href: "#prijs" },
                 { label: "Team", href: "#team" },

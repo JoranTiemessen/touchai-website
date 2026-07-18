@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
 import Services from "@/components/Services";
 import AgentTypes from "@/components/AgentTypes";
+import AgentCatalog from "@/components/AgentCatalog";
 import HowItWorks from "@/components/HowItWorks";
 import Results from "@/components/Results";
 import Pricing from "@/components/Pricing";
@@ -18,6 +19,7 @@ export default function Home() {
       <TrustSection />
       <Services />
       <AgentTypes />
+      <AgentCatalog />
       <HowItWorks />
       <Results />
       <Pricing />

@@ -15,6 +15,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Je AI-team", href: "#ai-team" },
+    { label: "Catalogus", href: "#catalogus" },
     { label: "Aanpak", href: "#aanpak" },
     { label: "Prijs", href: "#prijs" },
     { label: "Team", href: "#team" },

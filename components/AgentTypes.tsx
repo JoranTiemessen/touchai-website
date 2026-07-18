@@ -10,39 +10,27 @@ type Look = {
 const agents: { name: string; does: string; hours: number; look: Look }[] = [
   {
     name: "Inbox-agent",
-    does: "Leest, sorteert en beantwoordt je mail én de terugkerende klantvragen via mail en WhatsApp. Jij keurt alleen nog goed.",
+    does: "Leest, sorteert en beantwoordt je mail én terugkerende klantvragen via mail en WhatsApp. Jij keurt goed.",
     hours: 13,
     look: { color: "#4A8EBB", light: "#7CB4DA", eyes: "round", mouth: "smile", top: "headset" },
   },
   {
     name: "Assistent-agent",
-    does: "Dagstart op maandag, weekrecap op vrijdag, documenten opstellen. Jouw overzicht van alles.",
-    hours: 5,
+    does: "Dagstart, weekrecap, documenten, meetings, actiepunten en afspraken. Jouw overzicht van alles.",
+    hours: 14,
     look: { color: "#6C7FD0", light: "#98A8E6", eyes: "happy", mouth: "smile", top: "double" },
-  },
-  {
-    name: "Meeting-agent",
-    does: "Elke meeting automatisch samengevat, actiepunten verdeeld en op de juiste lijst gezet.",
-    hours: 7,
-    look: { color: "#8A78CE", light: "#AC9CE4", eyes: "round", mouth: "calm", top: "double" },
-  },
-  {
-    name: "Offerte-agent",
-    does: "Van aanvraag naar concept-offerte in minuten in plaats van uren.",
-    hours: 5,
-    look: { color: "#3E9BD4", light: "#71B9E6", eyes: "happy", mouth: "grin", top: "antenna" },
   },
   {
     name: "Administratie-agent",
     does: "Facturen en bonnen inlezen, verwerken en klaarzetten in je boekhoudpakket.",
-    hours: 6,
+    hours: 8,
     look: { color: "#5E7C9E", light: "#8399B4", eyes: "round", mouth: "calm", top: "none", glasses: true },
   },
   {
-    name: "Afspraken-agent",
-    does: "Plannen, bevestigen en reminders sturen. Nooit meer heen-en-weer mailen.",
-    hours: 4,
-    look: { color: "#34AEC0", light: "#66C7D4", eyes: "round", mouth: "smile", top: "antenna" },
+    name: "Offerte-agent",
+    does: "Van aanvraag naar concept-offerte in minuten, plus automatische opvolging.",
+    hours: 5,
+    look: { color: "#3E9BD4", light: "#71B9E6", eyes: "happy", mouth: "grin", top: "antenna" },
   },
 ];
 
@@ -159,7 +147,7 @@ export default function AgentTypes() {
             <span style={{ color: "#6EADD4" }}>agent voor agent</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Geen abstract traject. Dit zijn de agents die we voor je bouwen, en wat ze je per week opleveren.
+            Geen abstract traject. Dit zijn de vier kern-agents die samen je fulltime medewerker vormen, en wat ze je per week opleveren.
           </p>
         </div>
 
