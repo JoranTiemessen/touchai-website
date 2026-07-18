@@ -6,7 +6,7 @@ import Services from "@/components/Services";
 import AgentCatalog from "@/components/AgentCatalog";
 import AgentInAction from "@/components/AgentInAction";
 import Integrations from "@/components/Integrations";
-import RoiMeter from "@/components/RoiMeter";
+import TijdlekCheck from "@/components/TijdlekCheck";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import CaseStudy from "@/components/CaseStudy";
@@ -31,7 +31,7 @@ export default function Home() {
       <Reveal><AgentCatalog /></Reveal>
       <Reveal><AgentInAction /></Reveal>
       <Reveal><Integrations /></Reveal>
-      <Reveal><RoiMeter /></Reveal>
+      <Reveal><TijdlekCheck /></Reveal>
       <Reveal><HowItWorks /></Reveal>
       <Reveal><Testimonials /></Reveal>
       <Reveal><CaseStudy /></Reveal>
