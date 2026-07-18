@@ -211,6 +211,9 @@ export default function Pricing() {
           <p className="mt-4 text-sm text-gray-400">
             Binnen 3 weken staat je eerste agent live. Binnen 90 dagen heb je een fulltime medewerker terug.
           </p>
+          <p className="mt-2 text-sm font-semibold" style={{ color: "#3474A0" }}>
+            We nemen maximaal 2 nieuwe implementaties per maand aan.
+          </p>
         </div>
       </div>
     </section>
