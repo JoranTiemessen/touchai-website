@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollBackground from "@/components/ScrollBackground";
@@ -33,14 +34,14 @@ const values = [
 const team = [
   {
     name: "Joran Tiemessen",
-    initials: "JT",
+    photo: "/joran.jpeg",
     role: "Mede-oprichter",
     tagline: "AI-strategie & automatisering",
     bio: "Joran leidt de klantstrategie en het ontwerp van de AI-systemen. Met een scherp oog voor bedrijfsprocessen ziet hij precies waar automatisering de meeste waarde oplevert, en bouwt het vervolgens. Hij verbindt AI aan concrete resultaten: meer tijd, minder handwerk, en systemen die 24/7 blijven draaien.",
   },
   {
     name: "Jesper Tiemessen",
-    initials: "JT",
+    photo: "/jesper.jpeg",
     role: "Mede-oprichter",
     tagline: "AI-development & integratie",
     bio: "Jesper doet de technische kant: het bouwen, trainen en uitrollen van de AI-systemen die de resultaten leveren. Van maatwerk-agents tot geautomatiseerde datapijplijnen: hij maakt complexe AI tot betrouwbare tools die ook een niet-technisch team gewoon kan gebruiken.",
@@ -186,10 +187,16 @@ export default function AboutPage() {
               >
                 <div className="flex items-center gap-5">
                   <div
-                    className="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-bold text-white flex-shrink-0"
-                    style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 8px 24px rgba(110,173,212,0.35)" }}
+                    className="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0"
+                    style={{ boxShadow: "0 8px 24px rgba(110,173,212,0.35)" }}
                   >
-                    {member.initials}
+                    <Image
+                      src={member.photo}
+                      alt={member.name}
+                      width={160}
+                      height={160}
+                      className="w-full h-full object-cover object-[center_18%]"
+                    />
                   </div>
                   <div>
                     <span
