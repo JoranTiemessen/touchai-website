@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { posts } from "./posts";
+import { getPublishedPosts } from "./posts";
+
+// Vernieuw elk uur zodat date-gated posts automatisch op hun publicatiedag verschijnen.
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Blog — Touch AI Agency",
@@ -42,7 +45,7 @@ export default function BlogIndex() {
       <section className="relative pb-28 md:pb-36">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {posts.map((post) => (
+            {getPublishedPosts().map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}

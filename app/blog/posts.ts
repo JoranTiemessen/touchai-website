@@ -105,8 +105,150 @@ export const posts: Post[] = [
       { type: "p", text: "De setup is eenmalig, met daarna een maandelijkse retainer voor monitoring, optimalisatie en uitbreiding. Afgezet tegen de kosten van een echte medewerker (al gauw €5.000 per maand) houd je netto capaciteit over, elke maand opnieuw. En omdat we afrekenen op de in de Tijdlek-scan vastgestelde besparing, met een garantie, weet je vooraf waar je aan toe bent." },
     ],
   },
+  {
+    slug: "wat-kost-een-medewerker-echt",
+    title: "Wat kost een medewerker écht? (fully-loaded uitgelegd)",
+    description:
+      "Een medewerker kost veel meer dan zijn brutosalaris. We rekenen de fully-loaded kosten voor: salaris, werkgeverslasten, werkplek en verzuim. Al gauw €5.000 per maand.",
+    date: "2026-07-21",
+    dateLabel: "21 juli 2026",
+    readingMinutes: 5,
+    category: "Kosten",
+    body: [
+      { type: "p", text: "Vraag een ondernemer wat een medewerker kost en je hoort meestal het brutosalaris. Maar dat is nog niet de helft van het verhaal. De echte, fully-loaded kosten liggen fors hoger, en juist die bepalen of een extra kracht rendabel is." },
+      { type: "h2", text: "Wat zit er allemaal in?" },
+      { type: "p", text: "Bovenop het brutosalaris betaal je als werkgever een flinke stapel extra kosten:" },
+      { type: "ul", items: [
+        "Werkgeverslasten: sociale premies, pensioenbijdrage en verzekeringen",
+        "Vakantiegeld en eventuele dertiende maand",
+        "Werkplek: laptop, software, bureau, kantoorruimte",
+        "Verzuim en vervanging bij ziekte",
+        "Werving, onboarding en opleiding",
+      ]},
+      { type: "p", text: "Bij elkaar opgeteld komt een modale MKB-medewerker al gauw uit op €5.000 per maand aan werkelijke kosten. Voor specialistische of ervaren krachten ligt dat nog hoger." },
+      { type: "h2", text: "En dan moet je die persoon nog vinden" },
+      { type: "p", text: "De kosten zijn één ding. Op de huidige arbeidsmarkt is het vaak nog lastiger om überhaupt de juiste persoon te vinden en te behouden. Vacatures staan maanden open, en een verkeerde aanname kost dubbel." },
+      { type: "h2", text: "Waarom dit ertoe doet" },
+      { type: "p", text: "Als je weet wat een medewerker écht kost, wordt de rekensom van automatisering ineens helder. Een AI Workforce die 40 uur repetitief werk per week overneemt, levert dezelfde capaciteit als een fulltime kracht, tegen een fractie van die €5.000 per maand. En je hoeft niemand te werven." },
+      { type: "p", text: "Wil je precies weten hoeveel capaciteit er bij jou verstopt zit in repetitief werk? Dat meten we in de gratis Tijdlek-scan." },
+    ],
+  },
+  {
+    slug: "ai-agent-vs-freelancer-vs-vaste-kracht",
+    title: "AI-agent vs. freelancer vs. vaste kracht: de eerlijke vergelijking",
+    description:
+      "Extra capaciteit nodig? We vergelijken een AI-agent, een freelancer en een vaste medewerker eerlijk op kosten, snelheid, schaalbaarheid en betrouwbaarheid.",
+    date: "2026-07-28",
+    dateLabel: "28 juli 2026",
+    readingMinutes: 6,
+    category: "Vergelijking",
+    body: [
+      { type: "p", text: "Je hebt meer capaciteit nodig. De klassieke keuze: iemand aannemen of een freelancer inhuren. Sinds kort is er een derde optie: een AI-agent. Hoe verhouden ze zich echt?" },
+      { type: "h2", text: "Vaste kracht" },
+      { type: "p", text: "Betrouwbaar en betrokken, maar duur (al gauw €5.000 per maand fully-loaded), traag te werven, en niet schaalbaar per taak. Bij ziekte of vertrek valt de capaciteit weg." },
+      { type: "h2", text: "Freelancer" },
+      { type: "p", text: "Flexibeler en sneller inzetbaar, maar duur per uur, beperkt beschikbaar, en de kennis vertrekt weer zodra de opdracht klaar is. Voor terugkerend werk loopt de rekening snel op." },
+      { type: "h2", text: "AI-agent" },
+      { type: "p", text: "Neemt terugkerend werk 24/7 over tegen een fractie van de kosten, schaalt per taak, en de kennis blijft in je bedrijf. Minder geschikt voor werk dat menselijk oordeel of fysieke aanwezigheid vraagt, daar blijft je team juist voor vrij." },
+      { type: "h2", text: "De eerlijke conclusie" },
+      { type: "ul", items: [
+        "Strategisch, creatief of relatiewerk: mens (vast of freelance)",
+        "Terugkerend, regelgebaseerd werk (mail, offertes, administratie): AI-agent",
+        "De beste mix: AI neemt het repetitieve over, je mensen doen het werk waar ze goed in zijn",
+      ]},
+      { type: "p", text: "Het is dus geen of-of. Een AI Workforce haalt de sleur uit de agenda van je bestaande team, zodat je pas hoeft aan te nemen als het echt om mensenwerk gaat." },
+    ],
+  },
+  {
+    slug: "7-processen-mkb-automatiseren",
+    title: "7 processen in het MKB die je vandaag kunt automatiseren",
+    description:
+      "Van mail tot offertes tot administratie: dit zijn 7 concrete processen die AI-agents in het MKB direct kunnen overnemen, met de tijdwinst per proces.",
+    date: "2026-08-04",
+    dateLabel: "4 augustus 2026",
+    readingMinutes: 6,
+    category: "Automatisering",
+    body: [
+      { type: "p", text: "Automatisering klinkt abstract, tot je ziet welke concrete taken vandaag al uit handen kunnen. Dit zijn zeven processen die in vrijwel elk MKB-bedrijf tijd opslokken, en die een AI-agent kan overnemen." },
+      { type: "h2", text: "1. Mail en klantvragen" },
+      { type: "p", text: "Terugkerende mail en klantvragen via mail en WhatsApp lezen, sorteren en beantwoorden. Jij keurt alleen nog goed. Goed voor zo'n 13 uur per week." },
+      { type: "h2", text: "2. Offertes opstellen en opvolgen" },
+      { type: "p", text: "Van aanvraag naar concept-offerte in minuten, plus automatische opvolging tot de klant tekent. Geen offerte blijft meer liggen." },
+      { type: "h2", text: "3. Administratie verwerken" },
+      { type: "p", text: "Facturen en bonnen inlezen, verwerken en klaarzetten in je boekhoudpakket. Einde aan het overtypen." },
+      { type: "h2", text: "4. Meetings en notulen" },
+      { type: "p", text: "Elke meeting automatisch samengevat, met actiepunten verdeeld en op de juiste lijst gezet." },
+      { type: "h2", text: "5. Afspraken plannen" },
+      { type: "p", text: "Plannen, bevestigen en reminders sturen. Nooit meer heen-en-weer mailen over een datum." },
+      { type: "h2", text: "6. Leads opvolgen en kwalificeren" },
+      { type: "p", text: "Inkomende leads scoren, verdelen en automatisch opvolgen, zodat je alleen met warme leads praat." },
+      { type: "h2", text: "7. Rapportage" },
+      { type: "p", text: "Data uit je tools samengevoegd tot een maandrapport of live dashboard, zonder handwerk." },
+      { type: "p", text: "Welke van deze zeven kost jou het meeste tijd? In de gratis Tijdlek-scan zetten we het per proces zwart op wit." },
+    ],
+  },
+  {
+    slug: "wat-is-een-ai-workforce",
+    title: "Wat is een AI Workforce (en waarom losse chatbots falen)",
+    description:
+      "Een AI Workforce is meer dan een chatbot. We leggen uit wat het is, hoe een team AI-agents samenwerkt op je bestaande systemen, en waarom losse tools stranden.",
+    date: "2026-08-11",
+    dateLabel: "11 augustus 2026",
+    readingMinutes: 5,
+    category: "AI Workforce",
+    body: [
+      { type: "p", text: "De term AI Workforce valt steeds vaker, maar wat is het precies? En waarom werkt het wél waar losse chatbots en tools blijven steken?" },
+      { type: "h2", text: "Van losse tool naar samenwerkend team" },
+      { type: "p", text: "Een chatbot doet één ding, los van de rest van je bedrijf. Een AI Workforce is een team van gespecialiseerde agents die elk een deel van het werk overnemen en samen een volledige rol invullen: mail, offertes, administratie, planning en meer, gekoppeld op de systemen die je al gebruikt." },
+      { type: "h2", text: "Waarom losse chatbots falen" },
+      { type: "ul", items: [
+        "Ze staan los van je systemen, dus je blijft handmatig schakelen",
+        "Ze dekken één taak, terwijl je werk uit tientallen kleine taken bestaat",
+        "Niemand richt ze goed in of adopteert ze, dus het gebruik zakt in",
+        "De besparing wordt nooit gemeten, dus niemand weet of het werkt",
+      ]},
+      { type: "h2", text: "Wat een AI Workforce anders maakt" },
+      { type: "p", text: "Omdat de agents op je bestaande systemen draaien en samenwerken, nemen ze het werk end-to-end over in plaats van één stukje. En omdat adoptie en meting zijn ingebakken, blijft de besparing ook echt staan. Zo wordt AI geen speeltje, maar capaciteit." },
+      { type: "p", text: "Bij Touch AI vormen vier kern-agents samen je fulltime medewerker (40 uur per week), en breidt je AI-team per afdeling uit wanneer je groeit." },
+    ],
+  },
+  {
+    slug: "offerte-agent-sneller-offreren",
+    title: "Van offerte-aanvraag naar getekend in minuten: de offerte-agent",
+    description:
+      "Trage offertes kosten je deals. Ontdek hoe een offerte-agent van aanvraag naar concept-offerte gaat in minuten, met automatische opvolging tot de handtekening.",
+    date: "2026-08-18",
+    dateLabel: "18 augustus 2026",
+    readingMinutes: 5,
+    category: "Sales",
+    body: [
+      { type: "p", text: "De snelste offerte wint vaak de deal. Toch blijven offertes in het MKB dagen liggen, simpelweg omdat er geen tijd voor is. Precies daar helpt een offerte-agent." },
+      { type: "h2", text: "Het probleem met handmatig offreren" },
+      { type: "p", text: "Een offerte opstellen kost al snel een uur: gegevens verzamelen, prijzen opzoeken, tekst schrijven, opmaken. En dan moet je nog opvolgen. Bij drukte schuift dat door, en een lauwe lead koelt af." },
+      { type: "h2", text: "Hoe de offerte-agent werkt" },
+      { type: "p", text: "De agent haalt de aanvraaggegevens op, stelt op basis van je eigen prijzen en templates een concept-offerte op in minuten, en zet die klaar zodat jij alleen nog controleert en verstuurt." },
+      { type: "h2", text: "Opvolgen zonder eraan te denken" },
+      { type: "p", text: "Na verzending volgt de agent automatisch op met de juiste timing en toon, tot de klant reageert of tekent. Geen enkele offerte verdwijnt meer in de vergetelheid, wat direct de grootste stille omzetlek dicht." },
+      { type: "h2", text: "Wat het oplevert" },
+      { type: "ul", items: [
+        "Sneller offreren, dus meer deals gewonnen op snelheid",
+        "Consistente, professionele offertes zonder tikfouten",
+        "Automatische opvolging, dus hogere conversie op je pijplijn",
+      ]},
+      { type: "p", text: "De offerte-agent is een van de vier kern-agents in het Touch AI offer. Benieuwd wat hij bij jou oplevert? Doe de gratis Tijdlek-scan." },
+    ],
+  },
 ];
 
 export function getPost(slug: string) {
   return posts.find((p) => p.slug === slug);
+}
+
+// Alleen posts waarvan de publicatiedatum is bereikt (date-gated drip),
+// nieuwste eerst. Wordt bij elke (wekelijkse) redeploy opnieuw geëvalueerd.
+export function getPublishedPosts() {
+  const today = new Date().toISOString().slice(0, 10);
+  return posts
+    .filter((p) => p.date <= today)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }

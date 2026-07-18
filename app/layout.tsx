@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.touchaiagency.com"),
   title: "Touch AI Agency · Een fulltime medewerker erbij met AI",
   description:
     "Met The AI Leap installeren wij een team AI-agents (je AI Workforce) op je bestaande systemen dat het werk van een fulltime medewerker overneemt. 40 uur per week terug, binnen 90 dagen gegarandeerd.",
