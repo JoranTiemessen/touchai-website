@@ -1,8 +1,20 @@
-const reassurances = [
-  "Je betaalt pas vanaf het moment dat je eerste agent live staat.",
-  "Alles wat we bouwen blijft van jou, ook als we uit elkaar gaan.",
-  "Gebouwd op je bestaande systemen. Geen migratie, geen gedoe.",
-  "Elke maand een rapport met bespaarde uren per agent, zwart op wit.",
+const conditions = [
+  {
+    title: "De norm komt uit de Tijdlek-scan",
+    desc: "Geen blinde 40 uur, maar de besparing die we samen vaststellen en aftekenen.",
+  },
+  {
+    title: "De klok start bij livegang",
+    desc: "De 90 dagen gaan in zodra je eerste agent draait, niet bij de kick-off.",
+  },
+  {
+    title: "Gemeten en per agent afgetekend",
+    desc: "Elke maand een rapport met bespaarde uren per agent, afgezet tegen de nulmeting.",
+  },
+  {
+    title: "Je betaalt pas bij livegang",
+    desc: "De maandelijkse investering start pas op het moment dat je eerste agent live staat.",
+  },
 ];
 
 export default function Results() {
@@ -38,14 +50,18 @@ export default function Results() {
               className="text-2xl md:text-4xl font-bold text-white tracking-[-0.02em] leading-[1.2] max-w-3xl"
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
-              Staat de besparing er niet binnen{" "}
-              <span style={{ color: "#6EADD4" }}>90 dagen na de kick-off?</span>{" "}
-              Dan werken wij kosteloos door tot het resultaat er wél staat.
+              De besparing die we in de Tijdlek-scan vaststellen, staat er{" "}
+              <span style={{ color: "#6EADD4" }}>binnen 90 dagen na livegang.</span>{" "}
+              Of we werken kosteloos door tot het wél zo is.
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mt-10">
-              {reassurances.map((item) => (
-                <div key={item} className="flex items-start gap-3">
+            <div className="text-xs font-semibold tracking-wider uppercase mt-10 mb-5" style={{ color: "rgba(255,255,255,0.45)" }}>
+              Onder deze voorwaarden
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+              {conditions.map((item) => (
+                <div key={item.title} className="flex items-start gap-3">
                   <div
                     className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
                     style={{ background: "rgba(110,173,212,0.18)", border: "1px solid rgba(110,173,212,0.35)" }}
@@ -54,12 +70,21 @@ export default function Results() {
                       <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <span className="text-sm leading-[1.6]" style={{ color: "rgba(255,255,255,0.62)" }}>
-                    {item}
-                  </span>
+                  <div>
+                    <div className="text-sm font-bold text-white" style={{ fontFamily: "'Sora', sans-serif" }}>
+                      {item.title}
+                    </div>
+                    <p className="text-[13px] leading-[1.6] mt-0.5" style={{ color: "rgba(255,255,255,0.55)" }}>
+                      {item.desc}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
+
+            <p className="text-[13px] leading-[1.6] mt-8 pt-6 border-t border-white/10" style={{ color: "rgba(255,255,255,0.45)" }}>
+              En alles wat we bouwen blijft van jou, ook als we uit elkaar gaan. Gebouwd op je bestaande systemen, geen migratie.
+            </p>
           </div>
         </div>
       </div>

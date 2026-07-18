@@ -133,7 +133,7 @@ export default function Pricing() {
             <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] whitespace-nowrap" style={{ fontFamily: "'Sora', sans-serif" }}>
               €3.500
             </div>
-            <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Netto in je zak, elke maand</div>
+            <div className="text-[11px] font-semibold tracking-wider uppercase text-white/70 mt-1">Aan capaciteit terug, elke maand</div>
           </div>
         </div>
 
