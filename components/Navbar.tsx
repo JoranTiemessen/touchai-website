@@ -14,11 +14,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Je AI-team", href: "#ai-team" },
-    { label: "Catalogus", href: "#catalogus" },
-    { label: "Aanpak", href: "#aanpak" },
-    { label: "Prijs", href: "#prijs" },
-    { label: "Team", href: "#team" },
+    { label: "Je AI-team", href: "/#ai-team" },
+    { label: "Aanpak", href: "/#aanpak" },
+    { label: "Prijs", href: "/#prijs" },
+    { label: "Over ons", href: "/about" },
+    { label: "Blog", href: "/blog" },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-2 group">
             <div className="relative w-20 h-20 flex-shrink-0">
               <Image
                 src="/logo.png"

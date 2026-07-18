@@ -4,12 +4,14 @@ import TrustSection from "@/components/TrustSection";
 import Services from "@/components/Services";
 import AgentTypes from "@/components/AgentTypes";
 import AgentCatalog from "@/components/AgentCatalog";
+import RoiMeter from "@/components/RoiMeter";
 import HowItWorks from "@/components/HowItWorks";
 import Results from "@/components/Results";
 import Pricing from "@/components/Pricing";
 import Advisors from "@/components/Advisors";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -17,14 +19,15 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustSection />
-      <Services />
-      <AgentTypes />
-      <AgentCatalog />
-      <HowItWorks />
-      <Results />
-      <Pricing />
-      <Advisors />
-      <FinalCTA />
+      <Reveal><Services /></Reveal>
+      <Reveal><AgentTypes /></Reveal>
+      <Reveal><AgentCatalog /></Reveal>
+      <Reveal><RoiMeter /></Reveal>
+      <Reveal><HowItWorks /></Reveal>
+      <Reveal><Results /></Reveal>
+      <Reveal><Pricing /></Reveal>
+      <Reveal><Advisors /></Reveal>
+      <Reveal><FinalCTA /></Reveal>
       <Footer />
     </main>
   );

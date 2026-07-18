@@ -71,11 +71,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: "Je AI-team", href: "#ai-team" },
-                { label: "Catalogus", href: "#catalogus" },
-                { label: "Aanpak", href: "#aanpak" },
-                { label: "Prijs", href: "#prijs" },
-                { label: "Team", href: "#team" },
+                { label: "Je AI-team", href: "/#ai-team" },
+                { label: "Catalogus", href: "/#catalogus" },
+                { label: "Aanpak", href: "/#aanpak" },
+                { label: "Prijs", href: "/#prijs" },
+                { label: "Over ons", href: "/about" },
+                { label: "Blog", href: "/blog" },
               ].map((link) => (
                 <li key={link.label}>
                   <a
