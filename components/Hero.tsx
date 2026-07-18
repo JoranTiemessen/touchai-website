@@ -68,9 +68,9 @@ export default function Hero() {
           {/* Stats */}
           <div className="mt-16 flex flex-wrap gap-x-10 gap-y-4">
             {[
-              { value: "40 u", label: "bespaard per week, een fulltime kracht" },
-              { value: "3 wkn", label: "tot je eerste agent live staat" },
-              { value: "90 dgn", label: "resultaat gegarandeerd, of we werken gratis door" },
+              { value: "40 uur", label: "bespaard per week, een fulltime kracht" },
+              { value: "3 weken", label: "tot je eerste agent live staat" },
+              { value: "90 dagen", label: "resultaat gegarandeerd, of we werken gratis door" },
             ].map((stat) => (
               <div key={stat.label} className="flex items-baseline gap-2 max-w-[15rem]">
                 <span
