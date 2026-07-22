@@ -7,9 +7,9 @@ const caseData = {
   approach: "Beschrijf welke agents zijn ingezet en hoe ze zijn gekoppeld op de bestaande systemen.",
   result: "Beschrijf het resultaat in tijd en euro's, afgezet tegen de nulmeting.",
   metrics: [
-    { value: "—", label: "uur bespaard per week" },
-    { value: "—", label: "per maand bespaard" },
-    { value: "—", label: "weken tot live" },
+    { value: "···", label: "uur bespaard per week" },
+    { value: "···", label: "per maand bespaard" },
+    { value: "···", label: "weken tot live" },
   ],
 };
 

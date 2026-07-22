@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ScrollBackground from "@/components/ScrollBackground";
 
 export const metadata: Metadata = {
-  title: "Over ons — Touch AI Agency",
+  title: "Over ons · Touch AI Agency",
   description:
     "Touch AI is opgericht door de broers Joran en Jesper Tiemessen. We bouwen AI-agents die het repetitieve werk overnemen bij Nederlandse MKB-bedrijven. Meetbaar, op je eigen systemen, gegarandeerd.",
 };

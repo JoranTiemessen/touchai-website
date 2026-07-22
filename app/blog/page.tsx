@@ -8,7 +8,7 @@ import { getPublishedPosts } from "./posts";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Blog — Touch AI Agency",
+  title: "Blog · Touch AI Agency",
   description:
     "Inzichten over AI-automatisering voor het MKB: waar de uren weglekken, hoe je repetitief werk terugwint, en hoe je een AI Workforce inzet die het werk overneemt.",
 };

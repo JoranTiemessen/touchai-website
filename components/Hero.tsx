@@ -5,7 +5,7 @@ const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 const stats = [
   { value: "40 uur", label: "bespaard per week, een fulltime kracht" },
   { value: "3 weken", label: "tot je eerste agent live staat" },
-  { value: "90 dagen", label: "resultaat gegarandeerd, of we werken gratis door" },
+  { value: "60 dagen", label: "resultaat gegarandeerd, of we werken gratis door" },
 ];
 
 export default function Hero() {
@@ -69,7 +69,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats — full-width row */}
+        {/* Stats: full-width row */}
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {stats.map((stat, i) => (
             <div key={stat.label} className={`text-center px-2 ${i > 0 ? "sm:border-l sm:border-gray-200" : ""}`}>

@@ -15,7 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const post = getPost(params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Touch AI Agency`,
+    title: `${post.title} · Touch AI Agency`,
     description: post.description,
     openGraph: {
       title: post.title,

@@ -99,7 +99,7 @@ export const posts: Post[] = [
       ]},
       { type: "h2", text: "Hoe het samen 40 uur wordt" },
       { type: "p", text: "Opgeteld nemen deze vier agents zo'n 40 uur repetitief werk per week over: een volledige fulltime medewerker aan capaciteit. De besparing is opgeteld over je hele team, dus je hoeft niet één iemand te ontslaan. Je wint tijd terug die nu verstopt zit in ieders agenda." },
-      { type: "h2", text: "In 90 dagen live (de AIOS-methode)" },
+      { type: "h2", text: "In 60 dagen live (de AIOS-methode)" },
       { type: "p", text: "We werken in vaste stappen: eerst een Tijdlek-scan (waar lekt de tijd weg), dan een agent-blauwdruk (welke agent lost welk lek op), daarna bouwen en koppelen we op je bestaande systemen. Je eerste agent staat binnen drie weken live. Vervolgens trainen we je team op adoptie en meten we elke maand de bespaarde uren." },
       { type: "h2", text: "Wat het kost en oplevert" },
       { type: "p", text: "De setup is eenmalig, met daarna een maandelijkse retainer voor monitoring, optimalisatie en uitbreiding. Afgezet tegen de kosten van een echte medewerker (al gauw €5.000 per maand) houd je netto capaciteit over, elke maand opnieuw. En omdat we afrekenen op de in de Tijdlek-scan vastgestelde besparing, met een garantie, weet je vooraf waar je aan toe bent." },

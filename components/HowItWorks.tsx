@@ -58,7 +58,7 @@ export default function HowItWorks() {
             <span style={{ color: "#6EADD4" }}>aan</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            The AI Leap brengt je van kick-off naar resultaat in 90 dagen. Je koopt geen software en geen adviesrapport, maar een meetbaar resultaat: 40 uur per week terug.
+            Eerst maken we je bedrijf AI-proof: we analyseren je processen en maken ze klaar. Daarna zetten we AI-agents per afdeling neer. Van kick-off naar resultaat in 60 dagen, met een meetbaar doel: 40 uur per week terug.
           </p>
         </div>
 

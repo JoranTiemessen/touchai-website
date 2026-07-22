@@ -2,7 +2,7 @@ const cols = ["AI Workforce", "Vaste medewerker", "Freelancer", "Losse AI-tools"
 
 type Cell = string | boolean;
 const rows: { label: string; values: Cell[] }[] = [
-  { label: "Kosten per maand", values: ["vanaf €1.500", "± €5.000", "hoog per uur", "laag, maar los"] },
+  { label: "Kosten per maand", values: ["fractie daarvan", "± €5.000", "hoog per uur", "laag, maar los"] },
   { label: "Inzetbaar in", values: ["3 weken", "maanden werven", "dagen", "direct, zelf inrichten"] },
   { label: "Werkt 24/7", values: [true, false, false, false] },
   { label: "Schaalbaar per taak", values: [true, false, "beperkt", "beperkt"] },

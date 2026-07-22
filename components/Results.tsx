@@ -5,7 +5,7 @@ const conditions = [
   },
   {
     title: "De klok start bij livegang",
-    desc: "De 90 dagen gaan in zodra je eerste agent draait, niet bij de kick-off.",
+    desc: "De 60 dagen gaan in zodra je eerste agent draait, niet bij de kick-off.",
   },
   {
     title: "Gemeten en per agent afgetekend",
@@ -51,7 +51,7 @@ export default function Results() {
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
               De besparing die we in de Tijdlek-scan vaststellen, staat er{" "}
-              <span style={{ color: "#6EADD4" }}>binnen 90 dagen na livegang.</span>{" "}
+              <span style={{ color: "#6EADD4" }}>binnen 60 dagen na livegang.</span>{" "}
               Of we werken kosteloos door tot het wél zo is.
             </h2>
 

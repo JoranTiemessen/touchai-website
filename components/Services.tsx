@@ -63,7 +63,7 @@ export default function Services() {
             <span style={{ color: "#6EADD4" }}>repetitieve werk overneemt</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Geen migratie, geen nieuwe software leren. We bouwen op de systemen die je nu al gebruikt. Jouw team gaat terug naar het werk waarvoor je ze hebt aangenomen.
+            Geen chatbot, geen cursus, geen los experiment. Wij bouwen het, implementeren het en zorgen dat je team ermee werkt, op de systemen die je nu al gebruikt.
           </p>
         </div>
 
