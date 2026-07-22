@@ -93,8 +93,8 @@ export default function AgentCatalog() {
           >
             Per afdeling een agent voor elk terugkerend proces.
           </h2>
-          <p className="text-lg text-gray-500 leading-[1.7] max-w-xl">
-            Dit is het volledige aanbod. Je kiest per afdeling welke agents je inzet en breidt uit wanneer je wilt, altijd op de systemen die je al gebruikt.
+          <p className="text-lg text-gray-500 leading-[1.7] max-w-2xl">
+            Geen chatbot, geen cursus, geen los experiment. Wij bouwen het, implementeren het en zorgen dat je team ermee werkt. Je kiest per afdeling welke agents je inzet en breidt uit wanneer je wilt.
           </p>
         </div>
 
