@@ -1,7 +1,7 @@
 const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 
 const eenmalig = [
-  "Tijdlek-scan: per afdeling in kaart waar de uren weglekken",
+  "Bedrijfsscan: per afdeling in kaart waar de uren weglekken",
   "Agent-blauwdruk: welke agent welk lek oplost",
   "Bouw en koppeling op je bestaande systemen",
   "Training van je team, zodat het ook echt gebruikt wordt",
@@ -109,13 +109,13 @@ export default function Pricing() {
             className="btn-primary inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-base hover:opacity-95 active:scale-[0.98] transition-all duration-200"
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
           >
-            Vraag je gratis Tijdlek-scan aan
+            Vraag je gratis Bedrijfsscan aan
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </a>
           <p className="mt-4 text-sm text-gray-400">
-            De exacte investering bespreken we in je Tijdlek-scan, afgestemd op jouw bedrijf.
+            De exacte investering bespreken we in je Bedrijfsscan, afgestemd op jouw bedrijf.
           </p>
           <p className="mt-2 text-sm font-semibold" style={{ color: "#3474A0" }}>
             We nemen maximaal 2 nieuwe implementaties per maand aan.

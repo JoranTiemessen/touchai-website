@@ -22,7 +22,7 @@ export default function CaseStudy() {
             Case study
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
-            Van tijdlek naar resultaat
+            Van tijdverlies naar resultaat
           </h2>
           {!caseData.real && <p className="text-sm text-gray-400 mt-4">De eerste uitgewerkte case volgt binnenkort.</p>}
         </div>

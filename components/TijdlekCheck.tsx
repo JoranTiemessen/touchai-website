@@ -82,10 +82,10 @@ export default function TijdlekCheck() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
-            Gratis Tijdlek-check
+            Gratis Bedrijfsscan
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
-            Bereken je tijdlek in 30 seconden.
+            Zie waar je tijd weglekt in 30 seconden.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
             Beantwoord 3 vragen en zie direct hoeveel tijd en geld er bij jou weglekt aan repetitief werk.
@@ -173,7 +173,7 @@ export default function TijdlekCheck() {
               <div className="relative rounded-2xl p-7 md:p-8 mb-6 overflow-hidden" style={{ background: "linear-gradient(155deg, #14263F 0%, #0A1220 100%)" }}>
                 <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse 80% 50% at 100% 0%, rgba(74,142,187,0.16) 0%, transparent 60%)" }} />
                 <div className="relative">
-                  <div className="text-[11px] font-bold tracking-[0.18em] uppercase mb-5" style={{ color: "rgba(159,202,227,0.7)" }}>Jouw tijdlek</div>
+                  <div className="text-[11px] font-bold tracking-[0.18em] uppercase mb-5" style={{ color: "rgba(159,202,227,0.7)" }}>Waar je tijd weglekt</div>
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div>
                       <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>{tijdlek}<span className="text-lg text-white/50"> u</span></div>
@@ -196,7 +196,7 @@ export default function TijdlekCheck() {
 
               {!sent ? (
                 <div>
-                  <p className="text-sm text-gray-500 mb-3">Ontvang je volledige tijdlek-rapport per mail en plan je gratis Tijdlek-scan.</p>
+                  <p className="text-sm text-gray-500 mb-3">Ontvang je volledige rapport per mail en plan je gratis Bedrijfsscan.</p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <input
                       type="email"
@@ -223,9 +223,9 @@ export default function TijdlekCheck() {
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" style={{ color: "#2C8F5E" }}><path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </div>
                   <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Check je mail</h3>
-                  <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">Je rapport is onderweg. Plan meteen je gratis Tijdlek-scan, dan meten we je exacte lek zwart op wit.</p>
+                  <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">Je rapport is onderweg. Plan meteen je gratis Bedrijfsscan, dan meten we je exacte lek zwart op wit.</p>
                   <a href={CAL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white font-semibold text-[15px]" style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}>
-                    Plan de gratis Tijdlek-scan
+                    Plan de gratis Bedrijfsscan
                     <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </a>
                 </div>
@@ -248,7 +248,7 @@ export default function TijdlekCheck() {
                   className="px-7 py-3 rounded-full text-white font-semibold text-[15px]"
                   style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
                 >
-                  {step === inputSteps - 1 ? "Bekijk mijn tijdlek" : "Volgende"}
+                  {step === inputSteps - 1 ? "Bekijk mijn resultaat" : "Volgende"}
                 </button>
               )}
             </div>

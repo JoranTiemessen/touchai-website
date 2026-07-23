@@ -124,7 +124,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               Benieuwd waar bij jou de uren weglekken?
             </h3>
             <p className="text-sm text-gray-500 leading-[1.7] max-w-md mx-auto mb-6">
-              Doe de gratis Tijdlek-scan en zie zwart op wit wat repetitief werk je kost.
+              Doe de gratis Bedrijfsscan en zie zwart op wit wat repetitief werk je kost.
             </p>
             <a
               href={CAL_URL}
@@ -133,7 +133,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-white font-semibold text-[15px]"
               style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
             >
-              Doe de gratis Tijdlek-scan
+              Doe de gratis Bedrijfsscan
               <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

@@ -26,7 +26,7 @@ export default function StickyCta() {
         className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full text-white font-semibold text-[15px]"
         style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
       >
-        Doe de gratis Tijdlek-scan
+        Doe de gratis Bedrijfsscan
         <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>

@@ -1,6 +1,6 @@
 const conditions = [
   {
-    title: "De norm komt uit de Tijdlek-scan",
+    title: "De norm komt uit de Bedrijfsscan",
     desc: "Geen blinde 40 uur, maar de besparing die we samen vaststellen en aftekenen.",
   },
   {
@@ -50,7 +50,7 @@ export default function Results() {
               className="text-2xl md:text-4xl font-bold text-white tracking-[-0.02em] leading-[1.2] max-w-3xl"
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
-              De besparing die we in de Tijdlek-scan vaststellen, staat er{" "}
+              De besparing die we in de Bedrijfsscan vaststellen, staat er{" "}
               <span style={{ color: "#6EADD4" }}>binnen 60 dagen na livegang.</span>{" "}
               Of we werken kosteloos door tot het wél zo is.
             </h2>

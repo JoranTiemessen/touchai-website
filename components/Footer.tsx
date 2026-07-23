@@ -72,9 +72,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { label: "Je AI-team", href: "/#ai-team" },
-                { label: "Catalogus", href: "/#catalogus" },
                 { label: "Aanpak", href: "/#aanpak" },
-                { label: "Prijs", href: "/#prijs" },
+                { label: "Investering", href: "/#prijs" },
                 { label: "Over ons", href: "/about" },
                 { label: "Blog", href: "/blog" },
               ].map((link) => (
@@ -105,7 +104,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
                 >
-                  Gratis Tijdlek-scan
+                  Gratis Bedrijfsscan
                 </a>
               </li>
               <li>
@@ -123,7 +122,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-brand-200 transition-colors duration-200"
                 >
-                  Doe de gratis Tijdlek-scan
+                  Doe de gratis Bedrijfsscan
                   <svg className="w-3.5 h-3.5" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

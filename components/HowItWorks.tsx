@@ -2,7 +2,7 @@ const steps = [
   {
     number: "01",
     when: "Week 1",
-    title: "Tijdlek-scan",
+    title: "Bedrijfsscan",
     description:
       "Eén sessie van 2 uur. Binnen een week zwart op wit waar de uren in jouw bedrijf weglekken en wat elk lek per maand kost. Dat is de nulmeting, daar rekenen we ons straks op af.",
   },
@@ -11,7 +11,7 @@ const steps = [
     when: "Week 2",
     title: "Agent-blauwdruk",
     description:
-      "Jouw AI-team op één pagina: welke agent welk tijdlek oplost, hoeveel uur dat scheelt en welke systemen hij gebruikt. Jij weet exact wat er gebouwd wordt.",
+      "Jouw AI-team op één pagina: welke agent welk lek oplost, hoeveel uur dat scheelt en welke systemen hij gebruikt. Jij weet exact wat er gebouwd wordt.",
   },
   {
     number: "03",
@@ -100,7 +100,7 @@ export default function HowItWorks() {
             className="btn-primary inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-400 text-white font-semibold text-[15px] hover:bg-brand-500 active:scale-[0.98] transition-all duration-150"
             style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
           >
-            Doe de gratis Tijdlek-scan
+            Doe de gratis Bedrijfsscan
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

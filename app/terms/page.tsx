@@ -36,8 +36,8 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>3. Gesprekken en Tijdlek-scan</h2>
-            <p>Een gratis Tijdlek-scan of kennismakingsgesprek kun je via onze website inplannen. Deze gesprekken zijn vrijblijvend en verplichten geen van beide partijen tot iets. Touch AI Agency behoudt zich het recht voor om een opdracht zonder opgaaf van reden te weigeren.</p>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>3. Gesprekken en Bedrijfsscan</h2>
+            <p>Een gratis Bedrijfsscan of kennismakingsgesprek kun je via onze website inplannen. Deze gesprekken zijn vrijblijvend en verplichten geen van beide partijen tot iets. Touch AI Agency behoudt zich het recht voor om een opdracht zonder opgaaf van reden te weigeren.</p>
           </div>
 
           <div>

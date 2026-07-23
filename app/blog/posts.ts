@@ -39,10 +39,10 @@ export const posts: Post[] = [
       { type: "h2", text: "Reken het eens uit" },
       { type: "p", text: "Neem een team van zes mensen dat elk zo'n zeven uur per week aan repetitief werk kwijt is. Dat is 42 uur per week: meer dan een volledige fulltime medewerker. Op deze arbeidsmarkt een kracht die je niet eens makkelijk vindt, en die je al gauw €5.000 per maand kost (salaris, werkgeverslasten, werkplek en verzuim)." },
       { type: "p", text: "Het punt: die medewerker heb je eigenlijk al nodig. Alleen zit die capaciteit nu verstopt in de agenda's van je bestaande team." },
-      { type: "h2", text: "Van tijdlek naar teruggewonnen tijd" },
+      { type: "h2", text: "Van tijdverlies naar teruggewonnen tijd" },
       { type: "p", text: "Het goede nieuws is dat precies dit type werk zich uitstekend leent voor AI-agents. Een agent die je mail voorsorteert en beantwoordt, een agent die offertes opstelt, een agent die je administratie inleest: samen nemen ze het repetitieve werk over, zodat je team terug kan naar het werk waarvoor je ze hebt aangenomen." },
       { type: "h2", text: "Begin met meten" },
-      { type: "p", text: "Je kunt pas terugwinnen wat je eerst hebt gemeten. Daarom start elk traject bij ons met een Tijdlek-scan: binnen een week zwart op wit waar de uren weglekken en wat elk lek per maand kost in euro's. Dat is je nulmeting, en meteen de basis voor de garantie." },
+      { type: "p", text: "Je kunt pas terugwinnen wat je eerst hebt gemeten. Daarom start elk traject bij ons met een Bedrijfsscan: binnen een week zwart op wit waar de uren weglekken en wat elk lek per maand kost in euro's. Dat is je nulmeting, en meteen de basis voor de garantie." },
     ],
   },
   {
@@ -100,9 +100,9 @@ export const posts: Post[] = [
       { type: "h2", text: "Hoe het samen 40 uur wordt" },
       { type: "p", text: "Opgeteld nemen deze vier agents zo'n 40 uur repetitief werk per week over: een volledige fulltime medewerker aan capaciteit. De besparing is opgeteld over je hele team, dus je hoeft niet één iemand te ontslaan. Je wint tijd terug die nu verstopt zit in ieders agenda." },
       { type: "h2", text: "In 60 dagen live (de AIOS-methode)" },
-      { type: "p", text: "We werken in vaste stappen: eerst een Tijdlek-scan (waar lekt de tijd weg), dan een agent-blauwdruk (welke agent lost welk lek op), daarna bouwen en koppelen we op je bestaande systemen. Je eerste agent staat binnen drie weken live. Vervolgens trainen we je team op adoptie en meten we elke maand de bespaarde uren." },
+      { type: "p", text: "We werken in vaste stappen: eerst een Bedrijfsscan (waar lekt de tijd weg), dan een agent-blauwdruk (welke agent lost welk lek op), daarna bouwen en koppelen we op je bestaande systemen. Je eerste agent staat binnen drie weken live. Vervolgens trainen we je team op adoptie en meten we elke maand de bespaarde uren." },
       { type: "h2", text: "Wat het kost en oplevert" },
-      { type: "p", text: "De setup is eenmalig, met daarna een maandelijkse retainer voor monitoring, optimalisatie en uitbreiding. Afgezet tegen de kosten van een echte medewerker (al gauw €5.000 per maand) houd je netto capaciteit over, elke maand opnieuw. En omdat we afrekenen op de in de Tijdlek-scan vastgestelde besparing, met een garantie, weet je vooraf waar je aan toe bent." },
+      { type: "p", text: "De setup is eenmalig, met daarna een maandelijkse retainer voor monitoring, optimalisatie en uitbreiding. Afgezet tegen de kosten van een echte medewerker (al gauw €5.000 per maand) houd je netto capaciteit over, elke maand opnieuw. En omdat we afrekenen op de in de Bedrijfsscan vastgestelde besparing, met een garantie, weet je vooraf waar je aan toe bent." },
     ],
   },
   {
@@ -130,7 +130,7 @@ export const posts: Post[] = [
       { type: "p", text: "De kosten zijn één ding. Op de huidige arbeidsmarkt is het vaak nog lastiger om überhaupt de juiste persoon te vinden en te behouden. Vacatures staan maanden open, en een verkeerde aanname kost dubbel." },
       { type: "h2", text: "Waarom dit ertoe doet" },
       { type: "p", text: "Als je weet wat een medewerker écht kost, wordt de rekensom van automatisering ineens helder. Een AI Workforce die 40 uur repetitief werk per week overneemt, levert dezelfde capaciteit als een fulltime kracht, tegen een fractie van die €5.000 per maand. En je hoeft niemand te werven." },
-      { type: "p", text: "Wil je precies weten hoeveel capaciteit er bij jou verstopt zit in repetitief werk? Dat meten we in de gratis Tijdlek-scan." },
+      { type: "p", text: "Wil je precies weten hoeveel capaciteit er bij jou verstopt zit in repetitief werk? Dat meten we in de gratis Bedrijfsscan." },
     ],
   },
   {
@@ -184,7 +184,7 @@ export const posts: Post[] = [
       { type: "p", text: "Inkomende leads scoren, verdelen en automatisch opvolgen, zodat je alleen met warme leads praat." },
       { type: "h2", text: "7. Rapportage" },
       { type: "p", text: "Data uit je tools samengevoegd tot een maandrapport of live dashboard, zonder handwerk." },
-      { type: "p", text: "Welke van deze zeven kost jou het meeste tijd? In de gratis Tijdlek-scan zetten we het per proces zwart op wit." },
+      { type: "p", text: "Welke van deze zeven kost jou het meeste tijd? In de gratis Bedrijfsscan zetten we het per proces zwart op wit." },
     ],
   },
   {
@@ -235,7 +235,7 @@ export const posts: Post[] = [
         "Consistente, professionele offertes zonder tikfouten",
         "Automatische opvolging, dus hogere conversie op je pijplijn",
       ]},
-      { type: "p", text: "De offerte-agent is een van de vier kern-agents in het Touch AI offer. Benieuwd wat hij bij jou oplevert? Doe de gratis Tijdlek-scan." },
+      { type: "p", text: "De offerte-agent is een van de vier kern-agents in het Touch AI offer. Benieuwd wat hij bij jou oplevert? Doe de gratis Bedrijfsscan." },
     ],
   },
 ];

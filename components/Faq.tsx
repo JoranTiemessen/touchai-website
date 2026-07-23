@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Wat als het resultaat er niet is?",
-    a: "Dan werken we kosteloos door tot de in de Tijdlek-scan vastgestelde besparing er staat, binnen 60 dagen na livegang. Je betaalt de retainer bovendien pas vanaf het moment dat je eerste agent live staat.",
+    a: "Dan werken we kosteloos door tot de in de Bedrijfsscan vastgestelde besparing er staat, binnen 60 dagen na livegang. Je betaalt de retainer bovendien pas vanaf het moment dat je eerste agent live staat.",
   },
   {
     q: "Voor welke bedrijven is dit?",

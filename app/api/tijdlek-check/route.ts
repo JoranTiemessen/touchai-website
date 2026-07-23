@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       await fetch(webhook, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ ...(data as object), source: "tijdlek-check", site: "touchaiagency.com" }),
+        body: JSON.stringify({ ...(data as object), source: "bedrijfsscan", site: "touchaiagency.com" }),
       });
     } catch {
       // niet blokkeren op webhook-fouten; lead-UX blijft werken
