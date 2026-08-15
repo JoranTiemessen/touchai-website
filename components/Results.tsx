@@ -1,7 +1,7 @@
 const voorwaarden = [
   { n: "01", t: "Toegang binnen 5 werkdagen", s: "Anders kunnen we niet bouwen en loopt de klok voor niets." },
   { n: "02", t: "Eén vast aanspreekpunt", s: "Iemand die knopen mag doorhakken als er een vraag is." },
-  { n: "03", t: "Anderhalf uur van je tijd", s: "Eén sessie bij jou op kantoor. Meer vragen we niet." },
+  { n: "03", t: "Anderhalf uur van je tijd", s: "Eén sessie via een videocall. Meer vragen we niet." },
   { n: "04", t: "Je mensen gebruiken ze ook", s: "Loopt er niets doorheen, dan is er niets te meten." },
 ];
 

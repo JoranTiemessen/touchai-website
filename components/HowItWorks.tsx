@@ -9,9 +9,9 @@ const steps = [
   {
     number: "02",
     when: "Week 1 · 90 minuten",
-    title: "Bij jou op kantoor",
+    title: "Toegang en doorloop",
     description:
-      "Eén sessie van anderhalf uur, bij jou op kantoor. We regelen samen de toegang en lopen je proces door. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem.",
+      "Eén sessie van anderhalf uur, via een videocall met scherm delen. We regelen samen de toegang en lopen je proces door. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem.",
   },
   {
     number: "03",
