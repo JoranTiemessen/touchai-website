@@ -46,6 +46,55 @@ const cases: Case[] = [
     gevonden:
       "Zevenentwintig ketens die in dertien dagen stilvielen zonder dat iemand het merkte. En een uitschrijving die nooit aankwam, omdat het WhatsApp-nummer bij een andere app hing: de controle stond op de juiste plek, maar het veld werd nooit gevuld.",
   },
+  {
+    klant: "Een payment provider",
+    sector: "Betaaldiensten voor e-commerce",
+    markt: "Nederland",
+    situatie:
+      "Afrekeningen van de partner kwamen binnen als bestanden die met de hand werden nagelopen. Verschillen tussen wat er hoorde binnen te komen en wat er stond, vielen pas op als iemand er gericht naar zocht.",
+    gebouwd: [
+      "Inlezen en uitsplitsen van de afrekeningen per transactietype",
+      "Automatisch naast de eigen administratie leggen, met alleen de afwijkingen als uitkomst",
+      "Een vaste rekenbasis, vastgelegd in plaats van in een los bestand",
+    ],
+    bewezen:
+      "De controle draait op de echte afrekeningen en levert alleen de verschillen op. Wat klopt, komt niet meer op iemands bureau.",
+    gevonden:
+      "Een bestand met GOUDEN REFERENTIE in de naam dat optelde tot €1.154,80, terwijl de geldende basis over alle transactietypes op €1.572,77 uitkwam. De naam bleef gouden, de inhoud niet. Een referentiebestand veroudert stiller dan code.",
+  },
+  {
+    klant: "Een notariskantoor",
+    sector: "Protestakten en incasso",
+    markt: "Brazilië",
+    situatie:
+      "Financiële documenten kwamen per mail binnen als PDF. Iemand las ze uit, hernoemde ze, archiveerde ze en zette de gegevens in een sheet. Elke dag opnieuw, in twee documenttypes.",
+    gebouwd: [
+      "Intake vanuit de mailbox, met AI-extractie van de gegevens uit de PDF",
+      "Automatisch archiveren in Drive en wegschrijven in een controleerbaar logboek",
+      "Een review-rij voor alles waar het model niet zeker van is, zodat een mens alleen de twijfelgevallen ziet",
+      "Een dagelijkse samenvatting om 18:00 lokale tijd naar één ontvanger",
+    ],
+    bewezen:
+      "Draait dagelijks op echte documenten, bediend door niet-technische medewerkers. De pilot is opgeleverd en betaald, het volledige traject loopt.",
+    gevonden:
+      "De dagelijkse samenvatting gaat ook uit als er nul openstaande items zijn. Dat is bewust: een stille digest is niet te onderscheiden van een kapotte workflow, en dan merkt niemand het als hij ermee stopt.",
+  },
+  {
+    klant: "Een interieurbouwer",
+    sector: "Interieur op maat",
+    markt: "Nederland",
+    situatie:
+      "Aanvragen via de site kwamen binnen in de mailbox en werden met de hand opgevolgd. Voor twee merken naast elkaar, met elk hun eigen route en eigen toon.",
+    gebouwd: [
+      "Een lead-funnel per merk: formulier binnen, lead vastgelegd, interne melding en daarna automatisch een bericht naar de klant",
+      "WhatsApp als kanaal, met een goedgekeurde template en een wachtmoment ertussen",
+      "Twee volledig gescheiden pijplijnen, zodat het ene merk het andere niet kan omgooien",
+    ],
+    bewezen:
+      "Beide merken draaien op hun eigen keten. Een aanvraag krijgt binnen een minuut een eerste reactie.",
+    gevonden:
+      "Telefoonnummers werden genormaliseerd met een reeks vervangregels achter elkaar. Bij een nummer in 0031-notatie sloegen er twee tegelijk toe en miste het resultaat een cijfer. Een keten van replaces is geen normalisatie, dat is een reeks aannames die elkaar in de rug schieten.",
+  },
 ];
 
 export default function Cases() {
@@ -61,7 +110,7 @@ export default function Cases() {
             Wat er bij anderen draait.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Twee lopende opdrachten, met wat er is gebouwd én wat we onderweg tegenkwamen.
+            Vijf lopende opdrachten, met wat er is gebouwd én wat we onderweg tegenkwamen.
             Klantnamen laten we weg zolang daar afspraken over lopen.
           </p>
         </div>
