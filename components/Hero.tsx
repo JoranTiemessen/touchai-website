@@ -52,8 +52,8 @@ export default function Hero() {
         <div className="mt-14 grid grid-cols-1 md:grid-cols-12 gap-10 items-end">
           <div className="md:col-span-5 md:col-start-8">
             <p className="text-[17px] text-gray-500 leading-[1.65]">
-              Wij halen het terugkerende werk uit je bedrijf met AI-agents, op de systemen die je nu
-              al gebruikt.{" "}
+              Aanvragen, offertes, facturen, opvolging. Wij bouwen de agents die dat overnemen, op
+              de systemen die je nu al gebruikt.{" "}
               <strong className="font-semibold text-gray-800">
                 Werkt het niet binnen 60 dagen, dan krijg je je investering terug
               </strong>{" "}
