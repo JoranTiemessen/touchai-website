@@ -1,6 +1,6 @@
 export default function FinalCTA() {
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-gray-950 overflow-hidden">
+    <section id="contact" className="relative py-24 md:py-32 bg-transparent overflow-hidden">
       {/* Background glow */}
       <div
         className="absolute inset-0 pointer-events-none"

@@ -42,7 +42,7 @@ export default function Advisors() {
     <section
       id="team"
       className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: "rgba(255,255,255,0.88)" }}
+      style={{ background: "rgba(13,19,30,0.72)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
@@ -58,13 +58,13 @@ export default function Advisors() {
             Het team
           </div>
           <h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
+            className="text-4xl md:text-5xl font-bold text-white tracking-[-0.03em] mb-5"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Twee broers,{" "}
             <span style={{ color: "#6EADD4" }}>één missie</span>
           </h2>
-          <p className="text-lg text-gray-500 leading-[1.7]">
+          <p className="text-lg text-slate-400 leading-[1.7]">
             Touch AI wordt gerund door de broers Joran en Jesper Tiemessen. Samen ontwerpen, bouwen en leveren ze de AI-systemen die een echt verschil maken in hoe onze klanten werken.
           </p>
         </div>
@@ -85,12 +85,12 @@ export default function Advisors() {
           }}
         >
           <h3
-            className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em] mb-4"
+            className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] mb-4"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Waarom we Touch AI zijn begonnen
           </h3>
-          <p className="text-gray-500 leading-[1.75] max-w-2xl mx-auto">
+          <p className="text-slate-400 leading-[1.75] max-w-2xl mx-auto">
             We zagen steeds hetzelfde: goede bedrijven die verzuipen in repetitief werk, terwijl AI ongebruikt bleef. Touch AI dicht dat gat. Geen jargon, geen dure consultants, gewoon praktische automatisering die vanaf dag één een zichtbaar verschil maakt.
           </p>
           <a
@@ -119,7 +119,7 @@ function TeamCard({ member }: { member: typeof team[0] }) {
     <div
       className="rounded-3xl p-8 md:p-10 flex flex-col gap-7"
       style={{
-        background: "rgba(255,255,255,0.95)",
+        background: "rgba(13,19,30,0.75)",
         boxShadow:
           "0 4px 6px rgba(110,173,212,0.06), 0 12px 40px rgba(110,173,212,0.10), 0 1px 2px rgba(0,0,0,0.04)",
         border: "1px solid rgba(110,173,212,0.12)",
@@ -162,7 +162,7 @@ function TeamCard({ member }: { member: typeof team[0] }) {
             </span>
           </div>
           <h3
-            className="text-2xl font-bold text-gray-900 tracking-[-0.02em]"
+            className="text-2xl font-bold text-white tracking-[-0.02em]"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             {member.name}
@@ -172,7 +172,7 @@ function TeamCard({ member }: { member: typeof team[0] }) {
               {member.tagline}
             </span>
           </div>
-          <div className="flex items-center gap-1.5 mt-1.5 text-xs text-gray-400">
+          <div className="flex items-center gap-1.5 mt-1.5 text-xs text-slate-500">
             <svg className="w-3 h-3" viewBox="0 0 16 16" fill="currentColor">
               <path fillRule="evenodd" d="M8 1a5 5 0 00-3.536 8.536L8 13.07l3.536-3.534A5 5 0 008 1zm0 7a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
             </svg>
@@ -183,9 +183,9 @@ function TeamCard({ member }: { member: typeof team[0] }) {
 
       {/* Bio + skills */}
       <div className="flex flex-col gap-6 flex-1">
-        <p className="text-gray-600 leading-[1.75] text-base">{member.bio}</p>
+        <p className="text-slate-300 leading-[1.75] text-base">{member.bio}</p>
         <div>
-          <div className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">
+          <div className="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-3">
             Expertise
           </div>
           <div className="flex flex-wrap gap-2">

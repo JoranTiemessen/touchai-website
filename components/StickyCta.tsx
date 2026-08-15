@@ -17,7 +17,7 @@ export default function StickyCta() {
   return (
     <div
       className={`md:hidden fixed left-0 right-0 bottom-0 z-40 px-4 pb-[calc(env(safe-area-inset-bottom)+12px)] pt-3 transition-transform duration-300 ${show ? "translate-y-0" : "translate-y-full"}`}
-      style={{ background: "rgba(255,255,255,0.92)", backdropFilter: "blur(10px)", borderTop: "1px solid rgba(11,18,32,0.08)" }}
+      style={{ background: "rgba(13,19,30,0.72)", backdropFilter: "blur(10px)", borderTop: "1px solid rgba(11,18,32,0.08)" }}
     >
       <a
         href={CAL_URL}

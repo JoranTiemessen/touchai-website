@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function BlogIndex() {
   return (
-    <main className="relative bg-white">
+    <main className="relative bg-transparent">
       <Navbar />
 
       <section className="relative pt-40 pb-14 md:pt-48 md:pb-16 overflow-hidden">
@@ -31,12 +31,12 @@ export default function BlogIndex() {
             Inzichten
           </div>
           <h1
-            className="text-5xl sm:text-6xl font-bold text-gray-900 leading-[1.06] tracking-[-0.03em] mb-6"
+            className="text-5xl sm:text-6xl font-bold text-white leading-[1.06] tracking-[-0.03em] mb-6"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Blog
           </h1>
-          <p className="text-lg md:text-xl text-gray-500 leading-[1.7] max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-400 leading-[1.7] max-w-2xl mx-auto">
             Praktische inzichten over AI-automatisering voor het MKB. Geen hype, wel resultaat.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function BlogIndex() {
                 href={`/blog/${post.slug}`}
                 className="group rounded-3xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-1"
                 style={{
-                  background: "rgba(255,255,255,0.96)",
+                  background: "rgba(13,19,30,0.72)",
                   boxShadow: "0 4px 6px rgba(110,173,212,0.06), 0 12px 40px rgba(110,173,212,0.09), 0 1px 2px rgba(0,0,0,0.04)",
                   border: "1px solid rgba(110,173,212,0.14)",
                 }}
@@ -63,17 +63,17 @@ export default function BlogIndex() {
                   >
                     {post.category}
                   </span>
-                  <span className="text-xs text-gray-400">{post.readingMinutes} min lezen</span>
+                  <span className="text-xs text-slate-500">{post.readingMinutes} min lezen</span>
                 </div>
                 <h2
-                  className="text-xl font-bold text-gray-900 tracking-[-0.01em] mb-3 leading-snug group-hover:text-brand-500 transition-colors duration-200"
+                  className="text-xl font-bold text-white tracking-[-0.01em] mb-3 leading-snug group-hover:text-brand-500 transition-colors duration-200"
                   style={{ fontFamily: "'Sora', sans-serif" }}
                 >
                   {post.title}
                 </h2>
-                <p className="text-sm text-gray-500 leading-[1.7] mb-6 flex-1">{post.description}</p>
+                <p className="text-sm text-slate-400 leading-[1.7] mb-6 flex-1">{post.description}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-400">{post.dateLabel}</span>
+                  <span className="text-xs text-slate-500">{post.dateLabel}</span>
                   <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-500">
                     Lees meer
                     <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-200" viewBox="0 0 14 14" fill="none">

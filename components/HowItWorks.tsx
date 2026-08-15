@@ -40,7 +40,7 @@ const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 
 export default function HowItWorks() {
   return (
-    <section id="aanpak" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(255,255,255,0.94)" }}>
+    <section id="aanpak" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(13,19,30,0.72)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-16">
@@ -51,13 +51,13 @@ export default function HowItWorks() {
             Zo werkt het
           </div>
           <h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-4"
+            className="text-4xl md:text-5xl font-bold text-white tracking-[-0.03em] mb-4"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Zo pakken we het{" "}
             <span style={{ color: "#6EADD4" }}>aan</span>
           </h2>
-          <p className="text-lg text-gray-500 leading-[1.7]">
+          <p className="text-lg text-slate-400 leading-[1.7]">
             Wij komen niet met een mening over jouw bedrijf, wij vragen door tot duidelijk is welk werk eruit kan. Daarna bouwen we het, in je eigen accounts en op de systemen die je al gebruikt.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function HowItWorks() {
             <div key={step.title} className="relative">
               <div
                 className="text-5xl font-bold tracking-[-0.03em] mb-4 select-none"
-                style={{ color: "rgba(110,173,212,0.25)", fontFamily: "'Sora', sans-serif" }}
+                style={{ color: "rgba(110,173,212,0.42)", fontFamily: "'Sora', sans-serif" }}
               >
                 {step.number}
               </div>
@@ -79,12 +79,12 @@ export default function HowItWorks() {
                 {step.when}
               </div>
               <h3
-                className="text-xl font-bold text-gray-900 mb-3 tracking-[-0.02em]"
+                className="text-xl font-bold text-white mb-3 tracking-[-0.02em]"
                 style={{ fontFamily: "'Sora', sans-serif" }}
               >
                 {step.title}
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="text-sm text-slate-400 leading-relaxed">
                 {step.description}
               </p>
             </div>
@@ -92,7 +92,7 @@ export default function HowItWorks() {
         </div>
 
         {/* CTA */}
-        <div className="mt-14 pt-10 border-t border-gray-100">
+        <div className="mt-14 pt-10 border-t border-white/10">
           <a
             href={CAL_URL}
             target="_blank"

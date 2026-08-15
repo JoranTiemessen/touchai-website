@@ -21,7 +21,7 @@ export default function Pricing() {
     <section
       id="prijs"
       className="relative py-24 md:py-32 overflow-hidden"
-      style={{ background: "linear-gradient(180deg, rgba(240,248,255,0.6) 0%, rgba(255,255,255,0.95) 100%)" }}
+      style={{ background: "linear-gradient(180deg, rgba(110,173,212,0.06) 0%, rgba(7,10,16,0) 100%)" }}
     >
       <div
         className="absolute inset-0 pointer-events-none"
@@ -38,13 +38,13 @@ export default function Pricing() {
             De investering
           </div>
           <h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
+            className="text-4xl md:text-5xl font-bold text-white tracking-[-0.03em] mb-5"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Wat het kost, hoor je{" "}
             <span style={{ color: "#6EADD4" }}>in het gesprek.</span>
           </h2>
-          <p className="text-lg text-gray-500 leading-[1.7]">
+          <p className="text-lg text-slate-400 leading-[1.7]">
 Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze samen benoemd hebben. Je hoort het bedrag in datzelfde gesprek, niet in een offerte drie dagen later.
           </p>
         </div>
@@ -59,13 +59,13 @@ Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze s
               key={col.label}
               className="rounded-3xl p-8 md:p-10"
               style={{
-                background: "rgba(255,255,255,0.96)",
+                background: "rgba(13,19,30,0.72)",
                 boxShadow: "0 4px 6px rgba(110,173,212,0.06), 0 14px 44px rgba(110,173,212,0.10), 0 1px 2px rgba(0,0,0,0.04)",
                 border: "1px solid rgba(110,173,212,0.14)",
               }}
             >
               <div className="text-xs font-semibold tracking-wider uppercase text-brand-500 mb-2">{col.label}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6 tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+              <h3 className="text-xl font-bold text-white mb-6 tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif" }}>
                 {col.title}
               </h3>
               <div className="space-y-3.5">
@@ -76,7 +76,7 @@ Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze s
                         <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
-                    <span className="text-sm text-gray-600 leading-[1.6]">{item}</span>
+                    <span className="text-sm text-slate-300 leading-[1.6]">{item}</span>
                   </div>
                 ))}
               </div>
@@ -93,7 +93,7 @@ Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze s
           }}
         >
           <p
-            className="text-lg md:text-2xl font-bold text-gray-900 tracking-[-0.01em] leading-[1.4] max-w-3xl mx-auto"
+            className="text-lg md:text-2xl font-bold text-white tracking-[-0.01em] leading-[1.4] max-w-3xl mx-auto"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             Je betaalt de helft bij de start en de helft als de laatste agent draait.{" "}
@@ -115,7 +115,7 @@ Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze s
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </a>
-          <p className="mt-4 text-sm text-gray-400">
+          <p className="mt-4 text-sm text-slate-500">
             Eén prijs voor het geheel, afgestemd op het aantal processen dat we overnemen.
           </p>
           <p className="mt-2 text-sm font-semibold" style={{ color: "#3474A0" }}>

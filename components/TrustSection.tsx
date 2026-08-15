@@ -11,11 +11,11 @@ export default function TrustSection() {
 
   return (
     <section
-      className="relative py-14 border-y border-brand-100 overflow-hidden"
-      style={{ background: "rgba(255,255,255,0.88)" }}
+      className="relative py-14 border-y border-white/10 overflow-hidden"
+      style={{ background: "rgba(13,19,30,0.72)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-center text-xs font-semibold tracking-[0.18em] uppercase text-gray-400 mb-10">
+        <p className="text-center text-xs font-semibold tracking-[0.18em] uppercase text-slate-500 mb-10">
           Vertrouwd door vooruitstrevende bedrijven
         </p>
 
@@ -36,7 +36,7 @@ export default function TrustSection() {
                   className="h-10 w-auto max-w-[140px] object-contain opacity-90 hover:opacity-100 transition duration-300"
                 />
                 <span
-                  className="text-sm font-semibold tracking-wide text-gray-500"
+                  className="text-sm font-semibold tracking-wide text-slate-400"
                   style={{ fontFamily: "'Sora', sans-serif" }}
                 >
                   {c.name}

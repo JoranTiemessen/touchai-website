@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gray-950 text-white overflow-hidden">
+    <footer className="relative bg-transparent text-white overflow-hidden">
       {/* Top accent line */}
       <div
         className="h-px w-full"
@@ -41,7 +41,7 @@ export default function Footer() {
                 <span className="text-brand-300 font-normal text-[11px] tracking-[0.12em] uppercase">Agency</span>
               </span>
             </div>
-            <p className="text-sm text-gray-400 leading-[1.7] max-w-xs mb-6">
+            <p className="text-sm text-slate-500 leading-[1.7] max-w-xs mb-6">
               Wij halen het terugkerende werk uit je bedrijf met AI-agents, op de systemen die je al gebruikt. Werkt het niet, dan krijg je je investering terug en blijven de agents staan.
             </p>
             {/* Social */}
@@ -50,7 +50,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/joran-tiemessen-729569162"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg flex items-center justify-center text-gray-400 hover:text-white hover:bg-brand-400 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-400"
+                className="w-9 h-9 rounded-lg flex items-center justify-center text-slate-500 hover:text-white hover:bg-brand-400 transition-all duration-200 focus-visible:outline-2 focus-visible:outline-brand-400"
                 style={{ background: "rgba(255,255,255,0.06)" }}
                 aria-label="LinkedIn"
               >
@@ -80,7 +80,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200 link-underline"
+                    className="text-sm text-slate-500 hover:text-brand-300 transition-colors duration-200 link-underline"
                   >
                     {link.label}
                   </a>
@@ -102,7 +102,7 @@ export default function Footer() {
                   href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
+                  className="text-sm text-slate-500 hover:text-brand-300 transition-colors duration-200"
                 >
                   Plan het gesprek
                 </a>
@@ -110,7 +110,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:info@touchaiagency.com"
-                  className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
+                  className="text-sm text-slate-500 hover:text-brand-300 transition-colors duration-200"
                 >
                   info@touchaiagency.com
                 </a>
@@ -134,14 +134,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="py-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-slate-300">
             &copy; {currentYear} Touch AI Agency. Alle rechten voorbehouden.
           </p>
           <div className="flex gap-6">
-            <a href="/privacy" className="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-200">
+            <a href="/privacy" className="text-xs text-slate-300 hover:text-slate-500 transition-colors duration-200">
               Privacybeleid
             </a>
-            <a href="/terms" className="text-xs text-gray-600 hover:text-gray-400 transition-colors duration-200">
+            <a href="/terms" className="text-xs text-slate-300 hover:text-slate-500 transition-colors duration-200">
               Algemene voorwaarden
             </a>
           </div>

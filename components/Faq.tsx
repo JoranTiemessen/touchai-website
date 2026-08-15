@@ -49,13 +49,13 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden" style={{ background: "#F7F6F3" }}>
+    <section className="relative py-24 md:py-32 overflow-hidden" style={{ background: "transparent" }}>
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
             Veelgestelde vragen
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>
             Alles wat je wilt weten
           </h2>
         </div>
@@ -67,13 +67,13 @@ export default function Faq() {
               <div
                 key={item.q}
                 className="rounded-2xl overflow-hidden"
-                style={{ background: "#fff", border: "1px solid rgba(11,18,32,0.07)" }}
+                style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(150,190,225,0.14)" }}
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
                 >
-                  <span className="text-[16px] font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>{item.q}</span>
+                  <span className="text-[16px] font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>{item.q}</span>
                   <span
                     className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                     style={{ background: "#EEF2F7", transform: isOpen ? "rotate(45deg)" : "none" }}
@@ -85,7 +85,7 @@ export default function Faq() {
                 </button>
                 <div className="grid transition-all duration-300 ease-out" style={{ gridTemplateRows: isOpen ? "1fr" : "0fr" }}>
                   <div className="overflow-hidden">
-                    <p className="px-6 pb-5 text-[15px] text-gray-500 leading-[1.7]">{item.a}</p>
+                    <p className="px-6 pb-5 text-[15px] text-slate-400 leading-[1.7]">{item.a}</p>
                   </div>
                 </div>
               </div>

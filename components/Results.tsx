@@ -19,7 +19,7 @@ const conditions = [
 
 export default function Results() {
   return (
-    <section id="garantie" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(255,255,255,0.94)" }}>
+    <section id="garantie" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(13,19,30,0.72)" }}>
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
         style={{ background: "radial-gradient(ellipse 70% 70% at 50% 0%, rgba(110,173,212,0.07) 0%, transparent 70%)" }}
@@ -27,7 +27,7 @@ export default function Results() {
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Guarantee hero block */}
-        <div className="relative rounded-3xl overflow-hidden bg-gray-950 p-8 md:p-14">
+        <div className="relative rounded-3xl overflow-hidden bg-transparent p-8 md:p-14">
           <div
             className="absolute inset-0 pointer-events-none"
             style={{ background: "radial-gradient(ellipse 60% 60% at 20% 0%, rgba(110,173,212,0.16) 0%, transparent 60%)" }}

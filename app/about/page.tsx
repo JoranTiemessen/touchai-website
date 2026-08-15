@@ -65,7 +65,7 @@ export default function AboutPage() {
             Over Touch AI
           </div>
           <h1
-            className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-[1.06] tracking-[-0.03em] mb-6"
+            className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.06] tracking-[-0.03em] mb-6"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             AI die het werk doet.
@@ -81,7 +81,7 @@ export default function AboutPage() {
               Niet alleen het advies.
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-500 leading-[1.7] max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-400 leading-[1.7] max-w-2xl mx-auto">
             Touch AI is opgericht door de broers Joran en Jesper Tiemessen. We bouwen AI-agents die het repetitieve werk overnemen bij Nederlandse MKB-bedrijven, gebouwd op je eigen systemen en afgerekend op bespaarde uren.
           </p>
         </div>
@@ -98,10 +98,10 @@ export default function AboutPage() {
               border: "1px solid rgba(110,173,212,0.12)",
             }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em] mb-5" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] mb-5" style={{ fontFamily: "'Sora', sans-serif" }}>
               Waarom we Touch AI zijn begonnen
             </h2>
-            <div className="space-y-5 text-gray-600 leading-[1.8]">
+            <div className="space-y-5 text-slate-300 leading-[1.8]">
               <p>
                 We zagen steeds hetzelfde: goede bedrijven die verzuipen in repetitief werk, terwijl AI ongebruikt bleef. Mails die zichzelf zouden kunnen beantwoorden, offertes die uren kosten, administratie die zich opstapelt. Werk dat moet gebeuren, maar niemand vooruit helpt.
               </p>
@@ -126,7 +126,7 @@ export default function AboutPage() {
             >
               Waar we in geloven
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif" }}>
               Vier principes die ons werk sturen
             </h2>
           </div>
@@ -147,10 +147,10 @@ export default function AboutPage() {
                 >
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+                <h3 className="text-lg font-bold text-white mb-2 tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif" }}>
                   {v.title}
                 </h3>
-                <p className="text-sm text-gray-500 leading-[1.7]">{v.desc}</p>
+                <p className="text-sm text-slate-400 leading-[1.7]">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -167,10 +167,10 @@ export default function AboutPage() {
             >
               Het team
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif" }}>
               Twee broers, één missie
             </h2>
-            <p className="text-lg text-gray-500 leading-[1.7]">
+            <p className="text-lg text-slate-400 leading-[1.7]">
               Klein en hands-on. Je werkt direct met de mensen die je AI-team ontwerpen en bouwen.
             </p>
           </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 key={member.name}
                 className="rounded-3xl p-8 md:p-10 flex flex-col gap-6"
                 style={{
-                  background: "rgba(255,255,255,0.92)",
+                  background: "rgba(13,19,30,0.72)",
                   boxShadow: "0 4px 6px rgba(110,173,212,0.06), 0 12px 40px rgba(110,173,212,0.10), 0 1px 2px rgba(0,0,0,0.04)",
                   border: "1px solid rgba(110,173,212,0.12)",
                 }}
@@ -205,13 +205,13 @@ export default function AboutPage() {
                     >
                       {member.role}
                     </span>
-                    <h3 className="text-2xl font-bold text-gray-900 tracking-[-0.02em] mt-1.5" style={{ fontFamily: "'Sora', sans-serif" }}>
+                    <h3 className="text-2xl font-bold text-white tracking-[-0.02em] mt-1.5" style={{ fontFamily: "'Sora', sans-serif" }}>
                       {member.name}
                     </h3>
                     <div className="text-sm font-semibold mt-0.5" style={{ color: "#6EADD4" }}>{member.tagline}</div>
                   </div>
                 </div>
-                <p className="text-gray-600 leading-[1.75] text-base">{member.bio}</p>
+                <p className="text-slate-300 leading-[1.75] text-base">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -228,10 +228,10 @@ export default function AboutPage() {
               border: "1px solid rgba(110,173,212,0.18)",
             }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-[-0.02em] mb-4" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em] mb-4" style={{ fontFamily: "'Sora', sans-serif" }}>
               Benieuwd waar bij jou de uren weglekken?
             </h2>
-            <p className="text-gray-500 leading-[1.7] max-w-xl mx-auto mb-8">
+            <p className="text-slate-400 leading-[1.7] max-w-xl mx-auto mb-8">
               Plan het gesprek. Vijfenveertig minuten, en je weet welke processen eruit kunnen en wat ze je nu kosten.
             </p>
             <a

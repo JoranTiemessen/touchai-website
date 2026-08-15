@@ -41,7 +41,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <main className="relative bg-white">
+    <main className="relative bg-transparent">
       <Navbar />
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -49,7 +49,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <article className="relative pt-36 md:pt-44 pb-24">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back */}
-          <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-400 hover:text-brand-500 transition-colors duration-200 mb-8">
+          <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-brand-500 transition-colors duration-200 mb-8">
             <svg className="w-3.5 h-3.5" viewBox="0 0 14 14" fill="none">
               <path d="M12 7H2M6 3L2 7l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -64,17 +64,17 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             >
               {post.category}
             </span>
-            <span className="text-xs text-gray-400">{post.dateLabel} · {post.readingMinutes} min lezen</span>
+            <span className="text-xs text-slate-500">{post.dateLabel} · {post.readingMinutes} min lezen</span>
           </div>
 
           {/* Title */}
           <h1
-            className="text-3xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] leading-[1.1] mb-6"
+            className="text-3xl md:text-5xl font-bold text-white tracking-[-0.03em] leading-[1.1] mb-6"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
             {post.title}
           </h1>
-          <p className="text-lg text-gray-500 leading-[1.7] mb-10 pb-10 border-b border-gray-100">
+          <p className="text-lg text-slate-400 leading-[1.7] mb-10 pb-10 border-b border-white/10">
             {post.description}
           </p>
 
@@ -85,7 +85,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 return (
                   <h2
                     key={i}
-                    className="text-2xl font-bold text-gray-900 tracking-[-0.02em] pt-6"
+                    className="text-2xl font-bold text-white tracking-[-0.02em] pt-6"
                     style={{ fontFamily: "'Sora', sans-serif" }}
                   >
                     {block.text}
@@ -96,7 +96,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 return (
                   <ul key={i} className="space-y-3 pl-1">
                     {block.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-gray-600 leading-[1.8]">
+                      <li key={j} className="flex items-start gap-3 text-slate-300 leading-[1.8]">
                         <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 mt-3" style={{ background: "#6EADD4" }} />
                         <span>{item}</span>
                       </li>
@@ -105,7 +105,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 );
               }
               return (
-                <p key={i} className="text-gray-600 leading-[1.85] text-[17px]">
+                <p key={i} className="text-slate-300 leading-[1.85] text-[17px]">
                   {block.text}
                 </p>
               );
@@ -120,10 +120,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               border: "1px solid rgba(110,173,212,0.18)",
             }}
           >
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 tracking-[-0.01em] mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h3 className="text-xl md:text-2xl font-bold text-white tracking-[-0.01em] mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>
               Benieuwd waar bij jou de uren weglekken?
             </h3>
-            <p className="text-sm text-gray-500 leading-[1.7] max-w-md mx-auto mb-6">
+            <p className="text-sm text-slate-400 leading-[1.7] max-w-md mx-auto mb-6">
               Plan het gesprek en zie zwart op wit wat het werk je kost dat elke week terugkomt.
             </p>
             <a
