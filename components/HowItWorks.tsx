@@ -22,17 +22,10 @@ const steps = [
   },
   {
     number: "04",
-    when: "Dag 60",
-    title: "De rest draait",
+    when: "Dag 60 en daarna",
+    title: "De rest draait, en blijft draaien",
     description:
-      "De overige agents, aan elkaar geknoopt. Met monitoring, een overzicht van wat er doorheen ging en een melding zodra er iets stilvalt.",
-  },
-  {
-    number: "05",
-    when: "Daarna",
-    title: "Draaiend houden",
-    description:
-      "Koppelingen breken, systemen veranderen, modellen worden vervangen. Wij zien het en lossen het op, voordat jij het merkt.",
+      "De overige agents, aan elkaar geknoopt, met monitoring eronder. Koppelingen breken en systemen veranderen: wij zien het en lossen het op, voordat jij het merkt.",
   },
 ];
 
@@ -63,7 +56,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
           {steps.map((step) => (
             <div key={step.title} className="relative">
               <div
