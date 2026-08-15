@@ -76,11 +76,11 @@ const departments: Department[] = [
   },
 ];
 
-const chipStyle = { background: "rgba(255,255,255,0.05)", color: "#475569", border: "1px solid rgba(71,85,105,0.10)" };
+const chipStyle = { background: "#F1F3F7", color: "#475569", border: "1px solid rgba(71,85,105,0.10)" };
 
 export default function AgentCatalog() {
   return (
-    <section id="ai-team" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "transparent" }}>
+    <section id="ai-team" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "#F7F6F3" }}>
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-14">
@@ -89,11 +89,11 @@ export default function AgentCatalog() {
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold tracking-[-0.03em] leading-[1.08] max-w-3xl mb-6"
-            style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}
+            style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}
           >
             Per afdeling een agent voor elk terugkerend proces.
           </h2>
-          <p className="text-lg text-slate-400 leading-[1.7] max-w-2xl">
+          <p className="text-lg text-gray-500 leading-[1.7] max-w-2xl">
             Geen chatbot, geen cursus, geen los experiment. Wij bouwen het, implementeren het en zorgen dat je team ermee werkt. Je kiest per afdeling welke agents je inzet en breidt uit wanneer je wilt.
           </p>
         </div>
@@ -105,8 +105,8 @@ export default function AgentCatalog() {
               key={dept.name}
               className="rounded-2xl p-7 flex flex-col"
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(150,190,225,0.14)",
+                background: "#ffffff",
+                border: "1px solid rgba(11,18,32,0.07)",
                 boxShadow: "0 1px 2px rgba(11,18,32,0.04), 0 8px 30px rgba(11,18,32,0.05)",
               }}
             >
@@ -118,10 +118,10 @@ export default function AgentCatalog() {
                   {dept.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>
+                  <h3 className="text-lg font-bold tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
                     {dept.name}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-snug mt-0.5">{dept.tagline}</p>
+                  <p className="text-sm text-gray-400 leading-snug mt-0.5">{dept.tagline}</p>
                 </div>
               </div>
 

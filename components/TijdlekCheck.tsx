@@ -77,17 +77,17 @@ export default function TijdlekCheck() {
   const inputSteps = 3;
 
   return (
-    <section id="tijdlek-check" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "transparent" }}>
+    <section id="tijdlek-check" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "#F7F6F3" }}>
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
             Plan het gesprek
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
             Zie waar je tijd weglekt in 30 seconden.
           </h2>
-          <p className="text-lg text-slate-400 leading-[1.7]">
+          <p className="text-lg text-gray-500 leading-[1.7]">
             Beantwoord 3 vragen en zie direct hoeveel tijd en geld er bij jou weglekt aan repetitief werk.
           </p>
         </div>
@@ -95,12 +95,12 @@ export default function TijdlekCheck() {
         {/* Card */}
         <div
           className="rounded-[28px] p-8 md:p-11"
-          style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(11,18,32,0.08)", boxShadow: "0 20px 60px rgba(11,18,32,0.10)" }}
+          style={{ background: "#fff", border: "1px solid rgba(11,18,32,0.08)", boxShadow: "0 20px 60px rgba(11,18,32,0.10)" }}
         >
           {/* Progress (input steps only) */}
           {step < inputSteps && (
             <div className="mb-8">
-              <div className="flex justify-between text-xs font-semibold text-slate-500 mb-2">
+              <div className="flex justify-between text-xs font-semibold text-gray-400 mb-2">
                 <span>Stap {step + 1} van {inputSteps}</span>
               </div>
               <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
@@ -112,28 +112,28 @@ export default function TijdlekCheck() {
           {/* Step 0: team */}
           {step === 0 && (
             <div>
-              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>Hoe groot is je team?</label>
-              <p className="text-sm text-slate-500 mb-7">Inclusief jijzelf en iedereen die meewerkt.</p>
+              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Hoe groot is je team?</label>
+              <p className="text-sm text-gray-400 mb-7">Inclusief jijzelf en iedereen die meewerkt.</p>
               <div className="text-center mb-6">
-                <span className="text-5xl font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>{team}</span>
-                <span className="text-lg text-slate-500 ml-2">{team === 1 ? "persoon" : "mensen"}</span>
+                <span className="text-5xl font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>{team}</span>
+                <span className="text-lg text-gray-400 ml-2">{team === 1 ? "persoon" : "mensen"}</span>
               </div>
               <Slider value={team} min={1} max={50} onChange={setTeam} />
-              <div className="flex justify-between text-xs text-slate-500 mt-2.5"><span>1</span><span>50</span></div>
+              <div className="flex justify-between text-xs text-gray-400 mt-2.5"><span>1</span><span>50</span></div>
             </div>
           )}
 
           {/* Step 1: hours per category */}
           {step === 1 && (
             <div>
-              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>Hoeveel uur per persoon per week?</label>
-              <p className="text-sm text-slate-500 mb-7">Schat per onderdeel hoeveel tijd er weglekt aan repetitief werk.</p>
+              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Hoeveel uur per persoon per week?</label>
+              <p className="text-sm text-gray-400 mb-7">Schat per onderdeel hoeveel tijd er weglekt aan repetitief werk.</p>
               <div className="space-y-6">
                 {categories.map((c) => (
                   <div key={c.key}>
                     <div className="flex items-baseline justify-between mb-2.5">
-                      <span className="text-[15px] font-semibold text-slate-100">{c.label}</span>
-                      <span className="text-lg font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>{hours[c.key]} <span className="text-sm font-medium text-slate-500">uur</span></span>
+                      <span className="text-[15px] font-semibold text-gray-800">{c.label}</span>
+                      <span className="text-lg font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>{hours[c.key]} <span className="text-sm font-medium text-gray-400">uur</span></span>
                     </div>
                     <Slider value={hours[c.key]} min={0} max={10} onChange={(v) => setHours((h) => ({ ...h, [c.key]: v }))} />
                   </div>
@@ -145,8 +145,8 @@ export default function TijdlekCheck() {
           {/* Step 2: systems */}
           {step === 2 && (
             <div>
-              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>Welke systemen gebruik je?</label>
-              <p className="text-sm text-slate-500 mb-7">Zo weten we waar we de agents op koppelen. Kies alles wat van toepassing is.</p>
+              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Welke systemen gebruik je?</label>
+              <p className="text-sm text-gray-400 mb-7">Zo weten we waar we de agents op koppelen. Kies alles wat van toepassing is.</p>
               <div className="flex flex-wrap gap-2.5">
                 {systemOptions.map((s) => {
                   const active = systems.includes(s);
@@ -157,7 +157,7 @@ export default function TijdlekCheck() {
                       className="px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150"
                       style={active
                         ? { background: "linear-gradient(135deg, #4A8EBB 0%, #2A5E83 100%)", color: "#fff", border: "1px solid transparent" }
-                        : { background: "transparent", color: "#475569", border: "1px solid rgba(11,18,32,0.08)" }}
+                        : { background: "#F7F6F3", color: "#475569", border: "1px solid rgba(11,18,32,0.08)" }}
                     >
                       {s}
                     </button>
@@ -196,7 +196,7 @@ export default function TijdlekCheck() {
 
               {!sent ? (
                 <div>
-                  <p className="text-sm text-slate-400 mb-3">Ontvang je volledige overzicht per mail en plan het gesprek.</p>
+                  <p className="text-sm text-gray-500 mb-3">Ontvang je volledige overzicht per mail en plan het gesprek.</p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <input
                       type="email"
@@ -204,7 +204,7 @@ export default function TijdlekCheck() {
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="jouw@bedrijf.nl"
                       className="flex-1 px-5 py-3.5 rounded-full text-[15px] outline-none"
-                      style={{ background: "transparent", border: "1px solid rgba(150,190,225,0.14)" }}
+                      style={{ background: "#F7F6F3", border: "1px solid rgba(11,18,32,0.10)" }}
                     />
                     <button
                       onClick={submit}
@@ -215,15 +215,15 @@ export default function TijdlekCheck() {
                       {sending ? "Versturen…" : "Stuur mijn rapport"}
                     </button>
                   </div>
-                  <p className="text-xs text-slate-500 mt-3">Indicatie op basis van ~€31 per uur fully-loaded. Geen spam, je kunt je altijd uitschrijven.</p>
+                  <p className="text-xs text-gray-400 mt-3">Indicatie op basis van ~€31 per uur fully-loaded. Geen spam, je kunt je altijd uitschrijven.</p>
                 </div>
               ) : (
                 <div className="text-center py-2">
                   <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "rgba(44,143,94,0.12)" }}>
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" style={{ color: "#2C8F5E" }}><path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Sora', sans-serif", color: "#E8EEF6" }}>Check je mail</h3>
-                  <p className="text-sm text-slate-400 mb-6 max-w-md mx-auto">Je overzicht is onderweg. Plan meteen het gesprek, dan benoemen we samen welke processen eruit kunnen.</p>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Check je mail</h3>
+                  <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">Je overzicht is onderweg. Plan meteen het gesprek, dan benoemen we samen welke processen eruit kunnen.</p>
                   <a href={CAL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white font-semibold text-[15px]" style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}>
                     Plan het gesprek
                     <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
@@ -238,7 +238,7 @@ export default function TijdlekCheck() {
             <div className="flex items-center justify-between mt-8">
               <button
                 onClick={() => setStep((s) => Math.max(0, s - 1))}
-                className={`text-sm font-semibold text-slate-500 hover:text-slate-200 transition-colors ${step === 0 ? "invisible" : ""}`}
+                className={`text-sm font-semibold text-gray-400 hover:text-gray-700 transition-colors ${step === 0 ? "invisible" : ""}`}
               >
                 ← Terug
               </button>

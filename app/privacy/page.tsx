@@ -3,27 +3,27 @@ import Footer from "@/components/Footer";
 
 export default function PrivacyPolicy() {
   return (
-    <main className="relative bg-transparent">
+    <main className="relative bg-white">
       <Navbar />
 
       <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-40 pb-24">
         <h1
-          className="text-4xl md:text-5xl font-bold text-white tracking-[-0.03em] mb-4"
+          className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-4"
           style={{ fontFamily: "'Sora', sans-serif" }}
         >
           Privacybeleid
         </h1>
-        <p className="text-sm text-slate-500 mb-12">Laatst bijgewerkt: juli 2026</p>
+        <p className="text-sm text-gray-400 mb-12">Laatst bijgewerkt: juli 2026</p>
 
-        <div className="prose prose-gray max-w-none space-y-10 text-slate-300 leading-[1.8]">
+        <div className="prose prose-gray max-w-none space-y-10 text-gray-600 leading-[1.8]">
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>1. Wie we zijn</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>1. Wie we zijn</h2>
             <p>Touch AI Agency wordt gerund door Joran Tiemessen en Jesper Tiemessen, gevestigd in Amersfoort, Nederland. Wij bouwen AI-automatiseringssystemen voor bedrijven. Heb je vragen over dit beleid? Neem contact op via <a href="mailto:info@touchaiagency.com" className="text-blue-500 hover:underline">info@touchaiagency.com</a>.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>2. Welke gegevens we verzamelen</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>2. Welke gegevens we verzamelen</h2>
             <p>We kunnen de volgende persoonsgegevens verzamelen wanneer je onze website gebruikt of contact met ons opneemt:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>Naam en e-mailadres (als je een contact- of boekingsformulier invult)</li>
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>3. Hoe we je gegevens gebruiken</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>3. Hoe we je gegevens gebruiken</h2>
             <p>We gebruiken je gegevens uitsluitend om:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>Op je vragen te reageren en gesprekken in te plannen</li>
@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>4. Grondslag (AVG)</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>4. Grondslag (AVG)</h2>
             <p>We verwerken je persoonsgegevens op de volgende grondslagen:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li><strong>Overeenkomst:</strong> de verwerking is nodig om een dienstverleningsovereenkomst met je uit te voeren</li>
@@ -56,12 +56,12 @@ export default function PrivacyPolicy() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>5. Bewaartermijn</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>5. Bewaartermijn</h2>
             <p>We bewaren persoonsgegevens alleen zo lang als nodig is voor het doel waarvoor ze zijn verzameld, of zolang de wet dat vereist. Contact- en klantgegevens bewaren we maximaal 2 jaar na afloop van onze samenwerking, tenzij een langere bewaartermijn wettelijk verplicht is.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>6. Diensten van derden</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>6. Diensten van derden</h2>
             <p>We maken mogelijk gebruik van de volgende diensten van derden die je gegevens kunnen verwerken:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li><strong>Google Calendar</strong> (voor het inplannen van gesprekken)</li>
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>7. Jouw rechten</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>7. Jouw rechten</h2>
             <p>Op grond van de AVG heb je het recht om:</p>
             <ul className="list-disc pl-6 mt-3 space-y-2">
               <li>De persoonsgegevens die we van je hebben in te zien</li>
@@ -86,17 +86,17 @@ export default function PrivacyPolicy() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>8. Cookies</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>8. Cookies</h2>
             <p>Onze website gebruikt mogelijk cookies om je browse-ervaring te verbeteren en het verkeer te analyseren. Je kunt cookies op elk moment uitschakelen in je browserinstellingen. We gebruiken geen cookies voor advertentiedoeleinden.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>9. Wijzigingen in dit beleid</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>9. Wijzigingen in dit beleid</h2>
             <p>We kunnen dit privacybeleid van tijd tot tijd bijwerken. Wijzigingen plaatsen we op deze pagina met een bijgewerkte datum. We raden je aan deze pagina regelmatig te bekijken.</p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>10. Contact</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>10. Contact</h2>
             <p>Touch AI Agency<br />Amersfoort, Nederland<br /><a href="mailto:info@touchaiagency.com" className="text-blue-500 hover:underline">info@touchaiagency.com</a></p>
           </div>
 

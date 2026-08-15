@@ -25,7 +25,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || menuOpen
-          ? "bg-transparent/90 backdrop-blur-md border-b border-white/10 shadow-brand-sm"
+          ? "bg-white/90 backdrop-blur-md border-b border-brand-100 shadow-brand-sm"
           : "bg-transparent"
       }`}
     >
@@ -44,7 +44,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col leading-tight">
               <span
-                className="text-2xl font-bold text-white tracking-[-0.02em]"
+                className="text-2xl font-bold text-gray-900 tracking-[-0.02em]"
                 style={{ fontFamily: "'Sora', sans-serif" }}
               >
                 TOUCH AI
@@ -64,7 +64,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="link-underline text-sm font-medium text-slate-300 hover:text-brand-400 transition-colors duration-200"
+                className="link-underline text-sm font-medium text-gray-600 hover:text-brand-400 transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -87,7 +87,7 @@ export default function Navbar() {
           {/* Mobile menu toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-brand-400 hover:bg-brand-50 transition-colors duration-200 focus-visible:outline-brand-400 focus-visible:outline-2"
+            className="md:hidden p-2 rounded-lg text-gray-600 hover:text-brand-400 hover:bg-brand-50 transition-colors duration-200 focus-visible:outline-brand-400 focus-visible:outline-2"
             aria-label="Toggle menu"
           >
             <div className="w-5 h-4 flex flex-col justify-between">
@@ -117,13 +117,13 @@ export default function Navbar() {
           }`}
           style={{ background: "white" }}
         >
-          <div className="flex flex-col gap-1 pt-2 border-t border-white/10">
+          <div className="flex flex-col gap-1 pt-2 border-t border-brand-100">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="px-3 py-2.5 text-sm font-medium text-slate-300 hover:text-brand-400 hover:bg-brand-50 rounded-lg transition-colors duration-200"
+                className="px-3 py-2.5 text-sm font-medium text-gray-600 hover:text-brand-400 hover:bg-brand-50 rounded-lg transition-colors duration-200"
               >
                 {link.label}
               </a>
