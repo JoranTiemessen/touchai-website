@@ -1,13 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
-import AgentCatalog from "@/components/AgentCatalog";
-import AgentInAction from "@/components/AgentInAction";
-import Integrations from "@/components/Integrations";
-import TijdlekCheck from "@/components/TijdlekCheck";
+import Keten from "@/components/Keten";
+import Systemen from "@/components/Systemen";
 import HowItWorks from "@/components/HowItWorks";
 import Results from "@/components/Results";
-import Comparison from "@/components/Comparison";
 import Pricing from "@/components/Pricing";
 import Faq from "@/components/Faq";
 import Advisors from "@/components/Advisors";
@@ -22,13 +19,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustSection />
-      <Reveal><AgentCatalog /></Reveal>
-      <Reveal><AgentInAction /></Reveal>
-      <Reveal><Integrations /></Reveal>
-      <Reveal><TijdlekCheck /></Reveal>
+      <Reveal><Keten /></Reveal>
+      <Reveal><Systemen /></Reveal>
       <Reveal><HowItWorks /></Reveal>
       <Reveal><Results /></Reveal>
-      <Reveal><Comparison /></Reveal>
       <Reveal><Pricing /></Reveal>
       <Reveal><Faq /></Reveal>
       <Reveal><Advisors /></Reveal>

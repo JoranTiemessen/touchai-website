@@ -53,6 +53,10 @@ export default function TijdlekCheck() {
   const sumPP = Object.values(hours).reduce((a, b) => a + b, 0);
   const tijdlek = team * sumPP;
   const perMonth = Math.round(tijdlek * WEEKS_PER_MONTH * EUR_PER_HOUR);
+  // Zelfrapportage overschat structureel, dus een band in plaats van één exact bedrag
+  const rond = (n: number) => Math.round(n / 100) * 100;
+  const bandLaag = rond(perMonth * 0.75);
+  const bandHoog = rond(perMonth);
   const ftes = (tijdlek / 40).toFixed(1).replace(".", ",");
   const biggest = categories.reduce((max, c) => (hours[c.key] > hours[max.key] ? c : max), categories[0]);
 
@@ -65,7 +69,7 @@ export default function TijdlekCheck() {
       await fetch("/api/tijdlek-check", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email, team, hours, systems, tijdlek, perMonth, ftes, grootsteLek: biggest.label }),
+        body: JSON.stringify({ email, team, hours, systems, tijdlek, perMonth, bandLaag, bandHoog, ftes, grootsteLek: biggest.label }),
       });
     } catch {
       // negeer; toon toch bevestiging
@@ -88,7 +92,7 @@ export default function TijdlekCheck() {
             Zie waar je tijd weglekt in 30 seconden.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Beantwoord 3 vragen en zie direct hoeveel tijd en geld er bij jou weglekt aan repetitief werk.
+            Drie vragen, jouw eigen schatting, en je ziet meteen de orde van grootte van wat dit werk je nu kost.
           </p>
         </div>
 
@@ -112,13 +116,13 @@ export default function TijdlekCheck() {
           {/* Step 0: team */}
           {step === 0 && (
             <div>
-              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Hoe groot is je team?</label>
-              <p className="text-sm text-gray-400 mb-7">Inclusief jijzelf en iedereen die meewerkt.</p>
+              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Hoeveel mensen doen dit werk?</label>
+              <p className="text-sm text-gray-400 mb-7">Niet je hele team, alleen de mensen die deze taken echt uitvoeren. Jijzelf meegerekend.</p>
               <div className="text-center mb-6">
                 <span className="text-5xl font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>{team}</span>
                 <span className="text-lg text-gray-400 ml-2">{team === 1 ? "persoon" : "mensen"}</span>
               </div>
-              <Slider value={team} min={1} max={50} onChange={setTeam} />
+              <Slider value={team} min={1} max={25} onChange={setTeam} />
               <div className="flex justify-between text-xs text-gray-400 mt-2.5"><span>1</span><span>50</span></div>
             </div>
           )}
@@ -180,8 +184,8 @@ export default function TijdlekCheck() {
                       <div className="text-xs text-white/55 mt-1">per week</div>
                     </div>
                     <div>
-                      <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>{euro(perMonth)}</div>
-                      <div className="text-xs text-white/55 mt-1">per maand</div>
+                      <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] tabular" style={{ fontFamily: "'Sora', sans-serif" }}>{euro(bandLaag)}<span className="text-white/45"> – </span>{euro(bandHoog)}</div>
+                      <div className="text-xs text-white/55 mt-1">per maand, bij €{EUR_PER_HOUR} per uur belast</div>
                     </div>
                     <div>
                       <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>{ftes}</div>
@@ -189,7 +193,7 @@ export default function TijdlekCheck() {
                     </div>
                   </div>
                   <div className="rounded-xl px-4 py-3 text-sm" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.8)" }}>
-                    Je grootste lek zit in <span className="font-bold text-white">{biggest.label.toLowerCase()}</span>. Dat lost onze <span className="font-bold" style={{ color: "#9FCAE3" }}>{biggest.agent}</span> op.
+                    Je grootste lek zit in <span className="font-bold text-white">{biggest.label.toLowerCase()}</span>. Dat is meestal ook het proces waar we mee beginnen, maar dat weten we pas zeker als we het samen doorlopen.
                   </div>
                 </div>
               </div>
@@ -215,7 +219,7 @@ export default function TijdlekCheck() {
                       {sending ? "Versturen…" : "Stuur mijn rapport"}
                     </button>
                   </div>
-                  <p className="text-xs text-gray-400 mt-3">Indicatie op basis van ~€31 per uur fully-loaded. Geen spam, je kunt je altijd uitschrijven.</p>
+                  <p className="text-xs text-gray-400 mt-3">Een schatting op basis van jouw eigen invoer en €31 per uur belast. Geen meting, daarvoor is het gesprek. Geen spam, je kunt je altijd uitschrijven.</p>
                 </div>
               ) : (
                 <div className="text-center py-2">

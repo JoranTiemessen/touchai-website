@@ -25,6 +25,7 @@ const config: Config = {
       fontFamily: {
         display: ["'Sora'", "sans-serif"],
         sans: ["'Inter'", "sans-serif"],
+        mono: ["'Azeret Mono'", "ui-monospace", "monospace"],
       },
       letterSpacing: {
         tight2: "-0.03em",

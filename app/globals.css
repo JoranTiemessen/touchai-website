@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Azeret+Mono:wght@400;500;600&display=swap');
 
 :root {
   --brand: #6EADD4;
@@ -13,18 +13,66 @@
 
 html {
   scroll-behavior: smooth;
+  background: #F7F6F3;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #ffffff;
+  background:
+    radial-gradient(ellipse 85% 50% at 50% -8%, rgba(110,173,212,0.10) 0%, transparent 62%),
+    radial-gradient(ellipse 55% 40% at 90% 12%, rgba(74,142,187,0.06) 0%, transparent 60%),
+    #ffffff;
+  background-attachment: fixed;
   color: #111827;
   -webkit-font-smoothing: antialiased;
 }
 
+/* Vaste graanlaag: haalt de digitale vlakheid eraf, ook op wit */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  pointer-events: none;
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.022'/%3E%3C/svg%3E");
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Sora', sans-serif;
+  text-wrap: balance;
 }
+
+p { text-wrap: pretty; }
+
+/* Cijfers in tabelvorm, anders dansen ze bij het tellen */
+.tabular { font-variant-numeric: tabular-nums; }
+
+::selection { background: rgba(110,173,212,0.28); color: #0B1220; }
+
+:focus-visible {
+  outline: 2px solid #4A8EBB;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Randlicht dat de cursor volgt */
+.spotlight { position: relative; }
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: radial-gradient(220px circle at var(--mx, 50%) var(--my, 0%), rgba(74,142,187,0.45), transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.spotlight:hover::before { opacity: 1; }
 
 /* Noise texture overlay */
 .noise-bg::before {
@@ -49,19 +97,19 @@ h1, h2, h3, h4, h5, h6 {
 .card-base {
   background: #ffffff;
   border: 1px solid rgba(110,173,212,0.12);
-  box-shadow: 0 2px 8px 0 rgba(110,173,212,0.08), 0 1px 2px 0 rgba(0,0,0,0.04);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 2px 10px -4px rgba(42,94,131,0.14), 0 10px 30px -18px rgba(42,94,131,0.22);
 }
 
 .card-elevated {
   background: #ffffff;
   border: 1px solid rgba(110,173,212,0.15);
-  box-shadow: 0 4px 20px 0 rgba(110,173,212,0.14), 0 2px 6px 0 rgba(0,0,0,0.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 6px 20px -8px rgba(42,94,131,0.18), 0 18px 44px -22px rgba(42,94,131,0.28);
 }
 
 .card-floating {
   background: #ffffff;
   border: 1px solid rgba(110,173,212,0.2);
-  box-shadow: 0 8px 40px 0 rgba(110,173,212,0.18), 0 4px 12px 0 rgba(0,0,0,0.08);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.95), 0 10px 30px -12px rgba(42,94,131,0.22), 0 28px 64px -28px rgba(42,94,131,0.32);
 }
 
 /* Button focus ring */
@@ -126,3 +174,67 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 .roi-slider:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 4px #4A8EBB, 0 0 0 7px rgba(74,142,187,0.35); }
+
+
+/* ---------- Ontleend aan de referentie: mono-labels, hoekmarkeringen, dot-veld ---------- */
+
+/* Elk klein label in mono. Leest als een instrument, niet als een folder. */
+.label-mono {
+  font-family: 'Azeret Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Hoekmarkeringen om een label of blok */
+.brackets { position: relative; }
+.brackets::before,
+.brackets::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(74,142,187,0.55);
+  border-style: solid;
+}
+.brackets::before { left: -14px; top: -8px; border-width: 1px 0 0 1px; }
+.brackets::after  { right: -14px; bottom: -8px; border-width: 0 1px 1px 0; }
+
+/* Dot-veld: bolvormig raster van punten, traag draaiend */
+.dotfield {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(42,94,131,0.55) 1px, transparent 1.4px);
+  background-size: 15px 15px;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0%, #000 38%, rgba(0,0,0,0.55) 55%, transparent 72%);
+          mask-image: radial-gradient(circle at 50% 50%, #000 0%, #000 38%, rgba(0,0,0,0.55) 55%, transparent 72%);
+  opacity: 0.5;
+  animation: dotdrift 42s linear infinite;
+}
+@keyframes dotdrift {
+  from { background-position: 0 0; }
+  to   { background-position: 60px 30px; }
+}
+@media (prefers-reduced-motion: reduce) { .dotfield { animation: none; } }
+
+/* Zwevende pill-navigatie */
+.navpill {
+  border-radius: 9999px;
+  background: rgba(11,18,32,0.92);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px -12px rgba(11,18,32,0.45), inset 0 1px 0 rgba(255,255,255,0.10);
+  backdrop-filter: blur(14px);
+}
+
+/* Tekst binnen de zwevende pill omkeren naar licht */
+.navpill a { color: rgba(226,236,246,0.82); }
+.navpill a:hover { color: #ffffff; }
+.navpill .text-gray-600 { color: rgba(226,236,246,0.82); }
+.navpill .text-gray-900,
+.navpill span[style*="0B1220"],
+.navpill .logo-word { color: #F2F7FC !important; }
+.navpill .link-underline::after { background: #9FCAE3; }
+.navpill a.btn-primary,
+.navpill a[class*="bg-brand"] { color: #0B1220; }
