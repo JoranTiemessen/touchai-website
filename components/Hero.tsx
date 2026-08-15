@@ -39,12 +39,12 @@ export default function Hero() {
 
         {/* asymmetrische kop: eerste regel links, tweede regel ingesprongen */}
         <h1
-          className="font-bold text-gray-900 leading-[0.94] tracking-[-0.04em]"
-          style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(2.75rem, 7.2vw, 6.5rem)" }}
+          className="font-bold text-gray-900 leading-[1.0] tracking-[-0.035em]"
+          style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(2.35rem, 5.2vw, 4.5rem)" }}
         >
-          <span className="block">Weer aan het werk</span>
+          <span className="block">Focus op het echte werk.</span>
           <span className="block md:pl-[14%]" style={{ color: "#6EADD4" }}>
-            dat er echt toe doet.
+            Het terugkerende doen wij.
           </span>
         </h1>
 
