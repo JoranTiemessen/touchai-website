@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Azeret+Mono:wght@400;500;600&display=swap');
 
 :root {
   --brand: #6EADD4;
@@ -174,3 +174,67 @@ p { text-wrap: pretty; }
   cursor: pointer;
 }
 .roi-slider:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 4px #4A8EBB, 0 0 0 7px rgba(74,142,187,0.35); }
+
+
+/* ---------- Ontleend aan de referentie: mono-labels, hoekmarkeringen, dot-veld ---------- */
+
+/* Elk klein label in mono. Leest als een instrument, niet als een folder. */
+.label-mono {
+  font-family: 'Azeret Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Hoekmarkeringen om een label of blok */
+.brackets { position: relative; }
+.brackets::before,
+.brackets::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: rgba(74,142,187,0.55);
+  border-style: solid;
+}
+.brackets::before { left: -14px; top: -8px; border-width: 1px 0 0 1px; }
+.brackets::after  { right: -14px; bottom: -8px; border-width: 0 1px 1px 0; }
+
+/* Dot-veld: bolvormig raster van punten, traag draaiend */
+.dotfield {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(42,94,131,0.55) 1px, transparent 1.4px);
+  background-size: 15px 15px;
+  -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0%, #000 38%, rgba(0,0,0,0.55) 55%, transparent 72%);
+          mask-image: radial-gradient(circle at 50% 50%, #000 0%, #000 38%, rgba(0,0,0,0.55) 55%, transparent 72%);
+  opacity: 0.5;
+  animation: dotdrift 42s linear infinite;
+}
+@keyframes dotdrift {
+  from { background-position: 0 0; }
+  to   { background-position: 60px 30px; }
+}
+@media (prefers-reduced-motion: reduce) { .dotfield { animation: none; } }
+
+/* Zwevende pill-navigatie */
+.navpill {
+  border-radius: 9999px;
+  background: rgba(11,18,32,0.92);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 30px -12px rgba(11,18,32,0.45), inset 0 1px 0 rgba(255,255,255,0.10);
+  backdrop-filter: blur(14px);
+}
+
+/* Tekst binnen de zwevende pill omkeren naar licht */
+.navpill a { color: rgba(226,236,246,0.82); }
+.navpill a:hover { color: #ffffff; }
+.navpill .text-gray-600 { color: rgba(226,236,246,0.82); }
+.navpill .text-gray-900,
+.navpill span[style*="0B1220"],
+.navpill .logo-word { color: #F2F7FC !important; }
+.navpill .link-underline::after { background: #9FCAE3; }
+.navpill a.btn-primary,
+.navpill a[class*="bg-brand"] { color: #0B1220; }

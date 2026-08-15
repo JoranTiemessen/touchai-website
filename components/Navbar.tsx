@@ -22,15 +22,9 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || menuOpen
-          ? "bg-white/90 backdrop-blur-md border-b border-brand-100 shadow-brand-sm"
-          : "bg-transparent"
-      }`}
-    >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24 md:h-28">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 pt-4 md:pt-5">
+      <nav className={`max-w-6xl mx-auto px-4 sm:px-6 transition-all duration-300 ${scrolled || menuOpen ? "navpill" : ""}`}>
+        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "h-16 md:h-[68px]" : "h-20 md:h-24"}`}>
           {/* Logo */}
           <a href="/" className="flex items-center gap-2 group">
             <div className="relative w-20 h-20 flex-shrink-0">
@@ -44,7 +38,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col leading-tight">
               <span
-                className="text-2xl font-bold text-gray-900 tracking-[-0.02em]"
+                className="logo-word text-2xl font-bold text-gray-900 tracking-[-0.02em]"
                 style={{ fontFamily: "'Sora', sans-serif" }}
               >
                 TOUCH AI
