@@ -42,7 +42,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-[1.7] max-w-xs mb-6">
-              Met The AI Leap installeren we een team AI-agents op je bestaande systemen dat het repetitieve werk overneemt. Een fulltime medewerker erbij, elke maand opnieuw.
+              Wij halen het terugkerende werk uit je bedrijf met AI-agents, op de systemen die je al gebruikt. Werkt het niet, dan krijg je je investering terug en blijven de agents staan.
             </p>
             {/* Social */}
             <div className="flex gap-3">
@@ -104,7 +104,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
                 >
-                  Gratis Bedrijfsscan
+                  Plan het gesprek
                 </a>
               </li>
               <li>
@@ -122,7 +122,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-brand-200 transition-colors duration-200"
                 >
-                  Doe de gratis Bedrijfsscan
+                  Plan het gesprek
                   <svg className="w-3.5 h-3.5" viewBox="0 0 14 14" fill="none">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>

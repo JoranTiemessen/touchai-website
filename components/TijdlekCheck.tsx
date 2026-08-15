@@ -82,7 +82,7 @@ export default function TijdlekCheck() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
-            Gratis Bedrijfsscan
+            Plan het gesprek
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
             Zie waar je tijd weglekt in 30 seconden.
@@ -185,7 +185,7 @@ export default function TijdlekCheck() {
                     </div>
                     <div>
                       <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>{ftes}</div>
-                      <div className="text-xs text-white/55 mt-1">fulltime kracht</div>
+                      <div className="text-xs text-white/55 mt-1">fte aan werk</div>
                     </div>
                   </div>
                   <div className="rounded-xl px-4 py-3 text-sm" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.10)", color: "rgba(255,255,255,0.8)" }}>
@@ -196,7 +196,7 @@ export default function TijdlekCheck() {
 
               {!sent ? (
                 <div>
-                  <p className="text-sm text-gray-500 mb-3">Ontvang je volledige rapport per mail en plan je gratis Bedrijfsscan.</p>
+                  <p className="text-sm text-gray-500 mb-3">Ontvang je volledige overzicht per mail en plan het gesprek.</p>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <input
                       type="email"
@@ -223,9 +223,9 @@ export default function TijdlekCheck() {
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" style={{ color: "#2C8F5E" }}><path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </div>
                   <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Check je mail</h3>
-                  <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">Je rapport is onderweg. Plan meteen je gratis Bedrijfsscan, dan meten we je exacte lek zwart op wit.</p>
+                  <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">Je overzicht is onderweg. Plan meteen het gesprek, dan benoemen we samen welke processen eruit kunnen.</p>
                   <a href={CAL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white font-semibold text-[15px]" style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}>
-                    Plan de gratis Bedrijfsscan
+                    Plan het gesprek
                     <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </a>
                 </div>

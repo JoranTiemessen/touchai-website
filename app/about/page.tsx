@@ -109,7 +109,7 @@ export default function AboutPage() {
                 Tegelijk zagen we een markt vol AI-hype: workshops, adviesrapporten en losse tools die na een maand in de la belanden. Veel praten, weinig resultaat. Dat wilden we anders doen.
               </p>
               <p>
-                Dus bouwen we geen adviezen, maar een AI Workforce: een team agents dat het werk daadwerkelijk overneemt, op de systemen die je al hebt. We rekenen af op bespaarde uren, met een garantie eraan. Geen jargon, geen lock-in, gewoon een fulltime medewerker aan capaciteit terug.
+                Dus bouwen we geen adviezen, maar agents die het werk daadwerkelijk overnemen, op de systemen die je al hebt. We rekenen af op wat er draait, met een garantie eraan. Geen jargon, geen lock-in, gewoon het werk eruit dat elke week terugkomt.
               </p>
             </div>
           </div>
@@ -232,7 +232,7 @@ export default function AboutPage() {
               Benieuwd waar bij jou de uren weglekken?
             </h2>
             <p className="text-gray-500 leading-[1.7] max-w-xl mx-auto mb-8">
-              Doe de gratis Bedrijfsscan. Binnen een week zwart op wit waar je tijd verdwijnt en welke agents dat oplossen.
+              Plan het gesprek. Vijfenveertig minuten, en je weet welke processen eruit kunnen en wat ze je nu kosten.
             </p>
             <a
               href={CAL_URL}
@@ -241,7 +241,7 @@ export default function AboutPage() {
               className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-base"
               style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
             >
-              Doe de gratis Bedrijfsscan
+              Plan het gesprek
               <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

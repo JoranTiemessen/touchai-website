@@ -1,18 +1,19 @@
 const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 
 const eenmalig = [
-  "Bedrijfsscan: per afdeling in kaart waar de uren weglekken",
-  "Agent-blauwdruk: welke agent welk lek oplost",
-  "Bouw en koppeling op je bestaande systemen",
-  "Training van je team, zodat het ook echt gebruikt wordt",
+  "Het gesprek en de lijst met processen die eruit kunnen",
+  "Toegang en koppelingen op je bestaande systemen",
+  "De afgesproken agents, live op je eigen echte werk",
+  "Monitoring, een overzicht per agent en een melding bij stilte",
+  "Documentatie en overdracht, alles in je eigen accounts",
 ];
 
 const maandelijks = [
-  "Monitoring en onderhoud: we houden elke agent draaiend",
-  "Maandelijkse optimalisatie op basis van echt gebruik",
-  "Elke maand uitbreiding: je AI-team groeit mee",
-  "Maandrapport met bespaarde uren per agent",
-  "Adoptie en support, zodat je team blijft gebruiken",
+  "Monitoring en storingsherstel: wij zien het voordat jij het merkt",
+  "Aanpassing zodra een koppeling, systeem of model verandert",
+  "Eén optimalisatieronde per maand",
+  "Maandrapport: wat is er door de agents heen gegaan",
+  "Support en vragen tussendoor",
 ];
 
 export default function Pricing() {
@@ -40,11 +41,11 @@ export default function Pricing() {
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            Een medewerker kost je al gauw{" "}
-            <span style={{ color: "#6EADD4" }}>€5.000 per maand.</span>
+            Wat het kost, hoor je{" "}
+            <span style={{ color: "#6EADD4" }}>in het gesprek.</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Salaris, werkgeverslasten, werkplek en verzuim. Nog los van de tijd om er één te vinden. Jouw AI-team kost daar een fractie van.
+Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze samen benoemd hebben. Je hoort het bedrag in datzelfde gesprek, niet in een offerte drie dagen later.
           </p>
         </div>
 
@@ -52,7 +53,7 @@ export default function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {[
             { label: "Eenmalig", title: "De complete bouw", items: eenmalig },
-            { label: "Maandelijks", title: "We houden het scherp en groeiend", items: maandelijks },
+            { label: "Maandelijks", title: "Wij houden het draaiend", items: maandelijks },
           ].map((col) => (
             <div
               key={col.label}
@@ -95,8 +96,8 @@ export default function Pricing() {
             className="text-lg md:text-2xl font-bold text-gray-900 tracking-[-0.01em] leading-[1.4] max-w-3xl mx-auto"
             style={{ fontFamily: "'Sora', sans-serif" }}
           >
-            Een fulltime medewerker aan capaciteit terug, elke maand opnieuw.{" "}
-            <span style={{ color: "#4A8EBB" }}>Voor een fractie van wat die medewerker zou kosten.</span>
+            Je betaalt de helft bij de start en de helft als de laatste agent draait.{" "}
+            <span style={{ color: "#4A8EBB" }}>Werkt het niet, dan krijg je je investering terug en blijven de agents staan.</span>
           </p>
         </div>
 
@@ -109,16 +110,16 @@ export default function Pricing() {
             className="btn-primary inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-base hover:opacity-95 active:scale-[0.98] transition-all duration-200"
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
           >
-            Vraag je gratis Bedrijfsscan aan
+            Plan het gesprek
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </a>
           <p className="mt-4 text-sm text-gray-400">
-            De exacte investering bespreken we in je Bedrijfsscan, afgestemd op jouw bedrijf.
+            Eén prijs voor het geheel, afgestemd op het aantal processen dat we overnemen.
           </p>
           <p className="mt-2 text-sm font-semibold" style={{ color: "#3474A0" }}>
-            We nemen maximaal 2 nieuwe implementaties per maand aan.
+            We nemen maximaal 2 nieuwe trajecten per maand aan.
           </p>
         </div>
       </div>

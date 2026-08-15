@@ -1,38 +1,38 @@
 const steps = [
   {
     number: "01",
-    when: "Week 1",
-    title: "Bedrijfsscan",
+    when: "Dag 0 · 45 minuten",
+    title: "Het gesprek",
     description:
-      "Eén sessie van 2 uur. Binnen een week zwart op wit waar de uren in jouw bedrijf weglekken en wat elk lek per maand kost. Dat is de nulmeting, daar rekenen we ons straks op af.",
+      "Wij vragen door tot er vier tot zes processen op tafel liggen die eruit kunnen. In jouw woorden. Die lijst is meteen de opdracht: je weet precies wat je koopt voordat we beginnen.",
   },
   {
     number: "02",
-    when: "Week 2",
-    title: "Agent-blauwdruk",
+    when: "Week 1 · 90 minuten",
+    title: "Toegang en doorloop",
     description:
-      "Jouw AI-team op één pagina: welke agent welk lek oplost, hoeveel uur dat scheelt en welke systemen hij gebruikt. Jij weet exact wat er gebouwd wordt.",
+      "Eén sessie waarin we samen de toegang regelen en je proces doorlopen. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem. Verder kost het je niets aan tijd.",
   },
   {
     number: "03",
-    when: "Eerste agent live in week 3",
-    title: "Bouw en koppeling",
+    when: "Dag 10",
+    title: "De eerste agent draait",
     description:
-      "We starten met je grootste tijdvreter, gekoppeld op je bestaande systemen. Niks migreren. Daarna rollen we agent voor agent uit.",
+      "Op je eigen echte werk, niet op een demo. Zo weet je binnen twee weken of dit werkt, in plaats van na twee maanden.",
   },
   {
     number: "04",
-    when: "Doorlopend",
-    title: "Team-adoptie",
+    when: "Dag 60",
+    title: "De rest draait",
     description:
-      "We trainen je mensen tot elke agent dagelijks gebruikt wordt, want een ongebruikte agent bespaart nul uur. Jouw team is er max 2 uur per week mee bezig.",
+      "De overige agents, aan elkaar geknoopt. Met monitoring, een overzicht van wat er doorheen ging en een melding zodra er iets stilvalt.",
   },
   {
     number: "05",
-    when: "Elke maand",
-    title: "Meting en uitbreiding",
+    when: "Daarna",
+    title: "Draaiend houden",
     description:
-      "Elke maand een rapport met bespaarde uren per agent, afgezet tegen de nulmeting. En we breiden je AI-team stap voor stap verder uit.",
+      "Koppelingen breken, systemen veranderen, modellen worden vervangen. Wij zien het en lossen het op, voordat jij het merkt.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function HowItWorks() {
             className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border text-xs font-semibold tracking-wider uppercase mb-5"
             style={{ background: "rgba(110,173,212,0.06)", borderColor: "rgba(110,173,212,0.25)", color: "#6EADD4" }}
           >
-            De AIOS-methode
+            Zo werkt het
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-4"
@@ -58,7 +58,7 @@ export default function HowItWorks() {
             <span style={{ color: "#6EADD4" }}>aan</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Eerst maken we je bedrijf AI-proof: we analyseren je processen en maken ze klaar. Daarna zetten we AI-agents per afdeling neer. Van kick-off naar resultaat in 60 dagen, met een meetbaar doel: 40 uur per week terug.
+            Wij komen niet met een mening over jouw bedrijf, wij vragen door tot duidelijk is welk werk eruit kan. Daarna bouwen we het, in je eigen accounts en op de systemen die je al gebruikt.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function HowItWorks() {
             className="btn-primary inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-400 text-white font-semibold text-[15px] hover:bg-brand-500 active:scale-[0.98] transition-all duration-150"
             style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
           >
-            Doe de gratis Bedrijfsscan
+            Plan het gesprek
             <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

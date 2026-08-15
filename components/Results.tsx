@@ -1,19 +1,19 @@
 const conditions = [
   {
-    title: "De norm komt uit de Bedrijfsscan",
-    desc: "Geen blinde 40 uur, maar de besparing die we samen vaststellen en aftekenen.",
+    title: "De lijst is het contract",
+    desc: "We spreken vooraf af welke agents er komen, in jouw woorden. Per agent is er één vraag: draait hij op je echte werk, ja of nee.",
   },
   {
-    title: "De klok start bij livegang",
-    desc: "De 60 dagen gaan in zodra je eerste agent draait, niet bij de kick-off.",
+    title: "Meetbaar, geen gevoel",
+    desc: "Minstens 80% van het werk loopt er in de laatste twee weken daadwerkelijk doorheen. Dat lees je af in het overzicht dat je van ons krijgt.",
   },
   {
-    title: "Gemeten en per agent afgetekend",
-    desc: "Elke maand een rapport met bespaarde uren per agent, afgezet tegen de nulmeting.",
+    title: "De agents blijven staan",
+    desc: "Ook als je je geld terugvraagt. Inclusief documentatie en overdracht, in je eigen accounts.",
   },
   {
-    title: "Je betaalt pas bij livegang",
-    desc: "De maandelijkse investering start pas op het moment dat je eerste agent live staat.",
+    title: "Je betaalt de helft pas als het draait",
+    desc: "De helft bij de start, de helft als de laatste agent live is. Wij vinden het raar om je alles vooruit te laten betalen.",
   },
 ];
 
@@ -50,9 +50,9 @@ export default function Results() {
               className="text-2xl md:text-4xl font-bold text-white tracking-[-0.02em] leading-[1.2] max-w-3xl"
               style={{ fontFamily: "'Sora', sans-serif" }}
             >
-              De besparing die we in de Bedrijfsscan vaststellen, staat er{" "}
-              <span style={{ color: "#6EADD4" }}>binnen 60 dagen na livegang.</span>{" "}
-              Of we werken kosteloos door tot het wél zo is.
+              De agents die we samen afspreken, draaien{" "}
+              <span style={{ color: "#6EADD4" }}>binnen 60 dagen op je eigen echte werk.</span>{" "}
+              Lukt dat niet, dan kies jij: je investering terug, of wij werken kosteloos door.
             </h2>
 
             <div className="text-xs font-semibold tracking-wider uppercase mt-10 mb-5" style={{ color: "rgba(255,255,255,0.45)" }}>
@@ -83,7 +83,7 @@ export default function Results() {
             </div>
 
             <p className="text-[13px] leading-[1.6] mt-8 pt-6 border-t border-white/10" style={{ color: "rgba(255,255,255,0.45)" }}>
-              En alles wat we bouwen blijft van jou, ook als we uit elkaar gaan. Gebouwd op je bestaande systemen, geen migratie.
+              Alles draait in je eigen accounts, op de systemen die je al gebruikt. Geen migratie, en je kunt ons er morgen uit halen zonder dat er iets stopt.
             </p>
           </div>
         </div>

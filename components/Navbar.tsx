@@ -14,9 +14,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Je AI-team", href: "/#ai-team" },
+    { label: "Waar zit het werk", href: "/#ai-team" },
     { label: "Aanpak", href: "/#aanpak" },
-    { label: "Investering", href: "/#prijs" },
+    { label: "Wat het kost", href: "/#prijs" },
     { label: "Over ons", href: "/about" },
     { label: "Blog", href: "/blog" },
   ];
@@ -80,7 +80,7 @@ export default function Navbar() {
               className="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 text-white text-sm font-semibold hover:bg-brand-500 active:bg-brand-600 transition-colors duration-200"
               style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
             >
-              Gratis Bedrijfsscan
+              Plan het gesprek
             </a>
           </div>
 
@@ -135,7 +135,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="mt-2 btn-primary text-center px-5 py-2.5 rounded-full bg-brand-400 text-white text-sm font-semibold hover:bg-brand-500 transition-colors duration-200"
             >
-              Gratis Bedrijfsscan
+              Plan het gesprek
             </a>
           </div>
         </div>

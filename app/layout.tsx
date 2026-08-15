@@ -3,13 +3,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.touchaiagency.com"),
-  title: "Touch AI Agency · Een fulltime medewerker erbij met AI",
+  title: "Touch AI Agency · Weer aan het werk dat er echt toe doet",
   description:
-    "Met The AI Leap installeren wij een team AI-agents (je AI Workforce) op je bestaande systemen dat het werk van een fulltime medewerker overneemt. 40 uur per week terug, binnen 60 dagen gegarandeerd.",
+    "Wij halen het terugkerende werk uit je bedrijf met AI-agents, op de systemen die je al gebruikt. Eerste agent draait op dag 10. Werkt het niet binnen 60 dagen, dan krijg je je investering terug en blijven de agents staan.",
   openGraph: {
-    title: "Touch AI Agency · Jouw AI Workforce",
+    title: "Touch AI Agency · AI-agents die het terugkerende werk overnemen",
     description:
-      "Bespaar de kosten van een fulltime medewerker, al gauw €5.000 per maand. Een team AI-agents dat het repetitieve werk overneemt. Eerste agent live in 3 weken.",
+      "AI-agents die het werk overnemen dat elke week terugkomt. Eerste agent draait op dag 10, de rest binnen 60 dagen. Werkt het niet, dan krijg je je investering terug en blijven de agents staan.",
     type: "website",
     locale: "nl_NL",
   },

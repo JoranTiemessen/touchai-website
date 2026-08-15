@@ -24,31 +24,31 @@ export default function FinalCTA() {
           }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-brand-400" />
-          Gratis Bedrijfsscan
+          Het gesprek · 45 minuten
         </div>
 
         <h2
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-[-0.03em] mb-5 leading-[1.1]"
           style={{ fontFamily: "'Sora', sans-serif" }}
         >
-          Klaar voor een
+          Klaar om dat werk
           <br />
-          <span style={{ color: "#6EADD4" }}>fulltime medewerker erbij?</span>
+          <span style={{ color: "#6EADD4" }}>kwijt te raken?</span>
         </h2>
 
         <p className="text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.5)" }}>
-          Doe de gratis Bedrijfsscan. In een gesprek van 30 minuten laten we je precies zien waar bij jou de uren weglekken, welke agents het meeste opleveren en wat we voor je zouden bouwen. Volledig vrijblijvend.
+          Vijfenveertig minuten. Wij vragen door, jij levert de cijfers, en je houdt er een overzicht aan over: je eigen processen en wat ze je nu kosten. Ligt er niets bruikbaars, dan zeggen we dat.
         </p>
 
         <p className="text-sm mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.38)" }}>
-          Voor Nederlandse MKB-bedrijven vanaf 5 medewerkers waar de eigenaar zelf meewerkt en dagelijks de pijn van repetitief werk voelt.
+          Voor Nederlandse MKB-bedrijven vanaf ongeveer tien man waar elke week hetzelfde werk terugkomt.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
           {[
             "Vrijblijvend",
-            "Eerste agent live in 3 weken",
-            "Gebouwd op je eigen systemen",
+            "Eerste agent draait op dag 10",
+            "In je eigen accounts",
           ].map((item) => (
             <div key={item} className="flex items-center gap-2 text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
               <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 16 16" fill="none" style={{ color: "#6EADD4" }}>
@@ -69,7 +69,7 @@ export default function FinalCTA() {
             boxShadow: "0 6px 20px rgba(110,173,212,0.35)",
           }}
         >
-          Doe de gratis Bedrijfsscan
+          Plan het gesprek
           <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

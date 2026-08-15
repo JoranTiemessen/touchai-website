@@ -1,9 +1,9 @@
-const cols = ["AI Workforce", "Vaste medewerker", "Freelancer", "Losse AI-tools"];
+const cols = ["Agents van Touch AI", "Iemand erbij", "Freelancer", "Losse AI-tools"];
 
 type Cell = string | boolean;
 const rows: { label: string; values: Cell[] }[] = [
-  { label: "Kosten per maand", values: ["fractie daarvan", "± €5.000", "hoog per uur", "laag, maar los"] },
-  { label: "Inzetbaar in", values: ["3 weken", "maanden werven", "dagen", "direct, zelf inrichten"] },
+  { label: "Wat het kost", values: ["vast bedrag vooraf", "salaris plus lasten", "hoog per uur", "laag, maar los"] },
+  { label: "Draait op je werk in", values: ["10 dagen", "maanden werven", "dagen", "direct, zelf inrichten"] },
   { label: "Werkt 24/7", values: [true, false, false, false] },
   { label: "Schaalbaar per taak", values: [true, false, "beperkt", "beperkt"] },
   { label: "Kennis blijft in je bedrijf", values: [true, true, false, "deels"] },
@@ -36,10 +36,10 @@ export default function Comparison() {
             De eerlijke vergelijking
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
-            Waarom een AI Workforce?
+            Waarom agents en niet iemand erbij?
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Extra capaciteit nodig? Zo verhoudt een AI Workforce zich tot de alternatieven.
+            Extra capaciteit nodig voor werk dat zich elke week herhaalt? Zo verhouden agents zich tot de alternatieven.
           </p>
         </div>
 

@@ -8,24 +8,40 @@ const faqs = [
     a: "Ja. We koppelen de agents op de tools die je nu al gebruikt (Gmail, Outlook, WhatsApp, je CRM, je boekhoudpakket). Geen migratie, geen nieuwe software die je team moet leren.",
   },
   {
-    q: "Wat als ik geen technische kennis heb?",
-    a: "Dat hoeft ook niet. Wij bouwen, koppelen en trainen alles. Jij keurt goed en gebruikt de agents in je vertrouwde omgeving. Je team is er maximaal een paar uur per week mee bezig.",
+    q: "Ik heb hier geen tijd voor.",
+    a: "Negentig minuten. Eén sessie waarin we samen de toegang regelen en je proces doorlopen. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem. Verder bouwen en koppelen wij alles.",
+  },
+  {
+    q: "Onze data is een rommel.",
+    a: "Dat is bijna altijd zo. We werken met twintig echte voorbeelden uit je eigen praktijk, niet met een schone database. Dit is geen dataproject.",
+  },
+  {
+    q: "We hebben al eens iets met AI geprobeerd en het viel stil.",
+    a: "Precies. Bouwen kan tegenwoordig iedereen, maar bijna niemand kijkt of het nog draait. Bij ons gaat er een melding af zodra er niets meer doorheen komt, en daar is de maandprijs voor.",
   },
   {
     q: "Is mijn data veilig?",
     a: "Ja. We werken op je eigen systemen en volgens de geldende privacywetgeving (AVG). Alles wat we bouwen blijft van jou, ook als we uit elkaar gaan.",
   },
   {
-    q: "Hoe snel staat de eerste agent live?",
-    a: "Binnen 3 weken. We starten met je grootste tijdvreter, zodat je direct resultaat ziet. Daarna rollen we agent voor agent uit.",
+    q: "Hoe snel draait de eerste agent?",
+    a: "Op dag 10, op je eigen echte werk en niet op een demo. De rest van de afgesproken agents draait binnen zestig dagen.",
   },
   {
-    q: "Wat als het resultaat er niet is?",
-    a: "Dan werken we kosteloos door tot de in de Bedrijfsscan vastgestelde besparing er staat, binnen 60 dagen na livegang. Je betaalt de retainer bovendien pas vanaf het moment dat je eerste agent live staat.",
+    q: "Wat als het niet werkt?",
+    a: "Dan kies jij: je investering terug, of wij werken kosteloos door tot het wel draait, met een grens van dertig dagen. In beide gevallen blijven de agents staan, inclusief documentatie en overdracht. En je betaalt sowieso de helft pas als de laatste agent draait.",
+  },
+  {
+    q: "Straks zijn mijn mensen hun werk kwijt.",
+    a: "Niemand hoeft weg. Het werk dat weggaat is het werk waar niemand voor is aangenomen: overtypen, doorsturen, nalopen.",
+  },
+  {
+    q: "Wat kost het?",
+    a: "Dat hangt af van hoeveel processen eruit kunnen, en dat weten we pas na het gesprek. Je hoort het bedrag in datzelfde gesprek, niet in een offerte drie dagen later.",
   },
   {
     q: "Voor welke bedrijven is dit?",
-    a: "Nederlandse MKB-bedrijven vanaf 5 medewerkers waar de eigenaar zelf meewerkt en dagelijks de pijn van repetitief werk voelt. We nemen maximaal 2 nieuwe implementaties per maand aan.",
+    a: "Nederlandse MKB-bedrijven vanaf ongeveer tien man waar elke week hetzelfde werk terugkomt. Zijn er minder dan vier van dat soort processen, dan zeggen we dat op het gesprek gewoon tegen je. We nemen maximaal 2 nieuwe trajecten per maand aan.",
   },
 ];
 
