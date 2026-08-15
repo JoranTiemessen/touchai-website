@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustSection from "@/components/TrustSection";
-import AgentCatalog from "@/components/AgentCatalog";
+import Keten from "@/components/Keten";
 import AgentInAction from "@/components/AgentInAction";
 import Integrations from "@/components/Integrations";
 import TijdlekCheck from "@/components/TijdlekCheck";
@@ -22,7 +22,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustSection />
-      <Reveal><AgentCatalog /></Reveal>
+      <Reveal><Keten /></Reveal>
       <Reveal><AgentInAction /></Reveal>
       <Reveal><Integrations /></Reveal>
       <Reveal><TijdlekCheck /></Reveal>

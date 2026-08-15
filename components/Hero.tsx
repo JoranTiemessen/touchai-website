@@ -1,6 +1,9 @@
 "use client";
 
+import { useState } from "react";
+
 const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+const UURTARIEF = 55;
 
 const stats = [
   { value: "Dag 10", label: "draait je eerste agent op je eigen werk" },
@@ -9,6 +12,13 @@ const stats = [
 ];
 
 export default function Hero() {
+  const [keer, setKeer] = useState(20);
+  const [min, setMin] = useState(20);
+  const uurPerMaand = (keer * min * 52) / 12 / 60;
+  const laag = Math.round((uurPerMaand * UURTARIEF * 0.75) / 100) * 100;
+  const hoog = Math.round((uurPerMaand * UURTARIEF) / 100) * 100;
+  const euro = (n: number) => "€" + n.toLocaleString("nl-NL");
+
   return (
     <section className="relative min-h-[92dvh] flex items-center pt-28 overflow-hidden">
       {/* dot-veld, bolvormig gemaskeerd */}
@@ -50,26 +60,57 @@ export default function Hero() {
               en blijven de agents staan.
             </p>
 
-            <div className="flex flex-wrap gap-3 mt-8">
-              <a
-                href={CAL_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-brand-400 text-white font-semibold text-[15px] hover:bg-brand-500 active:scale-[0.98] transition-[background-color,transform] duration-150"
-                style={{ boxShadow: "0 8px 24px -10px rgba(42,94,131,0.75)" }}
-              >
-                Plan het gesprek
-                <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </a>
-              <a
-                href="#ai-team"
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full border border-gray-200 bg-white/70 text-gray-600 font-medium text-[15px] hover:border-brand-300 hover:text-brand-500 active:scale-[0.98] transition-[color,border-color,transform] duration-200"
-              >
-                Waar zit het werk?
-              </a>
+            <div className="mt-8 rounded-2xl card-elevated p-6">
+              <div className="label-mono mb-4" style={{ color: "#3474A0" }}>
+                Wat kost je drukste proces nu?
+              </div>
+
+              <div className="space-y-4">
+                <div>
+                  <div className="flex items-baseline justify-between mb-2">
+                    <label htmlFor="keer" className="text-[15px] text-gray-600">Hoe vaak per week?</label>
+                    <span className="tabular text-[15px] font-bold text-gray-900">{keer}×</span>
+                  </div>
+                  <input id="keer" type="range" min={5} max={100} value={keer}
+                    onChange={(e) => setKeer(Number(e.target.value))}
+                    className="roi-slider w-full"
+                    style={{ background: `linear-gradient(90deg,#4A8EBB ${((keer - 5) / 95) * 100}%,#E5E7EB ${((keer - 5) / 95) * 100}%)` }} />
+                </div>
+                <div>
+                  <div className="flex items-baseline justify-between mb-2">
+                    <label htmlFor="min" className="text-[15px] text-gray-600">Hoeveel minuten per keer?</label>
+                    <span className="tabular text-[15px] font-bold text-gray-900">{min} min</span>
+                  </div>
+                  <input id="min" type="range" min={5} max={90} value={min}
+                    onChange={(e) => setMin(Number(e.target.value))}
+                    className="roi-slider w-full"
+                    style={{ background: `linear-gradient(90deg,#4A8EBB ${((min - 5) / 85) * 100}%,#E5E7EB ${((min - 5) / 85) * 100}%)` }} />
+                </div>
+              </div>
+
+              <div className="mt-6 pt-5 border-t border-gray-100 flex flex-wrap items-end justify-between gap-4">
+                <div>
+                  <div className="tabular text-3xl font-bold tracking-[-0.02em]" style={{ color: "#2A5E83", fontFamily: "'Sora', sans-serif" }}>
+                    {euro(laag)} – {euro(hoog)}
+                  </div>
+                  <div className="text-[13px] text-gray-400 mt-1">
+                    per maand, bij €{UURTARIEF} per uur belast · {Math.round(uurPerMaand)} uur
+                  </div>
+                </div>
+                <a href={CAL_URL} target="_blank" rel="noopener noreferrer"
+                  className="btn-primary inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-400 text-white font-semibold text-[15px] hover:bg-brand-500 active:scale-[0.98] transition-[background-color,transform] duration-150"
+                  style={{ boxShadow: "0 8px 24px -10px rgba(42,94,131,0.75)" }}>
+                  Plan het gesprek
+                  <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+              </div>
             </div>
+
+            <a href="#ai-team" className="inline-block mt-4 text-[15px] font-medium text-gray-500 hover:text-brand-500 link-underline transition-colors duration-200">
+              Of kijk eerst waar het werk zit →
+            </a>
           </div>
         </div>
 
