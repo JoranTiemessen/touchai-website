@@ -9,54 +9,61 @@ type Systeem = {
   stappen: [string, string, string];
   vervangt: string;
   draait: string;
+  bij?: string;
   shot?: string;
 };
 
 const frontend: Systeem[] = [
   {
-    n: "01", naam: "Aanvraag-agent",
-    kort: "Wat binnenkomt, staat meteen goed in je systeem.",
-    stappen: ["Mail of formulier komt binnen", "Classificeren, verrijken, in het CRM zetten", "Jij ziet alleen wat klopt"],
+    n: "01", naam: "Aanvraag- en leadverwerking",
+    kort: "Wat binnenkomt, staat verrijkt en gecontroleerd in je systeem.",
+    stappen: ["Mail, formulier of lead komt binnen", "Classificeren, verrijken, dubbelen eruit", "Jij ziet alleen wat klopt"],
     vervangt: "Overtypen uit de mailbox, en aanvragen die tussen wal en schip vallen",
     draait: "Gmail of Outlook · je CRM · webformulier",
+    bij: "een salesorganisatie en een interieurbouwer",
   },
   {
     n: "02", naam: "Offerte-agent",
     kort: "Een concept-offerte binnen het uur, met jouw prijzen.",
     stappen: ["Aanvraag is compleet", "Opstellen met jouw prijzen en voorwaarden", "Klaar voor akkoord met één klik"],
     vervangt: "Handmatig samenstellen uit oude offertes en prijslijsten",
-    draait: "je CRM · offertesjabloon · prijslijst",
+    draait: "je CRM of planningssysteem · offertesjabloon",
+    bij: "een vastgoedbeheerder",
   },
   {
     n: "03", naam: "Opvolg-agent",
     kort: "Niets blijft liggen, zonder dat het als een robot klinkt.",
-    stappen: ["Offerte staat drie dagen open", "Persoonlijk bericht, geen standaardherinnering", "Reactie komt in je weekrapport"],
+    stappen: ["Offerte of aanvraag staat te lang open", "Persoonlijk bericht over mail of WhatsApp", "Reactie komt in je weekrapport"],
     vervangt: "De opvolging die er bij drukte als eerste bij inschiet",
     draait: "mail · WhatsApp · je CRM",
+    bij: "een online opleider",
   },
 ];
 
 const backend: Systeem[] = [
   {
-    n: "04", naam: "Documenten-agent",
-    kort: "Bonnen en facturen lezen zichzelf uit.",
-    stappen: ["Bon of factuur komt binnen", "Uitlezen, controleren, wegschrijven", "Niemand typt meer over"],
-    vervangt: "Het overtypen van bedragen, data en nummers in de administratie",
-    draait: "mailbox · boekhoudpakket · documentmap",
-  },
-  {
-    n: "05", naam: "Facturatie-agent",
+    n: "04", naam: "Facturatie-agent",
     kort: "De factuur maakt zichzelf, jij keurt hem goed.",
     stappen: ["Opgeleverd of einde van de maand", "Factuur samenstellen uit het systeem", "Verstuurd en geboekt"],
     vervangt: "De maandelijkse factuurronde met de hand",
-    draait: "je CRM of planning · boekhoudpakket",
+    draait: "je planning of CRM · boekhoudpakket",
+    bij: "een vastgoedbeheerder",
+  },
+  {
+    n: "05", naam: "Controle-agent",
+    kort: "Klopt wat er binnenkomt met wat er hoort binnen te komen?",
+    stappen: ["Bedragen, bonnen of transacties komen binnen", "Naast de bron leggen en verschillen zoeken", "Alleen de afwijkingen komen bij jou"],
+    vervangt: "Steekproeven met de hand, en verschillen die pas maanden later opvallen",
+    draait: "boekhoudpakket · export uit je systeem",
+    bij: "een payment provider",
   },
   {
     n: "06", naam: "Signaal-agent",
     kort: "Wij zien het als iets stilvalt. Voordat jij het merkt.",
-    stappen: ["Elk uur een controle", "Wat bleef liggen, wat viel stil, wat faalde", "Melding in Slack, met wat er aan de hand is"],
+    stappen: ["Elk uur een controle op alles wat draait", "Wat bleef liggen, wat viel stil, wat faalde", "Melding in Slack, met wat er aan de hand is"],
     vervangt: "Ontdekken dat er iets stil ligt omdat een klant erover belt",
-    draait: "alle agents · register · Slack",
+    draait: "alle agents · het register · Slack",
+    bij: "een notariskantoor, en standaard bij al onze klanten",
   },
 ];
 
@@ -106,6 +113,12 @@ function Kaart({ s }: { s: Systeem }) {
                 <dt className="label-mono mb-1" style={{ color: "#8A94A6" }}>Draait op</dt>
                 <dd className="text-[15px] text-gray-600 leading-relaxed">{s.draait}</dd>
               </div>
+              {s.bij && (
+                <div>
+                  <dt className="label-mono mb-1" style={{ color: "#3474A0" }}>Draait nu bij</dt>
+                  <dd className="text-[15px] font-semibold text-gray-800 leading-relaxed">{s.bij}</dd>
+                </div>
+              )}
             </dl>
 
             {s.shot && (
@@ -126,11 +139,11 @@ export default function Systemen() {
         <div className="max-w-2xl mb-14">
           <div className="label-mono mb-4" style={{ color: "#3474A0" }}>De systemen</div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
-            Zes systemen die het werk overnemen.
+            De zes die we het vaakst bouwen.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-            Klik een systeem open en je ziet precies wat er gebeurt: waar het begint, wat het doet en
-            wat eruit komt. Welke van deze zes bij jou iets opleveren, blijkt uit het gesprek.
+            Elke agent heeft dezelfde vorm: één trigger, één keten, één uitkomst. Klik er een open
+            en je ziet precies wat er gebeurt. Welke bij jou iets opleveren, blijkt uit het gesprek.
           </p>
         </div>
 
@@ -153,7 +166,26 @@ export default function Systemen() {
           </div>
         </div>
 
-        <p className="mt-12 text-[15px] text-gray-400 max-w-3xl">
+        {/* de uitzondering als aanbod, niet als disclaimer */}
+        <div className="mt-8 rounded-2xl p-6 md:p-8" style={{ border: "1px dashed rgba(74,142,187,0.45)", background: "rgba(110,173,212,0.05)" }}>
+          <div className="flex flex-col md:flex-row md:items-start gap-5">
+            <span className="label-mono pt-1.5 shrink-0" style={{ color: "#4A8EBB" }}>07</span>
+            <div className="flex-1">
+              <h3 className="text-[21px] font-bold tracking-[-0.015em] text-gray-900" style={{ fontFamily: "'Sora', sans-serif" }}>
+                Iets wat hier niet bij staat
+              </h3>
+              <p className="text-[15px] text-gray-500 mt-1.5 leading-relaxed max-w-2xl">
+                Jij noemt een proces dat elke week terugkomt → wij kijken of het te bouwen valt →
+                als het kan, bouwen we het op dezelfde manier, met dezelfde garantie.
+              </p>
+              <p className="text-[14px] text-gray-400 mt-3">
+                Vervangt de aanname dat jouw proces te specifiek is. Draait op wat je nu al gebruikt.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <p className="mt-10 text-[15px] text-gray-400 max-w-3xl">
           Alles draait op de systemen die je al gebruikt: Gmail of Outlook, WhatsApp, je CRM, je
           boekhoudpakket en je planning. Geen migratie, geen nieuwe software.
         </p>
