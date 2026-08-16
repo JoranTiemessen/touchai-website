@@ -70,7 +70,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           {/* Title */}
           <h1
             className="text-3xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] leading-[1.1] mb-6"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             {post.title}
           </h1>
@@ -86,7 +86,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   <h2
                     key={i}
                     className="text-2xl font-bold text-gray-900 tracking-[-0.02em] pt-6"
-                    style={{ fontFamily: "'Sora', sans-serif" }}
+                    style={{ fontFamily: "'Inter Tight', sans-serif" }}
                   >
                     {block.text}
                   </h2>
@@ -120,7 +120,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               border: "1px solid rgba(110,173,212,0.18)",
             }}
           >
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 tracking-[-0.01em] mb-3" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 tracking-[-0.01em] mb-3" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
               Benieuwd waar bij jou de uren weglekken?
             </h3>
             <p className="text-sm text-gray-500 leading-[1.7] max-w-md mx-auto mb-6">

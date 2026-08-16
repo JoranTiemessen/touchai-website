@@ -66,7 +66,7 @@ export default function AboutPage() {
           </div>
           <h1
             className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 leading-[1.06] tracking-[-0.03em] mb-6"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             AI die het werk doet.
             <br />
@@ -98,7 +98,7 @@ export default function AboutPage() {
               border: "1px solid rgba(110,173,212,0.12)",
             }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em] mb-5" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em] mb-5" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
               Waarom we Touch AI zijn begonnen
             </h2>
             <div className="space-y-5 text-gray-600 leading-[1.8]">
@@ -126,7 +126,7 @@ export default function AboutPage() {
             >
               Waar we in geloven
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
               Vier principes die ons werk sturen
             </h2>
           </div>
@@ -143,11 +143,11 @@ export default function AboutPage() {
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mb-5 text-sm font-bold text-white"
-                  style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", fontFamily: "'Sora', sans-serif" }}
+                  style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", fontFamily: "'Inter Tight', sans-serif" }}
                 >
                   {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+                <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-[-0.01em]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
                   {v.title}
                 </h3>
                 <p className="text-sm text-gray-500 leading-[1.7]">{v.desc}</p>
@@ -167,7 +167,7 @@ export default function AboutPage() {
             >
               Het team
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
               Twee broers, één missie
             </h2>
             <p className="text-lg text-gray-500 leading-[1.7]">
@@ -205,7 +205,7 @@ export default function AboutPage() {
                     >
                       {member.role}
                     </span>
-                    <h3 className="text-2xl font-bold text-gray-900 tracking-[-0.02em] mt-1.5" style={{ fontFamily: "'Sora', sans-serif" }}>
+                    <h3 className="text-2xl font-bold text-gray-900 tracking-[-0.02em] mt-1.5" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
                       {member.name}
                     </h3>
                     <div className="text-sm font-semibold mt-0.5" style={{ color: "#6EADD4" }}>{member.tagline}</div>
@@ -228,7 +228,7 @@ export default function AboutPage() {
               border: "1px solid rgba(110,173,212,0.18)",
             }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-[-0.02em] mb-4" style={{ fontFamily: "'Sora', sans-serif" }}>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-[-0.02em] mb-4" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
               Benieuwd waar bij jou de uren weglekken?
             </h2>
             <p className="text-gray-500 leading-[1.7] max-w-xl mx-auto mb-8">

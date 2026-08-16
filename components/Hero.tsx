@@ -40,7 +40,7 @@ export default function Hero() {
         {/* asymmetrische kop: eerste regel links, tweede regel ingesprongen */}
         <h1
           className="font-bold text-gray-900 leading-[1.0] tracking-[-0.035em]"
-          style={{ fontFamily: "'Sora', sans-serif", fontSize: "clamp(2.35rem, 5.2vw, 4.5rem)" }}
+          style={{ fontFamily: "'Inter Tight', sans-serif", fontSize: "clamp(2.35rem, 5.2vw, 4.5rem)" }}
         >
           <span className="block">Focus op het echte werk.</span>
           <span className="block md:pl-[14%]" style={{ color: "#6EADD4" }}>
@@ -90,7 +90,7 @@ export default function Hero() {
 
               <div className="mt-6 pt-5 border-t border-gray-100 flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <div className="tabular text-3xl font-bold tracking-[-0.02em]" style={{ color: "#2A5E83", fontFamily: "'Sora', sans-serif" }}>
+                  <div className="tabular text-3xl font-bold tracking-[-0.02em]" style={{ color: "#2A5E83", fontFamily: "'Inter Tight', sans-serif" }}>
                     {euro(laag)} – {euro(hoog)}
                   </div>
                   <div className="text-[13px] text-gray-400 mt-1">
@@ -120,7 +120,7 @@ export default function Hero() {
             <div key={stat.label} className="flex items-baseline gap-4">
               <div
                 className="tabular text-2xl md:text-3xl font-semibold tracking-[-0.02em] whitespace-nowrap"
-                style={{ color: "#2A5E83", fontFamily: "'Sora', sans-serif" }}
+                style={{ color: "#2A5E83", fontFamily: "'Inter Tight', sans-serif" }}
               >
                 {stat.value}
               </div>

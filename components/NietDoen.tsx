@@ -13,7 +13,7 @@ export default function NietDoen() {
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-12">
           <div className="label-mono mb-4" style={{ color: "#3474A0" }}>Even eerlijk</div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
             Wat we niet doen.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
@@ -30,7 +30,7 @@ export default function NietDoen() {
                 </svg>
               </span>
               <div>
-                <div className="text-[19px] font-bold text-gray-900 tracking-[-0.01em] mb-1.5" style={{ fontFamily: "'Sora', sans-serif" }}>
+                <div className="text-[19px] font-bold text-gray-900 tracking-[-0.01em] mb-1.5" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
                   {n.t}
                 </div>
                 <p className="text-[15.5px] text-gray-500 leading-[1.6]">{n.s}</p>

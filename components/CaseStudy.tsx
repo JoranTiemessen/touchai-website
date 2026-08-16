@@ -21,7 +21,7 @@ export default function CaseStudy() {
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
             Case study
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em]" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
             Van tijdverlies naar resultaat
           </h2>
           {!caseData.real && <p className="text-sm text-gray-400 mt-4">De eerste uitgewerkte case volgt binnenkort.</p>}
@@ -35,7 +35,7 @@ export default function CaseStudy() {
           <div className="grid grid-cols-3 divide-x divide-gray-100" style={{ background: "linear-gradient(135deg, rgba(74,142,187,0.06) 0%, rgba(42,94,131,0.04) 100%)" }}>
             {caseData.metrics.map((m) => (
               <div key={m.label} className="p-6 md:p-8 text-center">
-                <div className="text-3xl md:text-4xl font-bold tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif", color: "#2A5E83" }}>{m.value}</div>
+                <div className="text-3xl md:text-4xl font-bold tracking-[-0.02em]" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#2A5E83" }}>{m.value}</div>
                 <div className="text-xs text-gray-500 mt-1.5 leading-snug">{m.label}</div>
               </div>
             ))}

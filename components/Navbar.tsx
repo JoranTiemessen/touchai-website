@@ -39,13 +39,13 @@ export default function Navbar() {
             <div className="flex flex-col leading-tight">
               <span
                 className={`logo-word font-bold text-gray-900 tracking-[-0.02em] transition-[font-size] duration-300 ${scrolled ? "text-lg" : "text-xl md:text-2xl"}`}
-                style={{ fontFamily: "'Sora', sans-serif" }}
+                style={{ fontFamily: "'Inter Tight', sans-serif" }}
               >
                 TOUCH AI
               </span>
               <span
                 className={`font-semibold text-brand-400 tracking-[0.18em] uppercase transition-[font-size] duration-300 ${scrolled ? "text-[10px]" : "text-xs md:text-sm"}`}
-                style={{ fontFamily: "'Sora', sans-serif" }}
+                style={{ fontFamily: "'Inter Tight', sans-serif" }}
               >
                 Agency
               </span>

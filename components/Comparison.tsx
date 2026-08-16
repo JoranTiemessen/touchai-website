@@ -35,7 +35,7 @@ export default function Comparison() {
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
             De eerlijke vergelijking
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
             Waarom agents en niet iemand erbij?
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
@@ -53,8 +53,8 @@ export default function Comparison() {
                   key={c}
                   className="rounded-2xl px-4 py-4 text-center text-sm font-bold"
                   style={i === 0
-                    ? { background: "linear-gradient(135deg, #4A8EBB 0%, #2A5E83 100%)", color: "#fff", fontFamily: "'Sora', sans-serif" }
-                    : { background: "#F7F6F3", color: "#475569", fontFamily: "'Sora', sans-serif" }}
+                    ? { background: "linear-gradient(135deg, #4A8EBB 0%, #2A5E83 100%)", color: "#fff", fontFamily: "'Inter Tight', sans-serif" }
+                    : { background: "#F7F6F3", color: "#475569", fontFamily: "'Inter Tight', sans-serif" }}
                 >
                   {c}
                 </div>

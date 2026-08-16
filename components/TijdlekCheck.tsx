@@ -88,7 +88,7 @@ export default function TijdlekCheck() {
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
             Plan het gesprek
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
             Zie waar je tijd weglekt in 30 seconden.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
@@ -116,10 +116,10 @@ export default function TijdlekCheck() {
           {/* Step 0: team */}
           {step === 0 && (
             <div>
-              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Hoeveel mensen doen dit werk?</label>
+              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>Hoeveel mensen doen dit werk?</label>
               <p className="text-sm text-gray-400 mb-7">Niet je hele team, alleen de mensen die deze taken echt uitvoeren. Jijzelf meegerekend.</p>
               <div className="text-center mb-6">
-                <span className="text-5xl font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>{team}</span>
+                <span className="text-5xl font-bold" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>{team}</span>
                 <span className="text-lg text-gray-400 ml-2">{team === 1 ? "persoon" : "mensen"}</span>
               </div>
               <Slider value={team} min={1} max={25} onChange={setTeam} />
@@ -130,14 +130,14 @@ export default function TijdlekCheck() {
           {/* Step 1: hours per category */}
           {step === 1 && (
             <div>
-              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Hoeveel uur per persoon per week?</label>
+              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>Hoeveel uur per persoon per week?</label>
               <p className="text-sm text-gray-400 mb-7">Schat per onderdeel hoeveel tijd er weglekt aan repetitief werk.</p>
               <div className="space-y-6">
                 {categories.map((c) => (
                   <div key={c.key}>
                     <div className="flex items-baseline justify-between mb-2.5">
                       <span className="text-[15px] font-semibold text-gray-800">{c.label}</span>
-                      <span className="text-lg font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>{hours[c.key]} <span className="text-sm font-medium text-gray-400">uur</span></span>
+                      <span className="text-lg font-bold" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>{hours[c.key]} <span className="text-sm font-medium text-gray-400">uur</span></span>
                     </div>
                     <Slider value={hours[c.key]} min={0} max={10} onChange={(v) => setHours((h) => ({ ...h, [c.key]: v }))} />
                   </div>
@@ -149,7 +149,7 @@ export default function TijdlekCheck() {
           {/* Step 2: systems */}
           {step === 2 && (
             <div>
-              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Welke systemen gebruik je?</label>
+              <label className="block text-lg font-bold mb-1" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>Welke systemen gebruik je?</label>
               <p className="text-sm text-gray-400 mb-7">Zo weten we waar we de agents op koppelen. Kies alles wat van toepassing is.</p>
               <div className="flex flex-wrap gap-2.5">
                 {systemOptions.map((s) => {
@@ -180,15 +180,15 @@ export default function TijdlekCheck() {
                   <div className="text-[11px] font-bold tracking-[0.18em] uppercase mb-5" style={{ color: "rgba(159,202,227,0.7)" }}>Waar je tijd weglekt</div>
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     <div>
-                      <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>{tijdlek}<span className="text-lg text-white/50"> u</span></div>
+                      <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>{tijdlek}<span className="text-lg text-white/50"> u</span></div>
                       <div className="text-xs text-white/55 mt-1">per week</div>
                     </div>
                     <div>
-                      <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] tabular" style={{ fontFamily: "'Sora', sans-serif" }}>{euro(bandLaag)}<span className="text-white/45"> – </span>{euro(bandHoog)}</div>
+                      <div className="text-2xl md:text-3xl font-bold text-white tracking-[-0.02em] tabular" style={{ fontFamily: "'Inter Tight', sans-serif" }}>{euro(bandLaag)}<span className="text-white/45"> – </span>{euro(bandHoog)}</div>
                       <div className="text-xs text-white/55 mt-1">per maand, bij €{EUR_PER_HOUR} per uur belast</div>
                     </div>
                     <div>
-                      <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Sora', sans-serif" }}>{ftes}</div>
+                      <div className="text-3xl md:text-4xl font-bold text-white tracking-[-0.02em]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>{ftes}</div>
                       <div className="text-xs text-white/55 mt-1">fte aan werk</div>
                     </div>
                   </div>
@@ -226,7 +226,7 @@ export default function TijdlekCheck() {
                   <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "rgba(44,143,94,0.12)" }}>
                     <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" style={{ color: "#2C8F5E" }}><path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                   </div>
-                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>Check je mail</h3>
+                  <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>Check je mail</h3>
                   <p className="text-sm text-gray-500 mb-6 max-w-md mx-auto">Je overzicht is onderweg. Plan meteen het gesprek, dan benoemen we samen welke processen eruit kunnen.</p>
                   <a href={CAL_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full text-white font-semibold text-[15px]" style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}>
                     Plan het gesprek

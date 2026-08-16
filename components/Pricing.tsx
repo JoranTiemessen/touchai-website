@@ -39,7 +39,7 @@ export default function Pricing() {
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             Wat het kost, hoor je{" "}
             <span style={{ color: "#6EADD4" }}>in het gesprek.</span>
@@ -65,7 +65,7 @@ Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze s
               }}
             >
               <div className="text-xs font-semibold tracking-wider uppercase text-brand-500 mb-2">{col.label}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-6 tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif" }}>
+              <h3 className="text-xl font-bold text-gray-900 mb-6 tracking-[-0.01em]" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
                 {col.title}
               </h3>
               <div className="space-y-3.5">
@@ -94,7 +94,7 @@ Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze s
         >
           <p
             className="text-lg md:text-2xl font-bold text-gray-900 tracking-[-0.01em] leading-[1.4] max-w-3xl mx-auto"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             Je betaalt de helft bij de start en de helft als de laatste agent draait.{" "}
             <span style={{ color: "#4A8EBB" }}>Werkt het niet, dan krijg je je investering terug en blijven de agents staan.</span>

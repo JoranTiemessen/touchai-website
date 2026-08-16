@@ -77,7 +77,7 @@ function Kaart({ s }: { s: Systeem }) {
       >
         <span className="label-mono pt-1.5 shrink-0" style={{ color: "#4A8EBB" }}>{s.n}</span>
         <span className="flex-1">
-          <span className="block text-[21px] font-bold tracking-[-0.015em] text-gray-900" style={{ fontFamily: "'Sora', sans-serif" }}>
+          <span className="block text-[21px] font-bold tracking-[-0.015em] text-gray-900" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
             {s.naam}
           </span>
           <span className="block text-[15px] text-gray-500 mt-1.5 leading-relaxed">{s.kort}</span>
@@ -138,7 +138,7 @@ export default function Systemen() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-14">
           <div className="label-mono mb-4" style={{ color: "#3474A0" }}>De systemen</div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
             De zes die we het vaakst bouwen.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
@@ -171,7 +171,7 @@ export default function Systemen() {
           <div className="flex flex-col md:flex-row md:items-start gap-5">
             <span className="label-mono pt-1.5 shrink-0" style={{ color: "#4A8EBB" }}>07</span>
             <div className="flex-1">
-              <h3 className="text-[21px] font-bold tracking-[-0.015em] text-gray-900" style={{ fontFamily: "'Sora', sans-serif" }}>
+              <h3 className="text-[21px] font-bold tracking-[-0.015em] text-gray-900" style={{ fontFamily: "'Inter Tight', sans-serif" }}>
                 Iets wat hier niet bij staat
               </h3>
               <p className="text-[15px] text-gray-500 mt-1.5 leading-relaxed max-w-2xl">

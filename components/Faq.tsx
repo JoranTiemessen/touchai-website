@@ -55,7 +55,7 @@ export default function Faq() {
           <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
             Veelgestelde vragen
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em]" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em]" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
             Alles wat je wilt weten
           </h2>
         </div>
@@ -73,7 +73,7 @@ export default function Faq() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
                 >
-                  <span className="text-[16px] font-bold" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>{item.q}</span>
+                  <span className="text-[16px] font-bold" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>{item.q}</span>
                   <span
                     className="w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300"
                     style={{ background: "#EEF2F7", transform: isOpen ? "rotate(45deg)" : "none" }}

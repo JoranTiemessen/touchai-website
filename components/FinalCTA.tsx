@@ -17,7 +17,7 @@ export default function FinalCTA() {
 
         <h2
           className="text-4xl md:text-[56px] font-bold tracking-[-0.035em] leading-[1.05] text-gray-900"
-          style={{ fontFamily: "'Sora', sans-serif" }}
+          style={{ fontFamily: "'Inter Tight', sans-serif" }}
         >
           Klaar om dat werk
           <br />

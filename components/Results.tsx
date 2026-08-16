@@ -13,7 +13,7 @@ export default function Results() {
           <div className="label-mono mb-4" style={{ color: "#3474A0" }}>De garantie</div>
           <h2
             className="text-4xl md:text-[52px] font-bold tracking-[-0.03em] leading-[1.08] text-gray-900"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             De agents die we samen afspreken, draaien binnen 60 dagen op{" "}
             <span style={{ color: "#4A8EBB" }}>je eigen echte werk.</span>
@@ -29,7 +29,7 @@ export default function Results() {
           <div className="rounded-2xl p-7 md:p-8 bg-white" style={{ border: "1px solid rgba(11,18,32,0.08)" }}>
             <div className="label-mono mb-4" style={{ color: "#2C8F5E" }}>Lukt dat</div>
             <p className="text-[22px] md:text-[26px] font-bold tracking-[-0.02em] leading-[1.25] text-gray-900"
-               style={{ fontFamily: "'Sora', sans-serif" }}>
+               style={{ fontFamily: "'Inter Tight', sans-serif" }}>
               Dan draait het werk, en betaal je de tweede helft.
             </p>
             <p className="text-[16px] text-gray-500 leading-[1.6] mt-4">
@@ -40,7 +40,7 @@ export default function Results() {
           <div className="rounded-2xl p-7 md:p-8" style={{ background: "#fff", border: "2px solid rgba(74,142,187,0.55)", boxShadow: "0 18px 44px -26px rgba(42,94,131,0.45)" }}>
             <div className="label-mono mb-4" style={{ color: "#C2413F" }}>Lukt dat niet</div>
             <p className="text-[22px] md:text-[26px] font-bold tracking-[-0.02em] leading-[1.25] text-gray-900"
-               style={{ fontFamily: "'Sora', sans-serif" }}>
+               style={{ fontFamily: "'Inter Tight', sans-serif" }}>
               Dan kies jij.
             </p>
             <div className="mt-5 space-y-3">
@@ -64,7 +64,7 @@ export default function Results() {
         {/* wat er in beide gevallen geldt */}
         <div className="rounded-2xl p-7 md:p-8 mb-12" style={{ background: "rgba(110,173,212,0.09)", border: "1px solid rgba(110,173,212,0.28)" }}>
           <p className="text-[20px] md:text-[24px] font-bold tracking-[-0.015em] text-gray-900 leading-[1.3]"
-             style={{ fontFamily: "'Sora', sans-serif" }}>
+             style={{ fontFamily: "'Inter Tight', sans-serif" }}>
             In beide gevallen blijven de agents staan.
           </p>
           <p className="text-[16px] text-gray-600 leading-[1.6] mt-3 max-w-3xl">
@@ -81,7 +81,7 @@ export default function Results() {
               <div key={v.n} className="pt-4" style={{ borderTop: "2px solid rgba(11,18,32,0.10)" }}>
                 <div className="label-mono mb-2" style={{ color: "#4A8EBB" }}>{v.n}</div>
                 <div className="text-[17px] font-bold text-gray-900 leading-[1.3] mb-1.5"
-                     style={{ fontFamily: "'Sora', sans-serif" }}>{v.t}</div>
+                     style={{ fontFamily: "'Inter Tight', sans-serif" }}>{v.t}</div>
                 <p className="text-[15px] text-gray-500 leading-[1.55]">{v.s}</p>
               </div>
             ))}

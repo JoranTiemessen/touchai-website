@@ -32,7 +32,7 @@ export default function BlogIndex() {
           </div>
           <h1
             className="text-5xl sm:text-6xl font-bold text-gray-900 leading-[1.06] tracking-[-0.03em] mb-6"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             Blog
           </h1>
@@ -67,7 +67,7 @@ export default function BlogIndex() {
                 </div>
                 <h2
                   className="text-xl font-bold text-gray-900 tracking-[-0.01em] mb-3 leading-snug group-hover:text-brand-500 transition-colors duration-200"
-                  style={{ fontFamily: "'Sora', sans-serif" }}
+                  style={{ fontFamily: "'Inter Tight', sans-serif" }}
                 >
                   {post.title}
                 </h2>

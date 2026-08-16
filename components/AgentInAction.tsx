@@ -8,7 +8,7 @@ export default function AgentInAction() {
             <div className="text-xs font-bold tracking-[0.18em] uppercase mb-4" style={{ color: "#3474A0" }}>
               Zo ziet het eruit
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] leading-[1.1] mb-6" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] leading-[1.1] mb-6" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
               De agent doet het werk. Jij keurt alleen nog goed.
             </h2>
             <p className="text-lg text-gray-500 leading-[1.7] mb-6">

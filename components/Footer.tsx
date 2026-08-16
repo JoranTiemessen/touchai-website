@@ -35,7 +35,7 @@ export default function Footer() {
               </div>
               <span
                 className="font-bold text-[15px] tracking-wide text-white leading-tight"
-                style={{ fontFamily: "'Sora', sans-serif" }}
+                style={{ fontFamily: "'Inter Tight', sans-serif" }}
               >
                 TOUCH AI<br />
                 <span className="text-brand-300 font-normal text-[11px] tracking-[0.12em] uppercase">Agency</span>
@@ -65,7 +65,7 @@ export default function Footer() {
           <div>
             <h4
               className="text-sm font-semibold text-white mb-5 tracking-wide"
-              style={{ fontFamily: "'Sora', sans-serif" }}
+              style={{ fontFamily: "'Inter Tight', sans-serif" }}
             >
               Navigatie
             </h4>
@@ -92,7 +92,7 @@ export default function Footer() {
           <div>
             <h4
               className="text-sm font-semibold text-white mb-5 tracking-wide"
-              style={{ fontFamily: "'Sora', sans-serif" }}
+              style={{ fontFamily: "'Inter Tight', sans-serif" }}
             >
               Contact
             </h4>

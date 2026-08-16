@@ -36,7 +36,7 @@ export default function Keten() {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-14">
           <div className="label-mono mb-4" style={{ color: "#3474A0" }}>Waar zit het werk</div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] mb-5" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
             Van aanvraag tot betaling zitten er acht stappen.
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
@@ -84,7 +84,7 @@ export default function Keten() {
                     <span className="label-mono pt-1 shrink-0" style={{ color: "#4A8EBB" }}>{p.n}</span>
                     <span className="flex-1">
                       <span className="block text-[19px] font-bold tracking-[-0.01em] text-gray-900 group-hover:text-brand-500 transition-colors duration-200"
-                        style={{ fontFamily: "'Sora', sans-serif" }}>
+                        style={{ fontFamily: "'Inter Tight', sans-serif" }}>
                         {p.t}
                       </span>
                       <span

@@ -59,7 +59,7 @@ export default function Advisors() {
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             Twee broers,{" "}
             <span style={{ color: "#6EADD4" }}>één missie</span>
@@ -86,7 +86,7 @@ export default function Advisors() {
         >
           <h3
             className="text-2xl md:text-3xl font-bold text-gray-900 tracking-[-0.02em] mb-4"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             Waarom we Touch AI zijn begonnen
           </h3>
@@ -163,7 +163,7 @@ function TeamCard({ member }: { member: typeof team[0] }) {
           </div>
           <h3
             className="text-2xl font-bold text-gray-900 tracking-[-0.02em]"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             {member.name}
           </h3>

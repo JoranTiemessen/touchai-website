@@ -45,7 +45,7 @@ export default function HowItWorks() {
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-4"
-            style={{ fontFamily: "'Sora', sans-serif" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
             Zo pakken we het{" "}
             <span style={{ color: "#6EADD4" }}>aan</span>
@@ -61,7 +61,7 @@ export default function HowItWorks() {
             <div key={step.title} className="relative">
               <div
                 className="text-5xl font-bold tracking-[-0.03em] mb-4 select-none"
-                style={{ color: "rgba(110,173,212,0.25)", fontFamily: "'Sora', sans-serif" }}
+                style={{ color: "rgba(110,173,212,0.25)", fontFamily: "'Inter Tight', sans-serif" }}
               >
                 {step.number}
               </div>
@@ -73,7 +73,7 @@ export default function HowItWorks() {
               </div>
               <h3
                 className="text-xl font-bold text-gray-900 mb-3 tracking-[-0.02em]"
-                style={{ fontFamily: "'Sora', sans-serif" }}
+                style={{ fontFamily: "'Inter Tight', sans-serif" }}
               >
                 {step.title}
               </h3>

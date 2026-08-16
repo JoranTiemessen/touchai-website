@@ -89,7 +89,7 @@ export default function AgentCatalog() {
           </div>
           <h2
             className="text-4xl md:text-5xl font-bold tracking-[-0.03em] leading-[1.08] max-w-3xl mb-6"
-            style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}
+            style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}
           >
             Per afdeling een agent voor elk terugkerend proces.
           </h2>
@@ -118,7 +118,7 @@ export default function AgentCatalog() {
                   {dept.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold tracking-[-0.01em]" style={{ fontFamily: "'Sora', sans-serif", color: "#0B1220" }}>
+                  <h3 className="text-lg font-bold tracking-[-0.01em]" style={{ fontFamily: "'Inter Tight', sans-serif", color: "#0B1220" }}>
                     {dept.name}
                   </h3>
                   <p className="text-sm text-gray-400 leading-snug mt-0.5">{dept.tagline}</p>

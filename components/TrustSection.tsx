@@ -37,7 +37,7 @@ export default function TrustSection() {
                 />
                 <span
                   className="text-sm font-semibold tracking-wide text-gray-500"
-                  style={{ fontFamily: "'Sora', sans-serif" }}
+                  style={{ fontFamily: "'Inter Tight', sans-serif" }}
                 >
                   {c.name}
                 </span>
