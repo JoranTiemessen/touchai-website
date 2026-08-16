@@ -3,6 +3,9 @@
 import { useState } from "react";
 
 type Case = {
+  /** Vul naam + site zodra de klant schriftelijk akkoord is. Leeg = anoniem tonen. */
+  naam?: string;
+  site?: string;
   klant: string;
   sector: string;
   markt: string;
@@ -131,10 +134,17 @@ export default function Cases() {
 
         <div className="card-elevated rounded-3xl p-7 md:p-10">
           <div className="flex flex-wrap gap-x-8 gap-y-2 pb-7 mb-7 border-b border-gray-100">
-            {[["Sector", c.sector], ["Markt", c.markt]].map(([k, v]) => (
+            {[["Klant", c.naam || c.klant], ["Sector", c.sector], ["Markt", c.markt]].map(([k, v]) => (
               <div key={k}>
                 <div className="label-mono mb-1" style={{ color: "#8A94A6" }}>{k}</div>
-                <div className="text-[16px] font-semibold text-gray-800">{v}</div>
+                <div className="text-[16px] font-semibold text-gray-800">
+                  {v}
+                  {k === "Klant" && c.site && (
+                    <a href={`https://${c.site}`} target="_blank" rel="noopener noreferrer" className="ml-2 font-normal link-underline" style={{ color: "#3474A0" }}>
+                      {c.site}
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>

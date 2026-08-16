@@ -1,5 +1,5 @@
 const punten = [
-  "Vrijblijvend",
+  "Je procesplaat binnen 5 werkdagen",
   "Eerste agent draait op dag 10",
   "In je eigen accounts",
 ];
@@ -25,9 +25,9 @@ export default function FinalCTA() {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-500 leading-[1.6] mt-7 max-w-2xl mx-auto">
-          Vijfenveertig minuten. Wij vragen door, jij levert de cijfers, en je houdt er een overzicht
-          aan over: je eigen processen en wat ze je nu kosten. Ligt er niets bruikbaars, dan zeggen
-          we dat.
+          Vijfenveertig minuten. Wij vragen door, jij levert de cijfers. Binnen vijf werkdagen krijg
+          je je eigen procesplaat: jouw keten van aanvraag tot betaling, met de plekken erin
+          gemarkeerd waar het nu met de hand gaat. Ook als je verder niets met ons doet.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3 mt-9">

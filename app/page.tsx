@@ -4,6 +4,7 @@ import TrustSection from "@/components/TrustSection";
 import Keten from "@/components/Keten";
 import Systemen from "@/components/Systemen";
 import Cases from "@/components/Cases";
+import NietDoen from "@/components/NietDoen";
 import HowItWorks from "@/components/HowItWorks";
 import Results from "@/components/Results";
 import Pricing from "@/components/Pricing";
@@ -25,6 +26,7 @@ export default function Home() {
       <Reveal><Cases /></Reveal>
       <Reveal><HowItWorks /></Reveal>
       <Reveal><Results /></Reveal>
+      <Reveal><NietDoen /></Reveal>
       <Reveal><Pricing /></Reveal>
       <Reveal><Faq /></Reveal>
       <Reveal><Advisors /></Reveal>
