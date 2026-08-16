@@ -1,8 +1,4 @@
-const punten = [
-  "Je procesplaat binnen 5 werkdagen",
-  "Eerste agent draait op dag 10",
-  "In je eigen accounts",
-];
+const punten = ["Je procesplaat binnen 5 werkdagen", "Eerste agent op dag 10", "In je eigen accounts"];
 
 export default function FinalCTA() {
   return (
@@ -30,18 +26,14 @@ export default function FinalCTA() {
           gemarkeerd waar het nu met de hand gaat. Ook als je verder niets met ons doet.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3 mt-9">
-          {punten.map((p) => (
-            <div key={p} className="flex items-center gap-2.5 text-[15px] text-gray-600">
-              <span className="w-5 h-5 rounded-full grid place-items-center shrink-0" style={{ background: "rgba(44,143,94,0.14)" }}>
-                <svg className="w-3 h-3" viewBox="0 0 16 16" fill="none" style={{ color: "#2C8F5E" }}>
-                  <path d="M4 8l3 3 5-5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </span>
+        <p className="mt-8 text-[15px] text-gray-500 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+          {punten.map((p, k) => (
+            <span key={p} className="whitespace-nowrap">
+              {k > 0 && <span className="text-gray-300 mr-3">·</span>}
               {p}
-            </div>
+            </span>
           ))}
-        </div>
+        </p>
 
         <a
           href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
