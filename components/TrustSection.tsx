@@ -15,16 +15,9 @@ export default function TrustSection() {
       style={{ background: "rgba(255,255,255,0.88)" }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
-          <p className="label-mono text-gray-400 mb-4">Vertrouwd door vooruitstrevende bedrijven</p>
-          <p className="text-[17px] text-gray-600">
-            <strong className="font-semibold text-gray-900">Vijf lopende opdrachten</strong>
-            <span className="text-gray-300"> · </span>
-            agents live in <strong className="font-semibold text-gray-900">Nederland, Spanje en Brazilië</strong>
-            <span className="text-gray-300"> · </span>
-            gebouwd en bewaakt door <strong className="font-semibold text-gray-900">twee mensen</strong>
-          </p>
-        </div>
+        <p className="label-mono text-center text-gray-400 mb-10">
+          Vertrouwd door vooruitstrevende bedrijven
+        </p>
 
         <div className="relative">
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
