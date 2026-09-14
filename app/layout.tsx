@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import PixelConsent from "@/components/PixelConsent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.touchaiagency.com"),
-  title: "Touch AI Agency · Focus op het echte werk, het terugkerende doen wij",
+  title: "Touch AI Agency · Wij nemen je terugkerende werk over",
   description:
-    "Wij halen het terugkerende werk uit je bedrijf met AI-agents, op de systemen die je al gebruikt. Eerste agent draait op dag 10. Werkt het niet binnen 60 dagen, dan krijg je je investering terug en blijven de agents staan.",
+    "Een team AI-agents dat je terugkerende werk overneemt. Wij bouwen ze, sluiten ze aan op de systemen die je al gebruikt en houden ze draaiend. Eerste agent op dag 10, alles live binnen 30 dagen of je investering terug.",
   openGraph: {
-    title: "Touch AI Agency · Focus op het echte werk",
+    title: "Touch AI Agency · Wij nemen je terugkerende werk over",
     description:
-      "AI-agents die het werk overnemen dat elke week terugkomt. Eerste agent draait op dag 10, de rest binnen 60 dagen. Werkt het niet, dan krijg je je investering terug en blijven de agents staan.",
+      "Een team AI-agents voor je marketing, sales, uitvoering en administratie. Compleet voor je gedaan, in je eigen systemen, binnen 30 dagen.",
     type: "website",
     locale: "nl_NL",
   },
@@ -30,7 +31,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <PixelConsent />
+      </body>
     </html>
   );
 }

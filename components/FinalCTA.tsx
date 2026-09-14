@@ -1,4 +1,4 @@
-const punten = ["Je procesplaat binnen 5 werkdagen", "Eerste agent op dag 10", "In je eigen accounts"];
+const punten = ["Eerste agent op dag 10", "30 dagen of je investering terug", "In je eigen accounts"];
 
 export default function FinalCTA() {
   return (
@@ -9,21 +9,20 @@ export default function FinalCTA() {
       />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="label-mono mb-6" style={{ color: "#3474A0" }}>Het gesprek · 45 minuten</div>
+        <div className="label-mono mb-6" style={{ color: "#3474A0" }}>Het gesprek</div>
 
         <h2
           className="text-4xl md:text-[56px] font-bold tracking-[-0.035em] leading-[1.05] text-gray-900"
           style={{ fontFamily: "'Inter Tight', sans-serif" }}
         >
-          Klaar om dat werk
+          Klaar om je weer te focussen
           <br />
-          <span style={{ color: "#4A8EBB" }}>kwijt te raken?</span>
+          <span style={{ color: "#4A8EBB" }}>op het groeien van je bedrijf?</span>
         </h2>
 
         <p className="text-lg md:text-xl text-gray-500 leading-[1.6] mt-7 max-w-2xl mx-auto">
-          Vijfenveertig minuten. Wij vragen door, jij levert de cijfers. Binnen vijf werkdagen krijg
-          je je eigen procesplaat: jouw keten van aanvraag tot betaling, met de plekken erin
-          gemarkeerd waar het nu met de hand gaat. Ook als je verder niets met ons doet.
+          Wij vragen door, jij levert de cijfers, en we kijken samen wat er bij jou uit kan. We nemen maximaal
+          twee nieuwe trajecten per maand aan, dus het kan zijn dat je moment pas over een paar weken vrij is.
         </p>
 
         <p className="mt-8 text-[15px] text-gray-500 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
@@ -36,11 +35,9 @@ export default function FinalCTA() {
         </p>
 
         <a
-          href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/#gesprek"
           className="btn-primary inline-flex items-center gap-3 px-9 py-5 rounded-full mt-10 text-white font-bold text-[17px] hover:opacity-95 active:scale-[0.98] transition-[opacity,transform] duration-200"
-          style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 14px 34px -14px rgba(42,94,131,0.85)" }}
+          style={{ background: "linear-gradient(135deg, #4A8EBB 0%, #3474A0 100%)", boxShadow: "0 14px 34px -14px rgba(42,94,131,0.85)" }}
         >
           Plan het gesprek
           <svg className="w-4 h-4" viewBox="0 0 16 16" fill="none">
@@ -53,8 +50,8 @@ export default function FinalCTA() {
         </p>
 
         <p className="mt-10 pt-8 text-[15px] text-gray-400 max-w-xl mx-auto" style={{ borderTop: "1px solid rgba(11,18,32,0.08)" }}>
-          Voor Nederlandse MKB-bedrijven vanaf ongeveer tien man waar elke week hetzelfde werk
-          terugkomt. We nemen maximaal twee nieuwe trajecten per maand aan.
+          Voor Nederlandse MKB-bedrijven waar elke week hetzelfde werk terugkomt. Je praat met een van de twee
+          oprichters, niet met een salesteam.
         </p>
       </div>
     </section>

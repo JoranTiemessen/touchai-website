@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { posts, getPost } from "../posts";
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -127,9 +126,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               Plan het gesprek en zie zwart op wit wat het werk je kost dat elke week terugkomt.
             </p>
             <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#gesprek"
               className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full text-white font-semibold text-[15px]"
               style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
             >

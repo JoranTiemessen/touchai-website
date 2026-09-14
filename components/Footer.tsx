@@ -71,7 +71,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                { label: "Je AI-team", href: "/#ai-team" },
+                { label: "Wat je krijgt", href: "/#agents" },
                 { label: "Aanpak", href: "/#aanpak" },
                 { label: "Investering", href: "/#prijs" },
                 { label: "Over ons", href: "/about" },
@@ -99,9 +99,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#gesprek"
                   className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
                 >
                   Plan het gesprek
@@ -117,9 +115,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/#gesprek"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-brand-200 transition-colors duration-200"
                 >
                   Plan het gesprek

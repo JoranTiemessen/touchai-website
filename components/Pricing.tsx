@@ -1,4 +1,4 @@
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+import PijnCalculator from "@/components/PijnCalculator";
 
 const eenmalig = [
   "Het gesprek en de lijst met processen die eruit kunnen",
@@ -41,11 +41,11 @@ export default function Pricing() {
             className="text-4xl md:text-5xl font-bold text-gray-900 tracking-[-0.03em] mb-5"
             style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
-            Wat het kost, hoor je{" "}
-            <span style={{ color: "#6EADD4" }}>in het gesprek.</span>
+            Wat het kost, staat{" "}
+            <span style={{ color: "#6EADD4" }}>in het plan.</span>
           </h2>
           <p className="text-lg text-gray-500 leading-[1.7]">
-Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze samen benoemd hebben. Je hoort het bedrag in datzelfde gesprek, niet in een offerte drie dagen later.
+Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze samen benoemd hebben. Na het gesprek maken wij een plan, en daar staat het bedrag in. Wat je drukste proces je nu kost, reken je hieronder alvast uit.
           </p>
         </div>
 
@@ -101,12 +101,12 @@ Het hangt af van hoeveel processen eruit kunnen, en dat weten we pas als we ze s
           </p>
         </div>
 
+        <PijnCalculator />
+
         {/* CTA */}
         <div className="mt-12 text-center">
           <a
-            href={CAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#gesprek"
             className="btn-primary inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-base hover:opacity-95 active:scale-[0.98] transition-all duration-200"
             style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
           >

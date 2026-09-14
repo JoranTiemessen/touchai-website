@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
-
 export default function StickyCta() {
   const [show, setShow] = useState(false);
 
@@ -20,9 +18,7 @@ export default function StickyCta() {
       style={{ background: "rgba(255,255,255,0.92)", backdropFilter: "blur(10px)", borderTop: "1px solid rgba(11,18,32,0.08)" }}
     >
       <a
-        href={CAL_URL}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/#gesprek"
         className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full text-white font-semibold text-[15px]"
         style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
       >

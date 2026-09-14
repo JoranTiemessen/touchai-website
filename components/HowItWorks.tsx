@@ -1,7 +1,7 @@
 const steps = [
   {
     number: "01",
-    when: "Dag 0 · 45 minuten",
+    when: "Dag 0 · max 60 minuten",
     title: "Het gesprek",
     description:
       "Wij vragen door tot er vier tot zes processen op tafel liggen die eruit kunnen. In jouw woorden. Die lijst is meteen de opdracht: je weet precies wat je koopt voordat we beginnen.",
@@ -18,22 +18,20 @@ const steps = [
     when: "Dag 10",
     title: "De eerste agent draait",
     description:
-      "Op je eigen echte werk, niet op een demo. Zo weet je binnen twee weken of dit werkt, in plaats van na twee maanden.",
+      "Op je eigen echte werk, niet op een demo. Zo weet je binnen twee weken of dit werkt, en niet pas aan het eind.",
   },
   {
     number: "04",
-    when: "Dag 60 en daarna",
+    when: "Dag 30 en daarna",
     title: "De rest draait, en blijft draaien",
     description:
       "De overige agents, aan elkaar geknoopt, met monitoring eronder. Koppelingen breken en systemen veranderen: wij zien het en lossen het op, voordat jij het merkt.",
   },
 ];
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
-
 export default function HowItWorks() {
   return (
-    <section id="aanpak" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "rgba(255,255,255,0.94)" }}>
+    <section id="aanpak" className="relative py-24 md:py-32 overflow-hidden" style={{ background: "#F7F6F3" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-16">
@@ -87,9 +85,7 @@ export default function HowItWorks() {
         {/* CTA */}
         <div className="mt-14 pt-10 border-t border-gray-100">
           <a
-            href={CAL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#gesprek"
             className="btn-primary inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-brand-400 text-white font-semibold text-[15px] hover:bg-brand-500 active:scale-[0.98] transition-all duration-150"
             style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
           >

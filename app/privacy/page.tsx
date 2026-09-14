@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
 
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Inter Tight', sans-serif" }}>8. Cookies</h2>
-            <p>Onze website gebruikt mogelijk cookies om je browse-ervaring te verbeteren en het verkeer te analyseren. Je kunt cookies op elk moment uitschakelen in je browserinstellingen. We gebruiken geen cookies voor advertentiedoeleinden.</p>
+            <p>Onze website gebruikt mogelijk cookies om je browse-ervaring te verbeteren en het verkeer te analyseren. Je kunt cookies op elk moment uitschakelen in je browserinstellingen. Alleen als je daar in de cookiemelding toestemming voor geeft, laden we de Meta Pixel om onze advertenties te meten en te verbeteren. Zonder die toestemming plaatsen we geen advertentiecookies. Vul je het aanvraagformulier in, dan bewaren we je gegevens vanaf de tweede stap, ook als je het formulier niet afrondt, zodat we contact met je kunnen opnemen.</p>
           </div>
 
           <div>

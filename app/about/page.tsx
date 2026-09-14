@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     "Touch AI is opgericht door de broers Joran en Jesper Tiemessen. We bouwen AI-agents die het repetitieve werk overnemen bij Nederlandse MKB-bedrijven. Meetbaar, op je eigen systemen, gegarandeerd.",
 };
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
 
 const values = [
   {
@@ -232,12 +231,10 @@ export default function AboutPage() {
               Benieuwd waar bij jou de uren weglekken?
             </h2>
             <p className="text-gray-500 leading-[1.7] max-w-xl mx-auto mb-8">
-              Plan het gesprek. Vijfenveertig minuten, en je weet welke processen eruit kunnen en wat ze je nu kosten.
+              Plan het gesprek. Maximaal zestig minuten, en je weet welke processen eruit kunnen.
             </p>
             <a
-              href={CAL_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#gesprek"
               className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-white font-semibold text-base"
               style={{ background: "linear-gradient(135deg, #6EADD4 0%, #4A8EBB 100%)", boxShadow: "0 6px 20px rgba(110,173,212,0.40)" }}
             >

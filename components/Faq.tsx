@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     q: "Hoe snel draait de eerste agent?",
-    a: "Op dag 10, op je eigen echte werk en niet op een demo. De rest van de afgesproken agents draait binnen zestig dagen.",
+    a: "Op dag 10, op je eigen echte werk en niet op een demo. De rest van de afgesproken agents draait binnen dertig dagen.",
   },
   {
     q: "Wat als het niet werkt?",
-    a: "Dan kies jij: je investering terug, of wij werken kosteloos door tot het wel draait, met een grens van dertig dagen. In beide gevallen blijven de agents staan, inclusief documentatie en overdracht. En je betaalt sowieso de helft pas als de laatste agent draait.",
+    a: "Dan kies jij: je investering terug, of wij werken kosteloos door tot het wel draait, met een grens van vijftien dagen. In beide gevallen blijven de agents staan, inclusief documentatie en overdracht. En je betaalt sowieso de helft pas als de laatste agent draait.",
   },
   {
     q: "Straks zijn mijn mensen hun werk kwijt.",
@@ -37,11 +37,11 @@ const faqs = [
   },
   {
     q: "Wat kost het?",
-    a: "Dat hangt af van hoeveel processen eruit kunnen, en dat weten we pas na het gesprek. Je hoort het bedrag in datzelfde gesprek, niet in een offerte drie dagen later.",
+    a: "Dat hangt af van hoeveel processen eruit kunnen, en dat weten we pas na het gesprek. Daarna maken wij een plan, en daar staat het bedrag in: één prijs voor het geheel, plus een maandbedrag voor monitoring en onderhoud.",
   },
   {
     q: "Voor welke bedrijven is dit?",
-    a: "Nederlandse MKB-bedrijven vanaf ongeveer tien man waar elke week hetzelfde werk terugkomt. Zijn er minder dan vier van dat soort processen, dan zeggen we dat op het gesprek gewoon tegen je. We nemen maximaal 2 nieuwe trajecten per maand aan.",
+    a: "Nederlandse MKB-bedrijven waar elke week hetzelfde werk terugkomt. Zijn er minder dan vier van dat soort processen, dan zeggen we dat op het gesprek gewoon tegen je. We nemen maximaal 2 nieuwe trajecten per maand aan.",
   },
 ];
 

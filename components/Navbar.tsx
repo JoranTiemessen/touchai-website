@@ -14,9 +14,9 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Waar zit het werk", href: "/#ai-team" },
+    { label: "Wat je krijgt", href: "/#agents" },
     { label: "Aanpak", href: "/#aanpak" },
-    { label: "Wat het kost", href: "/#prijs" },
+    { label: "Garantie", href: "/#garantie" },
     { label: "Over ons", href: "/about" },
     { label: "Blog", href: "/blog" },
   ];
@@ -68,9 +68,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:block">
             <a
-              href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#gesprek"
               className="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 text-white text-sm font-semibold hover:bg-brand-500 active:bg-brand-600 transition-colors duration-200"
               style={{ boxShadow: "0 4px 14px rgba(110,173,212,0.4)" }}
             >
@@ -123,9 +121,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#gesprek"
               onClick={() => setMenuOpen(false)}
               className="mt-2 btn-primary text-center px-5 py-2.5 rounded-full bg-brand-400 text-white text-sm font-semibold hover:bg-brand-500 transition-colors duration-200"
             >
