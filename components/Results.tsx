@@ -15,7 +15,7 @@ export default function Results() {
             className="text-4xl md:text-[52px] font-bold tracking-[-0.03em] leading-[1.08] text-gray-900"
             style={{ fontFamily: "'Inter Tight', sans-serif" }}
           >
-            De agents die we samen afspreken, draaien binnen 60 dagen op{" "}
+            De agents die we samen afspreken, draaien binnen 30 dagen op{" "}
             <span style={{ color: "#4A8EBB" }}>je eigen echte werk.</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-500 leading-[1.6] mt-6">
@@ -46,7 +46,7 @@ export default function Results() {
             <div className="mt-5 space-y-3">
               {[
                 ["A", "Je investering terug", "Alle eenmalige bedragen, binnen 14 dagen."],
-                ["B", "Wij werken kosteloos door", "Tot het wel draait, met een grens van 30 dagen."],
+                ["B", "Wij werken kosteloos door", "Tot het wel draait, met een grens van 15 dagen."],
               ].map(([l, t, s]) => (
                 <div key={l} className="flex items-start gap-3.5">
                   <span className="w-7 h-7 rounded-lg shrink-0 grid place-items-center text-[13px] font-bold"

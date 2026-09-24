@@ -63,7 +63,7 @@ export default function TermsOfService() {
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Inter Tight', sans-serif" }}>7. Aansprakelijkheid en garantie</h2>
             <p>Touch AI Agency is niet aansprakelijk voor indirecte, incidentele of gevolgschade die voortvloeit uit het gebruik van onze diensten. Onze totale aansprakelijkheid is in elk geval beperkt tot het bedrag dat is betaald voor de specifieke dienst die aanleiding gaf tot de claim.</p>
-            <p className="mt-3">De resultaatgarantie die we bij een traject afgeven (het afgesproken aantal bespaarde uren binnen 60 dagen, of we werken kosteloos door) staat los van deze aansprakelijkheidsbeperking en wordt per opdracht schriftelijk vastgelegd.</p>
+            <p className="mt-3">De resultaatgarantie die we bij een traject afgeven (de afgesproken agents draaien binnen 30 dagen op echt werk; lukt dat niet, dan je investering terug of maximaal 15 dagen kosteloos doorwerken) staat los van deze aansprakelijkheidsbeperking en wordt per opdracht schriftelijk vastgelegd.</p>
           </div>
 
           <div>
