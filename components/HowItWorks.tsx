@@ -18,11 +18,11 @@ const steps = [
     when: "Dag 10",
     title: "De eerste agent draait",
     description:
-      "Op je eigen echte werk, niet op een demo. Zo weet je binnen twee weken of dit werkt, in plaats van na twee maanden.",
+      "Op je eigen echte werk, niet op een demo. Zo weet je binnen twee weken of dit werkt, en niet pas aan het eind.",
   },
   {
     number: "04",
-    when: "Dag 60 en daarna",
+    when: "Dag 30 en daarna",
     title: "De rest draait, en blijft draaien",
     description:
       "De overige agents, aan elkaar geknoopt, met monitoring eronder. Koppelingen breken en systemen veranderen: wij zien het en lossen het op, voordat jij het merkt.",

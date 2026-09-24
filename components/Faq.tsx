@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     q: "Hoe snel draait de eerste agent?",
-    a: "Op dag 10, op je eigen echte werk en niet op een demo. De rest van de afgesproken agents draait binnen zestig dagen.",
+    a: "Op dag 10, op je eigen echte werk en niet op een demo. De rest van de afgesproken agents draait binnen dertig dagen.",
   },
   {
     q: "Wat als het niet werkt?",
-    a: "Dan kies jij: je investering terug, of wij werken kosteloos door tot het wel draait, met een grens van dertig dagen. In beide gevallen blijven de agents staan, inclusief documentatie en overdracht. En je betaalt sowieso de helft pas als de laatste agent draait.",
+    a: "Dan kies jij: je investering terug, of wij werken kosteloos door tot het wel draait, met een grens van vijftien dagen. In beide gevallen blijven de agents staan, inclusief documentatie en overdracht. En je betaalt sowieso de helft pas als de laatste agent draait.",
   },
   {
     q: "Straks zijn mijn mensen hun werk kwijt.",

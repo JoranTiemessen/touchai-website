@@ -7,7 +7,7 @@ const UURTARIEF = 55;
 
 const stats = [
   { value: "Dag 10", label: "draait je eerste agent op je eigen werk" },
-  { value: "60 dagen", label: "tot de rest van je agents draait" },
+  { value: "30 dagen", label: "tot de rest van je agents draait" },
   { value: "90 min", label: "is alles wat het je aan tijd kost" },
 ];
 
@@ -55,7 +55,7 @@ export default function Hero() {
               Aanvragen, offertes, facturen, opvolging. Wij bouwen de agents die dat overnemen, op
               de systemen die je nu al gebruikt.{" "}
               <strong className="font-semibold text-gray-800">
-                Werkt het niet binnen 60 dagen, dan krijg je je investering terug
+                Werkt het niet binnen 30 dagen, dan krijg je je investering terug
               </strong>{" "}
               en blijven de agents staan.
             </p>
