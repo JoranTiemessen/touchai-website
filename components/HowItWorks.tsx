@@ -1,17 +1,17 @@
 const steps = [
   {
     number: "01",
-    when: "Dag 0 · 45 minuten",
+    when: "Dag 0",
     title: "Het gesprek",
     description:
       "Wij vragen door tot er vier tot zes processen op tafel liggen die eruit kunnen. In jouw woorden. Die lijst is meteen de opdracht: je weet precies wat je koopt voordat we beginnen.",
   },
   {
     number: "02",
-    when: "Week 1 · 90 minuten",
-    title: "Toegang en doorloop",
+    when: "Week 1",
+    title: "Toegang regelen",
     description:
-      "Eén sessie van anderhalf uur, via een videocall met scherm delen. We regelen samen de toegang en lopen je proces door. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem.",
+      "We doen een call en jij zorgt vanuit jouw kant voor alle toegang. Dan kunnen we door. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem.",
   },
   {
     number: "03",
@@ -29,7 +29,7 @@ const steps = [
   },
 ];
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+const CAL_URL = "https://calendly.com/joran-touchaiagency/30min";
 
 export default function HowItWorks() {
   return (

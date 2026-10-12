@@ -94,7 +94,7 @@ export default function Advisors() {
             We zagen steeds hetzelfde: goede bedrijven die verzuipen in repetitief werk, terwijl AI ongebruikt bleef. Touch AI dicht dat gat. Geen jargon, geen dure consultants, gewoon praktische automatisering die vanaf dag één een zichtbaar verschil maakt.
           </p>
           <a
-            href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
+            href="https://calendly.com/joran-touchaiagency/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 mt-8 px-7 py-3.5 rounded-full text-white font-semibold text-base"

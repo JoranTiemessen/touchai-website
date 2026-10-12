@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { posts, getPost } from "../posts";
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+const CAL_URL = "https://calendly.com/joran-touchaiagency/30min";
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+const CAL_URL = "https://calendly.com/joran-touchaiagency/30min";
 const EUR_PER_HOUR = 31;
 const WEEKS_PER_MONTH = 52 / 12;
 

@@ -68,7 +68,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:block">
             <a
-              href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
+              href="https://calendly.com/joran-touchaiagency/30min"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-400 text-white text-sm font-semibold hover:bg-brand-500 active:bg-brand-600 transition-colors duration-200"
@@ -123,7 +123,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
+              href="https://calendly.com/joran-touchaiagency/30min"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}

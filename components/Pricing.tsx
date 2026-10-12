@@ -1,4 +1,4 @@
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+const CAL_URL = "https://calendly.com/joran-touchaiagency/30min";
 
 const eenmalig = [
   "Het gesprek en de lijst met processen die eruit kunnen",

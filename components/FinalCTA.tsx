@@ -1,4 +1,4 @@
-const punten = ["Je procesplaat binnen 5 werkdagen", "Eerste agent op dag 10", "In je eigen accounts"];
+const punten = ["Je procesoverzicht binnen 5 werkdagen", "Eerste agent op dag 10", "In je eigen accounts"];
 
 export default function FinalCTA() {
   return (
@@ -9,7 +9,7 @@ export default function FinalCTA() {
       />
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="label-mono mb-6" style={{ color: "#3474A0" }}>Het gesprek · 45 minuten</div>
+        <div className="label-mono mb-6" style={{ color: "#3474A0" }}>Het gesprek</div>
 
         <h2
           className="text-4xl md:text-[56px] font-bold tracking-[-0.035em] leading-[1.05] text-gray-900"
@@ -21,8 +21,8 @@ export default function FinalCTA() {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-500 leading-[1.6] mt-7 max-w-2xl mx-auto">
-          Vijfenveertig minuten. Wij vragen door, jij levert de cijfers. Binnen vijf werkdagen krijg
-          je je eigen procesplaat: jouw keten van aanvraag tot betaling, met de plekken erin
+          Wij vragen door, jij levert de cijfers. Binnen vijf werkdagen krijg
+          je je eigen procesoverzicht: jouw keten van aanvraag tot betaling, met de plekken erin
           gemarkeerd waar het nu met de hand gaat. Ook als je verder niets met ons doet.
         </p>
 
@@ -36,7 +36,7 @@ export default function FinalCTA() {
         </p>
 
         <a
-          href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
+          href="https://calendly.com/joran-touchaiagency/30min"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-primary inline-flex items-center gap-3 px-9 py-5 rounded-full mt-10 text-white font-bold text-[17px] hover:opacity-95 active:scale-[0.98] transition-[opacity,transform] duration-200"

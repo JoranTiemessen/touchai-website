@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+const CAL_URL = "https://calendly.com/joran-touchaiagency/30min";
 
 export default function StickyCta() {
   const [show, setShow] = useState(false);

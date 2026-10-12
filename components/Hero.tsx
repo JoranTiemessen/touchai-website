@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 
-const CAL_URL = "https://calendar.app.google/7rRamUEnapLFZ2PS9";
+const CAL_URL = "https://calendly.com/joran-touchaiagency/30min";
 const UURTARIEF = 55;
 
 const stats = [
   { value: "Dag 10", label: "draait je eerste agent op je eigen werk" },
   { value: "30 dagen", label: "tot de rest van je agents draait" },
-  { value: "90 min", label: "is alles wat het je aan tijd kost" },
+  { value: "1 call", label: "en je regelt de toegang, de rest doen wij" },
 ];
 
 export default function Hero() {

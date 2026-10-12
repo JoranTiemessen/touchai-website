@@ -99,7 +99,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
+                  href="https://calendly.com/joran-touchaiagency/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-400 hover:text-brand-300 transition-colors duration-200"
@@ -117,7 +117,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://calendar.app.google/7rRamUEnapLFZ2PS9"
+                  href="https://calendly.com/joran-touchaiagency/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-300 hover:text-brand-200 transition-colors duration-200"

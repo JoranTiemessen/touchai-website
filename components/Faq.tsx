@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "Ik heb hier geen tijd voor.",
-    a: "Negentig minuten. Eén sessie waarin we samen de toegang regelen en je proces doorlopen. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem. Verder bouwen en koppelen wij alles.",
+    a: "We doen gewoon een call, en jij zorgt vanuit jouw kant voor alle toegang. Dan kunnen we door. De voorbeelden die we nodig hebben halen we daarna zelf uit je systeem. Verder bouwen en koppelen wij alles.",
   },
   {
     q: "Onze data is een rommel.",
