@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Privacybeleid · Touch AI Agency",
+  description: "Hoe Touch AI Agency omgaat met persoonsgegevens: welke gegevens we verwerken, waarom, en welke rechten je hebt.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPolicy() {
   return (

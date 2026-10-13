@@ -3,16 +3,34 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.touchaiagency.com"),
-  title: "Touch AI Agency · Focus op het echte werk, het terugkerende doen wij",
+  title: "AI-agents voor het MKB · Touch AI Agency",
   description:
     "Wij halen het terugkerende werk uit je bedrijf met AI-agents, op de systemen die je al gebruikt. Eerste agent draait op dag 10. Werkt het niet binnen 30 dagen, dan krijg je je investering terug en blijven de agents staan.",
   openGraph: {
-    title: "Touch AI Agency · Focus op het echte werk",
+    title: "AI-agents voor het MKB · Touch AI Agency",
     description:
       "AI-agents die het werk overnemen dat elke week terugkomt. Eerste agent draait op dag 10, de rest binnen 30 dagen. Werkt het niet, dan krijg je je investering terug en blijven de agents staan.",
     type: "website",
     locale: "nl_NL",
+    siteName: "Touch AI Agency",
   },
+  twitter: { card: "summary_large_image" },
+};
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Touch AI Agency",
+  url: "https://www.touchaiagency.com",
+  logo: "https://www.touchaiagency.com/logo.png",
+  email: "info@touchaiagency.com",
+  description:
+    "AI-agents die het terugkerende werk overnemen bij Nederlandse MKB-bedrijven, op de systemen die ze al gebruiken.",
+  areaServed: "NL",
+  founder: [
+    { "@type": "Person", name: "Joran Tiemessen" },
+    { "@type": "Person", name: "Jesper Tiemessen" },
+  ],
 };
 
 export default function RootLayout({
@@ -30,7 +48,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
+        {children}
+      </body>
     </html>
   );
 }

@@ -9,6 +9,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Blog · Touch AI Agency",
+  alternates: { canonical: "/blog" },
   description:
     "Inzichten over AI-automatisering voor het MKB: waar de uren weglekken, hoe je werk dat elke week terugkomt uit je bedrijf haalt, en hoe je agents draaiend houdt.",
 };

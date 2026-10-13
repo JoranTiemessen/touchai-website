@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Algemene voorwaarden · Touch AI Agency",
+  description: "De algemene voorwaarden van Touch AI Agency voor onze diensten.",
+  alternates: { canonical: "/terms" },
+};
 
 export default function TermsOfService() {
   return (

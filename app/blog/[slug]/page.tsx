@@ -17,12 +17,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   return {
     title: `${post.title} · Touch AI Agency`,
     description: post.description,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
       locale: "nl_NL",
+      images: ["/opengraph-image"],
     },
+    twitter: { card: "summary_large_image", images: ["/opengraph-image"] },
   };
 }
 
