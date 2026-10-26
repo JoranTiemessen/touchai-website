@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     siteName: "Touch AI Agency",
   },
   twitter: { card: "summary_large_image" },
+  other: {
+    "facebook-domain-verification": "ixs06eiggfpfsjsypa3isy2v4xhp20",
+  },
 };
 
 const orgJsonLd = {
