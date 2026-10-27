@@ -8,6 +8,7 @@ const KEY = "touchai-cookie-consent";
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
+    _fbq?: unknown;
   }
 }
 
@@ -24,6 +25,7 @@ function loadPixel() {
   fbq.version = "2.0";
   fbq.queue = [];
   window.fbq = fbq;
+  if (!window._fbq) window._fbq = fbq;
   document.head.appendChild(s);
   window.fbq("init", PIXEL_ID);
   window.fbq("track", "PageView");
