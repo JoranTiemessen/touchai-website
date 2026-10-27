@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ConsentPixel from "@/components/ConsentPixel";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.touchaiagency.com"),
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body className="antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         {children}
+        <ConsentPixel />
       </body>
     </html>
   );
