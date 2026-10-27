@@ -17,9 +17,22 @@ function loadPixel() {
   const s = document.createElement("script");
   s.async = true;
   s.src = "https://connect.facebook.net/en_US/fbevents.js";
-  // Zelfde stub als de standaard Meta-snippet: fbevents.js leest queue, loaded en version.
-  type Stub = ((...args: unknown[]) => void) & { push: unknown; loaded: boolean; version: string; queue: unknown[] };
-  const fbq = function (...args: unknown[]) { fbq.queue.push(args); } as Stub;
+  // Exact de stub uit de standaard Meta-snippet: zodra fbevents.js laadt en callMethod zet,
+  // gaan latere aanroepen (zoals Lead op een klik) daarheen in plaats van de wachtrij in.
+  type Stub = {
+    (...args: unknown[]): void;
+    callMethod?: { apply: (self: unknown, args: unknown) => void };
+    push: unknown;
+    loaded: boolean;
+    version: string;
+    queue: unknown[];
+  };
+  const fbq = function () {
+    // eslint-disable-next-line prefer-rest-params
+    if (fbq.callMethod) fbq.callMethod.apply(fbq, arguments);
+    // eslint-disable-next-line prefer-rest-params
+    else fbq.queue.push(arguments);
+  } as Stub;
   fbq.push = fbq;
   fbq.loaded = true;
   fbq.version = "2.0";
